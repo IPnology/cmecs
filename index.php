@@ -1,6 +1,6 @@
 <?php
 
-	header("Location: user/");	
+	header("Location: admin/");	
 
 ?>
 

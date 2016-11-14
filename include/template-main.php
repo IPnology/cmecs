@@ -16,19 +16,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="../include/css/animate.css">
+	<link rel="stylesheet" href="../../include/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="../include/css/icomoon.css">
+	<link rel="stylesheet" href="../../include/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="../include/css/bootstrap.css">
+	<link rel="stylesheet" href="../../include/css/bootstrap.css">
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="../include/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="../include/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../../include/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../../include/css/owl.theme.default.min.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="../include/css/style.css">
+	<link rel="stylesheet" href="../../include/css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="../include/js/modernizr-2.6.2.min.js"></script>
+	<script src="../../include/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -40,7 +40,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="../include/images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+			<h1 id="fh5co-logo"><a href="index.html"><img src="../../include/images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li class="fh5co-active"><a href="index.html">Home</a></li>
@@ -63,23 +63,23 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="../include/js/jquery.min.js"></script>
+	<script src="../../include/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="../include/js/jquery.easing.1.3.js"></script>
+	<script src="../../include/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="../include/js/bootstrap.min.js"></script>
+	<script src="../../include/js/bootstrap.min.js"></script>
 	<!-- Carousel -->
-	<script src="../include/js/owl.carousel.min.js"></script>
+	<script src="../../include/js/owl.carousel.min.js"></script>
 	<!-- Stellar -->
-	<script src="../include/js/jquery.stellar.min.js"></script>
+	<script src="../../include/js/jquery.stellar.min.js"></script>
 	<!-- Waypoints -->
-	<script src="../include/js/jquery.waypoints.min.js"></script>
+	<script src="../../include/js/jquery.waypoints.min.js"></script>
 	<!-- Counters -->
-	<script src="../include/js/jquery.countTo.js"></script>
+	<script src="../../include/js/jquery.countTo.js"></script>
 
 
 	<!-- MAIN JS -->
-	<script src="../include/js/main.js"></script>
+	<script src="../../include/js/main.js"></script>
 
 	</body>
 </html>
