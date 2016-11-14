@@ -55,7 +55,9 @@
 		<div id="fh5co-main">
 
 			<div class="fh5co-narrow-content">
-				<?php require_once $content;?>
+				<div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+					<?php require_once $content;?>
+				</div>
 			</div>
 		</div>
 	</div>
