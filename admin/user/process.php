@@ -10,8 +10,8 @@ switch ($action) {
 		login();
 		break;
 
-	case 'signup' :
-		signup();
+	case 'register' :
+		register();
 		break;
 		
 	default :
@@ -42,7 +42,7 @@ function login()
 	
 }
 
-function signup()
+function register()
 {
 	$username = $_POST['username'];
 	$firstname = $_POST['firstname'];

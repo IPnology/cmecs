@@ -26,6 +26,6 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 		</div>
 	</div>
 </form>
-	<a href="?view=signup">Sign Up</a>
+	<a href="?view=register">Add Account</a>
 </body>
 </html>

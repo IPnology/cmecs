@@ -44,7 +44,7 @@
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li class="fh5co-active"><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="../user/?view=list">Account</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>

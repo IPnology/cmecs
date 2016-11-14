@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form action="process.php?action=signup" method="POST">
+<form action="process.php?action=register" method="POST">
 	Username:</br>
 	<input type="text" name="username" placeholder="your username">
 	</br>
@@ -18,7 +18,7 @@
 	Repeat Password:</br>
 	<input type="password" name="repeatpassword" placeholder="enter password">
 	</br></br>
-	<input type="submit" value="Signup">
+	<input type="submit" value="Register">
 </form>
 	
 </body>
