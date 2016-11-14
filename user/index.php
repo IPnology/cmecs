@@ -27,7 +27,7 @@ switch ($view) {
 			
 		
 	default :
-		$login 	= 'login.php';
+		$content 	= 'login.php';
 		$template = '../include/template-login.php';
 }
 
