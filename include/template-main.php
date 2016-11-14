@@ -3,7 +3,7 @@ template
 <html>
 <head>
 	<title>CMECS</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../include/styles.css">
 </head>
 
 <ul>
