@@ -7,7 +7,7 @@ template
 </head>
 
 <ul>
-	<li><a href="home/">home</a></li>
+	<li><a class="active" href="home/">home</a></li>
 	<li><a href="user/">user</a></li>
 </ul>
 
