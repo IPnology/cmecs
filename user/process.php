@@ -10,6 +10,10 @@ switch ($action) {
 		login();
 		break;
 
+	case 'signup' :
+		signup();
+		break;
+		
 	default :
 }
 
@@ -35,6 +39,24 @@ function login()
 	{
 		header('Location: index.php?error=User not found in the Database');
 	}
+	
+}
+
+function signup()
+{
+	$username = $_POST['username'];
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$password = $_POST['password'];
+	$repeatpassword = $_POST['repeatpassword'];
+	
+	mysql_query("insert into user set username='".$username."',
+													fname='".$firstname."',
+													lname='".$lastname."',
+													password='".$password."',
+													level='client'");
+							
+	header('Location: ../home/');
 	
 }
 
