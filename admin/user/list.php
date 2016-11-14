@@ -1,7 +1,10 @@
 <?php
 $query = mysql_query("select * from user");
 
+$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
+
+<br><?=$message;?>
 
 	<table>
 	
@@ -19,7 +22,7 @@ $query = mysql_query("select * from user");
 			<td><?=$row['username']?></td>
 			<td><?=$row['fname']?></td>
 			<td><?=$row['lname']?></td>
-			<td><button>Delete</button></td>
+			<td><a href="process.php?action=delete&id=<?=$row['Id']?>">Delete</a></td>
 			<td><button>Update</button></td>
 		</tr>
 <?php

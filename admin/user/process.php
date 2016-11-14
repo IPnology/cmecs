@@ -13,7 +13,11 @@ switch ($action) {
 	case 'register' :
 		register();
 		break;
-		
+	
+	case 'delete' :
+		delete();
+		break;
+	
 	default :
 }
 
@@ -57,6 +61,16 @@ function register()
 													level='client'");
 							
 	header('Location: ../home/');
+	
+}
+
+function delete()
+{
+	$id = $_GET['id'];	
+	
+	mysql_query("delete from user where Id = '".$id."'");
+	
+	header('Location: ../user/?view=list&message=Successfully Deleted.');
 	
 }
 
