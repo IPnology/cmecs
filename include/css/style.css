@@ -558,6 +558,18 @@ body {
 	text-indent: 100%;
 	background: url(../images/move_top.png) no-repeat right top;
 }
+
+.cmLogo {
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+	border: none;
+	margin-left:auto;
+	margin-right:auto;
+	text-indent: 100%;
+	background: url(../images/cmlogo.png) no-repeat right top;
+}
+
 .copy{
 	text-align:center;
 	font-family: 'Source Sans Pro', sans-serif;

@@ -4,7 +4,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 <br><?=$error;?>
 
 <form action="process.php?action=login" method="POST">
-
+<div class="cmLogo"></div>
   <div class="container">
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
