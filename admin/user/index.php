@@ -14,6 +14,12 @@ switch ($view) {
 		$content 	= 'list.php';
 		$template = '../../include/template-main.php';		
 		break;
+		
+	case 'update' :
+		$content 	= 'update.php';
+		$template = '../../include/template-main.php';		
+		break;
+		
 			
 	default :
 		$content 	= 'login.php';
