@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'bebas_neueregular';
+    font-family: 'Arial';
     src:url(../fonts/BebasNeue-webfont.ttf) format('truetype');
 }
 .da-slider{
-    font-family: 'bebas_neueregular';
+    font-family: 'Arial';
 	width: 100%;
 	min-width: 520px;
 	height: 480px;

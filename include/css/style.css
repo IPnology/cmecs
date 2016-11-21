@@ -37,7 +37,7 @@ body {
 	width:80%;
 }
 .header_bg{
-	background: #ffffff;
+	background: #2c3739;
 }
 .header{
 	padding: 2%;
@@ -213,17 +213,17 @@ body {
 }
 /* header_btm */
 .header_btm{
-	background: #4CCFC1;
+	background: #151f21;
 }
 .header_sub{
 	padding: 0 2%;
 }
 /* start menu */
 .h_menu{
-	font-family: 'bebas_neueregular';
+	font-family: 'Arial';
 	float:left;
 	color:#ffffff;
-	font-size: 1.2em;
+	font-size: .65em;
 }
 .h_menu ul li{
 	display: inline-block;
