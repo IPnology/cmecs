@@ -1,3 +1,10 @@
+<?
+	if (!$_SESSION['user_session'])
+	{
+		header("Location: ../user");	
+	}
+?>
+
 <!-- start header -->
 <div class="header_bg">
 <div class="wrap">

@@ -60,7 +60,6 @@ function logout()
 {
 	if (isset($_SESSION['user_session'])) {
 		unset($_SESSION['user_session']);
-		session_unregister('user_session');
 	}
 	header('Location: index.php');
 	exit;
