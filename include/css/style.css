@@ -28,7 +28,7 @@ img{max-width:100%;}
     src:url(../fonts/BebasNeue-webfont.ttf) format('truetype');
 }
 body {
-	font-family: 'bebas_neueregular';
+	font-family: 'Arial';
 	background:#ffffff;
 	font-size: 100%;
 }
@@ -419,14 +419,15 @@ body {
 }
 /* start main1 */
 .main_bg1{
-	border-top: 4px solid #47BEAF;
-	background: #40C4B2;
+	border-top: 4px solid #14a154;
+	background: #2c3739;
 }
 .main1{
 	padding: 2%;
 }
 .main1 h2{
-	font-size: 2em;
+	font-size: 1.5em;
+	text-transform: uppercase;
 	color:#ffffff;
 	text-shadow: 0 1px 0 rgb(24, 141, 118);
 }
@@ -501,10 +502,11 @@ body {
 }
 /* start footer */
 .footer_bg{
-	background: #40C4B2;	
+	background: #47585b;	
 }
 .footer{
-	padding: 2%;
+	padding: 1.5%;
+	color: #fff;
 }
 /* start grids_of_3 */
 .grids_of_4{
@@ -541,7 +543,7 @@ body {
 }
 /* start footer1 */
 .footer_bg1{
-	background: #2DA89B;	
+	background: #47585b;	
 }
 #toTop {
 	display: none;
@@ -554,7 +556,7 @@ body {
 	height: 34px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/top_move.png) no-repeat right top;
+	background: url(../images/move_top.png) no-repeat right top;
 }
 .copy{
 	text-align:center;
