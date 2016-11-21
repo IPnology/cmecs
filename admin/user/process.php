@@ -18,6 +18,10 @@ switch ($action) {
 		delete();
 		break;
 	
+	case 'update' :
+		update();
+		break;
+	
 	default :
 }
 
@@ -71,6 +75,27 @@ function delete()
 	mysql_query("delete from user where Id = '".$id."'");
 	
 	header('Location: ../user/?view=list&message=Successfully Deleted.');
+	
+}
+
+function update()
+{
+	$id = $_GET['id'];	
+	
+	$username = $_POST['username'];
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$password = $_POST['password'];
+	$repeatpassword = $_POST['repeatpassword'];
+	
+	mysql_query("update user set username='".$username."',
+												fname='".$firstname."',
+												lname='".$lastname."',
+												password='".$password."',
+												level='client'
+												where Id = '".$id."'");
+												
+	header('Location: ../user/?view=list&message=Successfully Updated.');
 	
 }
 

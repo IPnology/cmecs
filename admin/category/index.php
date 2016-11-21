@@ -5,18 +5,14 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 	
-	case 'register' :
-		$content = 'register.php';
+	case 'add' :
+		$content = 'add.php';
 		$template = '../../include/template-main.php';
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
 		break;
 		
 	case 'list' :
 		$content 	= 'list.php';
 		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
 		break;
 		
 	case 'update' :
@@ -26,10 +22,8 @@ switch ($view) {
 		
 			
 	default :
-		$content 	= 'login.php';
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
-		$template = '../../include/template-login.php';
+		$content 	= 'list.php';
+		$template = '../../include/template-main.php';
 }
 
 require_once $template;
