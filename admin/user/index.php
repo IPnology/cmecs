@@ -7,7 +7,7 @@ switch ($view) {
 	
 	case 'register' :
 		$content = 'register.php';
-		$template = '../../include/template-login.php';
+		$template = '../../include/template-main.php';
 		break;
 		
 	case 'list' :
