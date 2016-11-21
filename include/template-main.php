@@ -1,23 +1,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-<link href="/cmecs/include/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="/cmecs/include/js/jquery.min.js"></script>
+<link href="../../include/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../../include/js/jquery.min.js"></script>
 <head>
 <!-- start slider -->		
-	<link href="/cmecs/include/css/slider.css" rel="stylesheet" type="text/css" media="all" />
-	<script type="text/javascript" src="/cmecs/include/js/modernizr.custom.28468.js"></script>
-	<script type="text/javascript" src="/cmecs/include/js/jquery.cslider.js"></script>
+	<link href="../../include/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="../../include/js/modernizr.custom.28468.js"></script>
+	<script type="text/javascript" src="../../include/js/jquery.cslider.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$('#da-slider').cslider();
 		});
 	</script>
 		<!-- Owl Carousel Assets -->
-		<link href="/cmecs/include/css/owl.carousel.css" rel="stylesheet">
+		<link href="../../include/css/owl.carousel.css" rel="stylesheet">
 		     <!-- Owl Carousel Assets -->
 		    <!-- Prettify -->
-		    <script src="/cmecs/include/js/owl.carousel.js"></script>
+		    <script src="../../include/js/owl.carousel.js"></script>
 		        <script>
 		    $(document).ready(function() {
 		
@@ -37,8 +37,8 @@
 		    </script>
 		   <!-- //Owl Carousel Assets -->
 		<!-- start top_js_button -->
-		<script type="text/javascript" src="/cmecs/include/js/move-top.js"></script>
-		<script type="text/javascript" src="/cmecs/include/js/easing.js"></script>
+		<script type="text/javascript" src="../../include/js/move-top.js"></script>
+		<script type="text/javascript" src="../../include/js/easing.js"></script>
 		   <script type="text/javascript">
 				jQuery(document).ready(function($) {
 					$(".scroll").click(function(event){		
