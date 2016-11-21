@@ -42,7 +42,7 @@ function login()
 	if (mysql_num_rows($query) != 0)
 	{
 
-		$_SESSION['user_session'] = $userName;
+		$_SESSION['customer_session'] = $userName;
 		header('Location: ../home/');
 
 			
