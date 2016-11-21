@@ -81,7 +81,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		
 	<tr>
 		<td><?=$row['categoryId']?></td>
-		<td><?=$row['name']?></td>
+		<td><a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></td>
 		<td><?=$row['description']?></td>
 		<td><?=$row['price']?></td>
 		<td><?=$row['image']?></td>
