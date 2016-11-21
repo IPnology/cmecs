@@ -1,5 +1,5 @@
 # Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-21 16:38:49
+# Date: 2016-11-21 17:06:02
 # Generator: MySQL-Front 5.4  (Build 1.4)
 
 /*!40101 SET NAMES latin1 */;
@@ -21,7 +21,6 @@ CREATE TABLE `category` (
 # Data for table "category"
 #
 
-INSERT INTO `category` VALUES (1,'cat1',NULL,NULL),(2,'cat2',NULL,NULL);
 
 #
 # Structure for table "product"
@@ -57,7 +56,7 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"

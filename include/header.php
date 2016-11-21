@@ -30,17 +30,10 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li> |
-				<li><a href="sale.html">sale</a></li> |
-				<li><a href="handbags.html">handbags</a></li> |
-				<li><a href="accessories.html">accessories</a></li> |
-				<li><a href="wallets.html">wallets</a></li> |
-				<li><a href="sale.html">sale</a></li> |
-				<li><a href="index.html">mens store</a></li> |
-				<li><a href="shoes.html">shoes</a></li> |
-				<li><a href="sale.html">vintage</a></li> |
-				<li><a href="service.html">services</a></li> |
-				<li><a href="contact.html">Contact us</a></li>
+				<li class="active"><a href="/cmecs/admin/home">Home</a></li> |
+				<li><a href="/cmecs/admin/user/?view=list">Accounts</a></li> |
+				<li><a href="/cmecs/admin/category">category</a></li> |
+				<li><a href="/cmecs/admin/product">product</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
