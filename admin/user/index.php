@@ -8,15 +8,21 @@ switch ($view) {
 	case 'register' :
 		$content = 'register.php';
 		$template = '../../include/template-main.php';
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';
 		break;
 		
 	case 'list' :
 		$content 	= 'list.php';
 		$template = '../../include/template-main.php';		
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';
 		break;
 			
 	default :
 		$content 	= 'login.php';
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';
 		$template = '../../include/template-login.php';
 }
 

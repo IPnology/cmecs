@@ -5,14 +5,12 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 	
-	case 'create' :
-		$content 	= 'create.php';
-		$template = '../../include/template-main.php';		
-		break;
 		
 	default :
-		$content 	= 'homepage.php';
+		$content 	= 'content.php';
 		$template = '../../include/template-main.php';
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';
 }
 
 require_once $template;
