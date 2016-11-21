@@ -64,7 +64,7 @@ function register()
 													password='".$password."',
 													level='client'");
 							
-	header('Location: ../home/');
+	header('Location: ../user/?view=list');
 	
 }
 

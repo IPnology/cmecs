@@ -76,7 +76,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	?>	
 		
 	<tr>
-		<td><?=$row['name']?></td>
+		<td><a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></a></td>
 		<td><button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button></td>
 		<td><button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></td>
 	</tr>

@@ -53,6 +53,7 @@ function login()
 function add()
 {
 	$name = $_POST['name'];
+	$description = $_POST['description'];
 	
 	// Where the file is going to be placed 
 	$target_path = "../../media/";
@@ -65,6 +66,7 @@ function add()
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	
 	mysql_query("insert into category set name='".$name."',
+											description='".$description."',
 											image='".$newfilename."'");
 	
 	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
@@ -93,10 +95,31 @@ function update()
 	$id = $_GET['id'];	
 	
 	$name = $_POST['name'];
+	$description = $_POST['description'];
 	
-	mysql_query("update category set name='".$name."' where Id = '".$id."'");
+	// Where the file is going to be placed 
+	$target_path = "../../media/";
+
+	/* Add the original filename to our target path.  
+	Result is "uploads/filename.extension" */
+	$target_path = $target_path . basename( $_FILES['upload_file']['name']); 
+
+	$temp = explode(".", $_FILES["upload_file"]["name"]);
+	$newfilename = round(microtime(true)) . '.' . end($temp);
+	
+	mysql_query("update category set name='".$name."',
+										description='".$description."',
+										image='".$newfilename."'
+										where Id = '".$id."'");
 												
+	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
+							
 	header('Location: ../category/?view=list&message=Successfully Updated.');
+	}
+	else{
+		
+	header('Location: ../category/?error=Not uploaded');
+	}
 	
 }
 
