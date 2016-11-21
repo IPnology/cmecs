@@ -10,4 +10,5 @@ $row=mysql_fetch_array($query)
 	Description:<?=$row['description']?></br>
 	Price:<?=$row['price']?></br>
 	</br></br>
-	<td><button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></td>
+	<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+	<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>

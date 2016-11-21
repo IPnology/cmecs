@@ -9,4 +9,5 @@ $row=mysql_fetch_array($query)
 	Name:<?=$row['name']?></br>
 	Description:<?=$row['description']?>
 	</br></br>
+	<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
 	<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
