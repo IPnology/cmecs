@@ -16,8 +16,9 @@
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form>
-    			<input type="text" value="">
+    		<form action="/cmecs/admin/product" method="GET">
+    			<input type="hidden" name="view" value="searchList">
+				<input type="text" name="search" value="">
     			<input type="submit" value="">
     		</form>
 		</div>
