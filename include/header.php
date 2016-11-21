@@ -33,7 +33,8 @@
 				<li class="active"><a href="/cmecs/admin/home">Home</a></li> |
 				<li><a href="/cmecs/admin/user/?view=list">Accounts</a></li> |
 				<li><a href="/cmecs/admin/category">category</a></li> |
-				<li><a href="/cmecs/admin/product">product</a></li>
+				<li><a href="/cmecs/admin/product">product</a></li> |
+				<li><a href="/cmecs/admin/product">logout</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
