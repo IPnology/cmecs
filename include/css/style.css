@@ -814,9 +814,8 @@ p.para{
 	background: #FFFFFF;
 	border: 1px solid #E7E7E7;
 	color: rgba(85, 81, 81, 0.84);
-	padding: 8px;
 	display: block;
-	width: 96.3333%;
+	width: 172px;
 	outline: none;
 	-webkit-appearance: none;
 	text-transform: capitalize;
@@ -847,7 +846,64 @@ p.para{
 	background: #555555;
 	color: #ffffff;
 }
+.box{
+	
+	background-color:black;
+}
+
 /*-- start details--*/
+
+/*-- login details--*/
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/*-- login details--*/
+
 .single{
 	padding:2% 0;
 }
