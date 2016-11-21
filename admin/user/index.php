@@ -22,6 +22,8 @@ switch ($view) {
 	case 'update' :
 		$content 	= 'update.php';
 		$template = '../../include/template-main.php';		
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';		
 		break;
 		
 			
