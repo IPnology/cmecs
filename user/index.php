@@ -5,9 +5,9 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 		
-	case 'login' :
-		$content 	= 'list.php';
-		$template = '../include/template-main.php';		
+	case 'signup' :
+		$content 	= 'signup.php';
+		$template = '../include/template-login.php';		
 		break;
 			
 	default :
