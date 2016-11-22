@@ -2,21 +2,37 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
 }
 
 li a {
     display: block;
-    color: #000;
+    color: white;
+	text-align: center;
 	font-family: Arial;
-    padding: 8px 16px;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #555;
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+background-color:#c0c0c0;
 }
 
 .homepage {
@@ -24,6 +40,7 @@ li a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #E1D9D9;
+	font-family: Arial;
 }
 
 p {
