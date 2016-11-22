@@ -7,6 +7,7 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST" enctype="multipart/form-data">
+	<div class="ccontainer">
 	Name:</br>
 	<input type="text" name="name" value="<?=$row['name']?>" placeholder="Add category"></br>
 	Description:</br>
@@ -14,5 +15,6 @@ $row=mysql_fetch_array($query)
 	Upload Photo:</br>
 	<input type="file" name="upload_file"  /><br>
 	</br></br>
-	<input type="submit" value="Update">
+	</div>
+	<input type="submit" class="btn-cupdate2" value="Update">
 </form>
