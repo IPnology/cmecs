@@ -874,8 +874,8 @@ form {
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
+    width: 500px;
+    padding: 6px 10px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -960,12 +960,64 @@ span.psw {
 	margin-top:-50px;;
 	border-radius:5px;
 }
-.btn-cupdate2{
+.btn-product{
 	height:40px;
 	width:100px;
 	background-color:green;
-	margin-left:500px;
-	margin-top:-48px;
+	margin-right:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:right;
+}
+.btn-addAccount{
+	height:40px;
+	width:100px;
+	background-color:green;
+	margin-right:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:right;
+}
+.btn-category{
+	height:40px;
+	width:150px;
+	background-color:green;
+	margin-left:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:left;
+}
+.btn-addcategory{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;;
+	border-radius:5px;
+}
+.btn-addproduct{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;;
+	border-radius:5px;
+}
+.btn-cupdate2{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;
+	border-radius:5px;
+	
+}
+.btn-pupdate{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;
 	border-radius:5px;
 	
 }

@@ -59,7 +59,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	}
 </style>
 
-<button onClick="location.href='?view=register'">Add Account</button></br></br>
+<button class="btn-addAccount" onClick="location.href='?view=register'">Add Account</button></br></br>
 
 <br><?=$message;?>
 

@@ -4,7 +4,7 @@ $query = mysql_query("select * from category");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<button onClick="location.href='?view=add'">Add Category</button></br></br>
+<button class="btn-category" onClick="location.href='?view=add'">Add Category</button></br></br>
 
 <br><?=$message;?>
 
