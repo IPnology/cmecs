@@ -63,6 +63,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 <br><?=$message;?>
 
+
+<div style="min-height: 55%;">
 <table>
 	
 	<tr>
@@ -88,3 +90,4 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		}
 	?>
 </table>
+</div>
