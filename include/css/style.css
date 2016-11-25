@@ -248,6 +248,7 @@ body {
 .h_menu ul li.active a{
 	color:#f0f0f0;
 }
+
 /* start icon styles */
 .h_icon{
 	float: right;
@@ -356,6 +357,10 @@ body {
 	border-bottom:20px solid transparent;
 	border-top: 20px solid transparent;
 	border-right:20px solid #323757;
+}
+.h_admin{
+	color:#fff;
+	font-size: 1.2em;
 }
 /* Mobile */
 .icon1-trigger {
@@ -508,6 +513,7 @@ body {
 .footer{
 	padding: 1.5%;
 	color: #fff;
+
 }
 /* start grids_of_3 */
 .grids_of_4{
@@ -1195,6 +1201,21 @@ span.psw {
 	float: right;
 }
 /* end description */
+
+/* start of detail buttons */
+.updatebtn {
+	background-color: #3a7fcc;
+	border-radius: 5px;
+	min-width: 30%;
+}
+
+.deletebtn {
+	background-color: #d43030;
+	border-radius: 5px;
+	min-width: 30%;
+}
+/* end of detail buttons */
+
 /* start sellers */
 .sellers{
 	font-family: 'Source Sans Pro', sans-serif;
