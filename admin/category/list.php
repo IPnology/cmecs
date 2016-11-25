@@ -4,11 +4,6 @@ $query = mysql_query("select * from category");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<<<<<<< HEAD
-<button class="btn-category" onClick="location.href='?view=add'">Add Category</button></br></br>
-
-=======
->>>>>>> upstream/master
 <br><?=$message;?>
 
 <div class="main_bg">
