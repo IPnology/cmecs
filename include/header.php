@@ -12,7 +12,7 @@
 		<div class="welcome">
 			Welcome, <?=$_SESSION['user_session'];?>!
 			<div>
-				<a href="../../customer/user/process.php?action=logout">Logout</a>
+				<a href="../../admin/user/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
@@ -39,6 +39,7 @@
 			<ul>
 				<li class="active"><a href="../../admin/home">Home</a></li> |
 				<li><a href="../../admin/user/?view=list">Accounts</a></li> |
+				<li><a href="../../admin/order">Order</a></li> |
 				<li><a href="../../admin/category">category</a></li> |
 				<li><a href="../../admin/product">product</a></li>
 			</ul>
