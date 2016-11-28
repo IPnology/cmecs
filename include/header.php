@@ -12,7 +12,7 @@
 		<div class="welcome">
 			Welcome, <?=$_SESSION['user_session'];?>!
 			<div>
-				<a href="../../customer/user/process.php?action=logout">Logout</a>
+				<a href="../../admin/user/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
