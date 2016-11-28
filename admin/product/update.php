@@ -7,7 +7,7 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST" enctype="multipart/form-data">
-	<div class="ccontainer" style="border:1px solid; padding:10px 20px; margin-left:500px;">
+	<div class="ccontainer">
 	Name:</br>
 	<input type="text" style="width:350px;" name="name" value="<?=$row['name']?>" placeholder="Add category"></br>
 	Description:</br>

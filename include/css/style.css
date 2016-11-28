@@ -854,7 +854,7 @@ p.para{
 	border: 1px solid #E7E7E7;
 	color: rgba(85, 81, 81, 0.84);
 	display: block;
-	width: 172px;
+	width: 350px;
 	outline: none;
 	-webkit-appearance: none;
 	text-transform: capitalize;
@@ -898,7 +898,7 @@ form {
 }
 
 input[type=text], input[type=password] {
-    width: 500px;
+    width: 350px;
     padding: 6px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -911,6 +911,11 @@ input[type=text], input[type=password] {
 	margin-top: 10px;
 	font-style: bold;
 	font-size: 1.2em;
+}
+.description {
+	width:350px; 
+	height:100px; 
+	padding:6px 10px;
 }
 button {
     background-color: #4CAF50;
@@ -961,12 +966,14 @@ span.psw {
 .ccontainer{
 	
 	font-family: Arial; 
-	margin-left:50px;
 	margin-right:auto;
 	margin-top:20px;
 	margin-bottom:10px;
 	width:350px;
-	
+	border:1px solid; 
+	border-color:grey;
+	padding:10px 20px; 
+	margin-left:500px;
 }
 .c2container{
 	
@@ -987,7 +994,7 @@ span.psw {
 }
 .btn-addAccount{
 	height:40px;
-	width:200px;
+	width:150px;
 	background-color:green;
 	margin-right:20px;
 	margin-top:5px;;
@@ -1039,9 +1046,11 @@ span.psw {
 	width: 52.3333%;
 }
 .span1_of_1_des{
-	float: right;
 	width: 44.3333%;
 	margin-left: 3.333%;
+	margin-left:-190px;
+	float:left; 
+	display:block;
 }
 /* start desc1 */
 .desc1 {

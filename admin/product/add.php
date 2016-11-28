@@ -3,16 +3,16 @@
 <body>
 
 <form action="process.php?action=add" method="POST" enctype="multipart/form-data">
-	<div class="ccontainer" style="border:1px solid; border-color:grey; padding:10px 20px; margin-left:500px;">
-	Name:</br>
-	<input type="text" name="name" style="width:350px;" placeholder="Add product name" required></br>
-	Description:</br>
-	<textarea name="description" placeholder="Inpute description here" style="width:350px; height:100px; padding:6px 10px;"></textarea></br>
-	Price:</br>
-	<input type="text" name="price" style="width:350px;" placeholder="Add price" required></br></br>
-	Upload Photo:
-	<input type="file" name="upload_file"  /><br>
-	</br></br>
+	<div class="ccontainer">
+	<div class="contact-form">
+	<span><label>Name</label></span>
+	<input type="text" name="name" placeholder="Add product name" required>
+	<span><label>Description</label></span>
+	<textarea name="description" placeholder="Inpute description here" class="description"></textarea>
+	<span><label>Price</label></span>
+	<input type="text" name="price" placeholder="Add price" required>
+	<span><label>Upload Photo:</label></span>
+	<input type="file" name="upload_file"/><br>
 	<input type="submit" class="btn-addproduct" value="Add">
 	</div>
 </form>
