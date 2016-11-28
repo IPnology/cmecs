@@ -12,7 +12,7 @@
 		<div class="welcome">
 			Welcome <?=$_SESSION['customer_session'];?>!
 			<div>
-				<a href="../../user/account/?view=list">My Account</a>  | 
+				<a href="../../user/account/?view=detail">My Account</a>  | 
 				<a href="../../user/account/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
