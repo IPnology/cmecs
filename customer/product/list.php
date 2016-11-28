@@ -92,3 +92,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		}
 	?>
 </table>
+
+<?php
+require_once 'tempCart.php';
+?>

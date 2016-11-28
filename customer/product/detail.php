@@ -32,3 +32,7 @@ $row=mysql_fetch_array($query)
 		}
 	?>
 	</form>
+
+<?php
+require_once 'tempCart.php';
+?>

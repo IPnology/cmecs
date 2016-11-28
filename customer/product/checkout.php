@@ -1,15 +1,11 @@
 <?php
 $query = mysql_query("select * from temp_cart");
-
-$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-
-<br><?=$message;?>
 
 <table>
 	
 	<tr>
-		<th>Product Id</th>
+		<th>UserName</th>
 		<th>Quantity</th>
 		<th>Price</th>
 	</tr>
@@ -28,5 +24,4 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		}
 	?>
 	
-	<button onclick="location.href='?view=checkout">Checkout</button>
 </table>

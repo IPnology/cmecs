@@ -47,6 +47,13 @@ switch ($view) {
 		$footer 	= '../../include/footer.php';		
 		break;
 		
+	case 'checkout' :
+		$content 	= 'checkout.php';
+		$template = '../../include/template-main.php';		
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';		
+		break;
+		
 			
 	default :
 		$content 	= 'list.php';
@@ -56,8 +63,6 @@ switch ($view) {
 }
 
 require_once $template;
-
-require_once 'tempCart.php';
 
 ?>
 
