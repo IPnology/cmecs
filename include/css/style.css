@@ -525,6 +525,11 @@ body {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+/* content minimum width */
+.content-min-height{
+	min-height: 90%;
+}
+/* end of content min width */
 /* start footer */
 .footer_bg{
 	background: #47585b;	

@@ -7,7 +7,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 <div class="main_bg">
 <div class="wrap">	
-<div class="main">	
+<div class="main">
+<div style="width: 74.3333%; float:left;">
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
@@ -23,11 +24,13 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				</div>
 			</div>
 	</div>
+	
 	<!--asta d-->
 <?php
 	}
 ?>
-<div class="clear"></div>
+
+</div>
 </div>
 </div>
 </div>
@@ -35,3 +38,5 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <?php
 require_once 'tempCart.php';
 ?>
+
+<div class="clear"></div>
