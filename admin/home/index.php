@@ -9,7 +9,7 @@ switch ($view) {
 	default :
 		$content 	= 'content.php';
 		$template = '../../include/template-main.php';
-		$header 	= '../../include/header.php';
+		$header 	= '../../include/headerCustomer.php';
 		$footer 	= '../../include/footer.php';
 }
 
