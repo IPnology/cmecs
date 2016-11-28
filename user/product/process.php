@@ -71,6 +71,7 @@ function confirmAddress()
 	$postal = $_POST['postal'];
 	$orderNumber = round(microtime(true));
 	
+	# input data to checkout
 	mysql_query("insert into checkout set username='".$username."',
 											street='".$street."',
 											brgy='".$brgy."',
@@ -80,6 +81,7 @@ function confirmAddress()
 											orderNumber='".$orderNumber."',
 											date=NOW()");
 
+	#copy data from temp_cart to cart
 	$query = mysql_query("select * from temp_cart where username='".$username."'");
 	if(mysql_num_rows($query)>0){ 
 				while($row=mysql_fetch_array($query)){
@@ -95,6 +97,7 @@ function confirmAddress()
 				}
 	}
 	
+	#delete data from temp_cart
 	mysql_query("delete from temp_cart where username='".$username."'");
 	
 	header('Location: ../product/?view=success');
