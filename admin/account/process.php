@@ -37,12 +37,12 @@ function login()
 	$userName = $_POST['username'];
 	$password = $_POST['password'];
 	
-	$query = mysql_query("select * from user where username = '".$userName."' and password = '".$password."'");
+	$query = mysql_query("select * from admin where username = '".$userName."' and password = '".$password."'");
 	
 	if (mysql_num_rows($query) != 0)
 	{
 
-		$_SESSION['user_session'] = $userName;
+		$_SESSION['admin_session'] = $userName;
 		header('Location: ../home/');
 
 			
@@ -58,8 +58,8 @@ function login()
 function logout()
 
 {
-	if (isset($_SESSION['user_session'])) {
-		unset($_SESSION['user_session']);
+	if (isset($_SESSION['admin_session'])) {
+		unset($_SESSION['admin_session']);
 	}
 	header('Location: index.php');
 	exit;
@@ -74,13 +74,13 @@ function register()
 	$password = $_POST['password'];
 	$repeatpassword = $_POST['repeatpassword'];
 	
-	mysql_query("insert into user set username='".$username."',
+	mysql_query("insert into admin set username='".$username."',
 													fname='".$firstname."',
 													lname='".$lastname."',
 													password='".$password."',
 													level='client'");
 							
-	header('Location: ../user/?view=list');
+	header('Location: ../account/?view=list');
 	
 }
 
@@ -88,9 +88,9 @@ function delete()
 {
 	$id = $_GET['id'];	
 	
-	mysql_query("delete from user where Id = '".$id."'");
+	mysql_query("delete from admin where Id = '".$id."'");
 	
-	header('Location: ../user/?view=list&message=Successfully Deleted.');
+	header('Location: ../account/?view=list&message=Successfully Deleted.');
 	
 }
 
@@ -104,14 +104,14 @@ function update()
 	$password = $_POST['password'];
 	$repeatpassword = $_POST['repeatpassword'];
 	
-	mysql_query("update user set username='".$username."',
+	mysql_query("update admin set username='".$username."',
 												fname='".$firstname."',
 												lname='".$lastname."',
 												password='".$password."',
 												level='client'
 												where Id = '".$id."'");
 												
-	header('Location: ../user/?view=list&message=Successfully Updated.');
+	header('Location: ../account/?view=list&message=Successfully Updated.');
 	
 }
 

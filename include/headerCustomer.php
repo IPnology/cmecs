@@ -10,14 +10,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome, <?=$_SESSION['customer_session'];?>!
+			Welcome <?=$_SESSION['customer_session'];?>!
 			<div>
-				<a href="../../customer/user/?view=list">My Account</a>  | 
-				<a href="../../customer/user/process.php?action=logout">Logout</a>
+				<a href="../../user/account/?view=list">My Account</a>  | 
+				<a href="../../user/account/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
-			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
+			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
     		<form action="../../admin/product" method="GET">
@@ -35,10 +35,10 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="../../customer/home">Home</a></li> |
-				<li><a href="../../customer/category">category</a></li> |
-				<li><a href="../../customer/product">product</a></li> |
-				<li><a href="../../customer/product">wishlist</a></li>	
+				<li class="active"><a href="../../user/home">Home</a></li> |
+				<li><a href="../../user/category">category</a></li> |
+				<li><a href="../../user/product">product</a></li> |
+				<li><a href="../../user/product">wishlist</a></li>	
 			</ul>
 		</div>
 		<div class="top-nav">
