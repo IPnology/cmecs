@@ -9,6 +9,7 @@
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
+	Admin side
 		<div class="logo">
 			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>

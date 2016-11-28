@@ -1,6 +1,6 @@
 <?php
 
-	header("Location: admin/");	
+	header("Location: customer/");	
 
 ?>
 
