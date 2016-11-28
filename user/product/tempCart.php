@@ -1,5 +1,7 @@
 <?php
-$query = mysql_query("select * from temp_cart");
+$username = $_SESSION['customer_session'];
+
+$query = mysql_query("select * from temp_cart where username = '$username'");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
