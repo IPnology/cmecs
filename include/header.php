@@ -9,12 +9,17 @@
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
-	Admin side
-		<div class="logo">
-			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
+		<div class="welcome">
+			Welcome, <?=$_SESSION['user_session'];?>!
+			<div>
+				<a href="../../customer/user/process.php?action=logout">Logout</a>
+			</div>	
 		</div>
-		<div class="h_icon">
-			<a class="h_admin" href="#"><i>Welcome, <?=$_SESSION['user_session'];?></i></a>
+		<div class="logo">
+		<ul>
+			<li><a href="index.html"><img src="../../include/images/logo.png" alt=""/></a></li>
+			<li><div style="font-style:Arial; font-size: .75em; float:left; color: #fff;">CASA MUEBLES ADMINISTRATOR SIDE</div></li>
+		</ul>
 		</div>
 		<div class="h_search">
     		<form action="../../admin/product" method="GET">
@@ -35,8 +40,7 @@
 				<li class="active"><a href="../../admin/home">Home</a></li> |
 				<li><a href="../../admin/user/?view=list">Accounts</a></li> |
 				<li><a href="../../admin/category">category</a></li> |
-				<li><a href="../../admin/product">product</a></li> |
-				<li><a href="../../admin/user/process.php?action=logout">logout</a></li>
+				<li><a href="../../admin/product">product</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
