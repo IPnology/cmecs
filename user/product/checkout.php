@@ -4,7 +4,6 @@ $query = mysql_query("select * from temp_cart");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<br><?=$message;?>
  <div class="left_sidebar">
 	<div class="sellers">
 		<h4>MY CART</h4>
@@ -32,15 +31,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				</tr>
 			
 			<?php
-				}
-			?>
-			<td colspan="5"><button onclick="location.href='?view=checkout'">Checkout</button>
-			<?php
+				}	
 				}
 				else
 				{
 					echo "Cart is empty";
-
 				}
 			?>
 			</table>		
