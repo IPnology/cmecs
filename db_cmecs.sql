@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-28 15:56:23
+# Date: 2016-11-28 17:20:54
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -50,10 +50,11 @@ INSERT INTO `category` VALUES (1,'cat1','','1480310724.jpg'),(2,'cat2','','14803
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `orderNumber` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `username` varchar(11) DEFAULT NULL,
+  `orderNumber` varchar(11) DEFAULT NULL,
+  `address` varchar(11) DEFAULT NULL,
+  `date` varchar(11) DEFAULT NULL,
+  `status` varchar(11) DEFAULT NULL,
   `totalPrice` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -62,6 +63,7 @@ CREATE TABLE `order` (
 # Data for table "order"
 #
 
+INSERT INTO `order` VALUES (1,'dalelicious','1','bacolod','1-1-2017','delivered',100);
 
 #
 # Structure for table "product"
