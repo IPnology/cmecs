@@ -15,14 +15,14 @@ $row=mysql_fetch_array($query)
 					<div class="product-view">
 						<div class="product-essential">
 							<div class="product-img-box">
-								<div class="product-image"> 
+								<div class="product-image">
 									<img src="../../media/<?=$row['image']?>"></br>
 							   </div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="span1_of_1_des">
+				<div class="span1_of_1_des" style="margin-left:-190px; float:left;">
 					<div class="desc1">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Description: <?=$row['description']?></p>
@@ -38,4 +38,4 @@ $row=mysql_fetch_array($query)
 	   <div class="clear"></div>
 	</div>
 </div>
-</div>
+</div>	
