@@ -9,17 +9,9 @@ switch ($action) {
 	case 'login' :
 		login();
 		break;
-
-	case 'add' :
-		add();
-		break;
 	
-	case 'delete' :
-		delete();
-		break;
-	
-	case 'update' :
-		update();
+	case 'add-to-cart' :
+		addToCart();
 		break;
 	
 	default :
@@ -50,82 +42,19 @@ function login()
 	
 }
 
-function add()
+function addToCart()
 {
-	$name = $_POST['name'];
-	$description = $_POST['description'];
+	$username = $_POST['username'];
+	$productId = $_POST['productId'];
+	$quantity = $_POST['quantity'];
 	$price = $_POST['price'];
 	
-	// Where the file is going to be placed 
-	$target_path = "../../media/";
-
-	/* Add the original filename to our target path.  
-	Result is "uploads/filename.extension" */
-	$target_path = $target_path . basename( $_FILES['upload_file']['name']); 
-
-	$temp = explode(".", $_FILES["upload_file"]["name"]);
-	$newfilename = round(microtime(true)) . '.' . end($temp);
-	
-	mysql_query("insert into product set name='".$name."',
-											description='".$description."',
-											price='".$price."',
-											image='".$newfilename."'");
-							
-	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
-							
-	header('Location: ../product/');
-	}
-	else{
-		
-	header('Location: ../product/?error=Not uploaded');
-	}
-	
-}
-
-function delete()
-{
-	$id = $_GET['id'];	
-	
-	mysql_query("delete from product where Id = '".$id."'");
-	
-	header('Location: ../product/?view=list&message=Successfully Deleted.');
-	
-}
-
-function update()
-{
-	$id = $_GET['id'];	
-	
-	$name = $_POST['name'];
-	$description = $_POST['description'];
-	$price = $_POST['price'];
-	$image = $_POST['image'];
-	
-	// Where the file is going to be placed 
-	$target_path = "../../media/";
-
-	/* Add the original filename to our target path.  
-	Result is "uploads/filename.extension" */
-	$target_path = $target_path . basename( $_FILES['upload_file']['name']); 
-
-	$temp = explode(".", $_FILES["upload_file"]["name"]);
-	$newfilename = round(microtime(true)) . '.' . end($temp);
-	
-	mysql_query("update product set name='".$name."',
-										description='".$description."',
-										price='".$price."',
-										image='".$newfilename."'
-										where Id = '".$id."'");
-	
-	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
-							
-	header('Location: ../product/?view=list&message=Successfully Updated.');
-	}
-	else{
-		
-	header('Location: ../product/?error=Not uploaded');
-	}
-	
+	mysql_query("insert into temp_cart set username='".$username."',
+											productId='".$productId."',
+											quantity='".$quantity."',
+											price='".$price."'");
+											
+	header('Location: ../product/?view=detail&id='.$productId);
 }
 
 ?>

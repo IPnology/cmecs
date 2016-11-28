@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-21 19:58:59
+# Date: 2016-11-28 15:56:23
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -16,12 +16,13 @@ CREATE TABLE `cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "cart"
 #
 
+INSERT INTO `cart` VALUES (1,NULL,5,1,600),(2,NULL,5,1,600);
 
 #
 # Structure for table "category"
@@ -34,13 +35,13 @@ CREATE TABLE `category` (
   `description` text,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "category"
 #
 
-INSERT INTO `category` VALUES (1,'cat1',NULL,NULL),(2,'cat2',NULL,NULL),(4,'cat4','cat ni sa','1479721468.jpg');
+INSERT INTO `category` VALUES (1,'cat1','','1480310724.jpg'),(2,'cat2','','1480310734.jpg'),(4,'cat4','cat ni sa','1480310743.jpg');
 
 #
 # Structure for table "order"
@@ -75,13 +76,33 @@ CREATE TABLE `product` (
   `price` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "product"
 #
 
-INSERT INTO `product` VALUES (1,NULL,'prod1',NULL,NULL,NULL),(2,NULL,'prod2',NULL,NULL,NULL),(3,NULL,'prod3',NULL,NULL,NULL),(5,NULL,'prouduct','super','600','ab'),(7,NULL,'proddds','prodds','1000','1479722823.jpg');
+INSERT INTO `product` VALUES (1,NULL,'prod1',NULL,NULL,NULL),(2,NULL,'prod2',NULL,NULL,NULL),(3,NULL,'prod3',NULL,NULL,NULL),(5,NULL,'prouduct','super','600','ab'),(7,NULL,'proddds','prodds','1000','1479722823.jpg'),(8,NULL,'Product1','pro','1000','1479731194.jpg');
+
+#
+# Structure for table "temp_cart"
+#
+
+DROP TABLE IF EXISTS `temp_cart`;
+CREATE TABLE `temp_cart` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(11) DEFAULT NULL,
+  `productId` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT '1',
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+#
+# Data for table "temp_cart"
+#
+
+INSERT INTO `temp_cart` VALUES (11,'dalelicious',2,2,0),(12,'dalelicious',2,1,0),(13,'dalelicious',5,1,600);
 
 #
 # Structure for table "user"
@@ -96,7 +117,7 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
