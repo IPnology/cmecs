@@ -1,4 +1,5 @@
-<?
+<?php
+	
 	if (!$_SESSION['user_session'])
 	{
 		header("Location: ../user");	
@@ -10,14 +11,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome, <?=$_SESSION['user_session'];?>!
+			Welcome <?=$_SESSION['user_session'];?>!
 			<div>
 				<a href="../../admin/user/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
 		<ul>
-			<li><a href="index.html"><img src="../../include/images/logo.png" alt=""/></a></li>
+			<li><a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/></a></li>
 			<li><div style="font-style:Arial; font-size: .75em; float:left; color: #fff;">CASA MUEBLES ADMINISTRATOR SIDE</div></li>
 		</ul>
 		</div>

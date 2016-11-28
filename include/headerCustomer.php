@@ -10,14 +10,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome, <?=$_SESSION['customer_session'];?>!
+			Welcome <?=$_SESSION['customer_session'];?>!
 			<div>
 				<a href="../../customer/user/?view=list">My Account</a>  | 
 				<a href="../../customer/user/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
-			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
+			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
     		<form action="../../admin/product" method="GET">
