@@ -40,4 +40,4 @@ $row=mysql_fetch_array($query)
 	</div>
 </div>
 </div>	
-	
+</div>	
