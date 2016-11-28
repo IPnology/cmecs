@@ -1,8 +1,8 @@
 <?php
 	
-	if (!$_SESSION['user_session'])
+	if (!$_SESSION['admin_session'])
 	{
-		header("Location: ../user");	
+		header("Location: ../account");	
 	}
 ?>
 
@@ -11,9 +11,9 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome <?=$_SESSION['user_session'];?>!
+			Welcome <?=$_SESSION['admin_session'];?>!
 			<div>
-				<a href="../../admin/user/process.php?action=logout">Logout</a>
+				<a href="../../admin/account/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
 		<div class="logo">
@@ -39,7 +39,7 @@
 		<div class="h_menu">
 			<ul>
 				<li class="active"><a href="../../admin/home">Home</a></li> |
-				<li><a href="../../admin/user/?view=list">Accounts</a></li> |
+				<li><a href="../../admin/account/?view=list">Accounts</a></li> |
 				<li><a href="../../admin/order">Order</a></li> |
 				<li><a href="../../admin/category">category</a></li> |
 				<li><a href="../../admin/product">product</a></li> |
