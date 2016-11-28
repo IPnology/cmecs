@@ -9,7 +9,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<div class="sellers">
 		<h4>MY CART</h4>
 		<div class="single-nav">
-			<table class="mycart">
+			<table class="tablemycart">
 				<tr>
 					<th>PRODUCT NAME</th>
 					<th></th>

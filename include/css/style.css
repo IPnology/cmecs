@@ -1206,22 +1206,22 @@ span.psw {
 /* end of detail buttons */
 
 /* start of my cart */
-.table mycart { 
+table.tablemycart { 
     width: 100%;
 }
-th{
+table.tablemycart th{
     text-align: center;	
 	font-weight: bold;
     border-bottom: 1px solid #ddd;
 }
-td {
+table.tablemycart td {
     padding: 5%;
     text-align: center;
     border-bottom: 1px solid #ddd;
 	width: 1%;
 }
 
-tr:hover{background-color:#f5f5f5}
+table.tablemycart tr:hover{background-color:#f5f5f5}
 		
 /* end of my cart */
 
