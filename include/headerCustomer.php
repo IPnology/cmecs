@@ -12,7 +12,7 @@
 		<div class="welcome">
 			Welcome <?=$_SESSION['customer_session'];?>!
 			<div>
-				<a href="../../user/account/?view=list">My Account</a>  | 
+				<a href="../../user/account/?view=detail">My Account</a>  | 
 				<a href="../../user/account/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
@@ -20,7 +20,7 @@
 			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
-    		<form action="../../admin/product" method="GET">
+    		<form class="formsearch" action="../../admin/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">

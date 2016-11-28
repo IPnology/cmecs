@@ -12,8 +12,8 @@ switch ($view) {
 		$footer 	= '../../include/footer.php';
 		break;
 		
-	case 'list' :
-		$content 	= 'list.php';
+	case 'detail' :
+		$content 	= 'detail.php';
 		$template = '../../include/template-main.php';		
 		$header 	= '../../include/headerCustomer.php';
 		$footer 	= '../../include/footer.php';

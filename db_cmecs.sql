@@ -1,8 +1,8 @@
-# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-28 18:10:09
-# Generator: MySQL-Front 5.4  (Build 1.4)
+﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
+# Date: 2016-11-28 19:39:46
+# Generator: MySQL-Front 5.4  (Build 1.40)
 
-/*!40101 SET NAMES latin1 */;
+/*!40101 SET NAMES utf8 */;
 
 #
 # Structure for table "admin"
@@ -144,13 +144,13 @@ CREATE TABLE `temp_cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "temp_cart"
 #
 
-INSERT INTO `temp_cart` VALUES (11,'dalelicious',2,2,0),(12,'dalelicious',2,1,0),(13,'dalelicious',5,1,600),(14,'admin',1,1,0);
+INSERT INTO `temp_cart` VALUES (1,'dalelicious',7,1,1000);
 
 #
 # Structure for table "user"
@@ -163,6 +163,15 @@ CREATE TABLE `user` (
   `fname` varchar(255) DEFAULT NULL,
   `lname` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `birthdate` varchar(11) DEFAULT NULL,
+  `gender` varchar(11) DEFAULT NULL,
+  `street` varchar(20) DEFAULT NULL,
+  `brgy` varchar(20) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `province` varchar(20) DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  `postal` varchar(20) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
@@ -171,4 +180,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'admin','i am','admin','1234','admin'),(2,'dalelicious','dale','torre','123','client'),(3,'fredowinz23','fred','garcia','123','client');
+INSERT INTO `user` VALUES (1,'admin','i am','admin','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'admin'),(2,'dalelicious','dale','torre','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client'),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client');

@@ -7,8 +7,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <button class="btn-addAccount" onClick="location.href='?view=register'">Add Account</button></br></br>
 <br><?=$message;?>
 
-
-<div style="min-height: 55%;">
 <table class="tableaccount">
 	
 	<tr>
@@ -34,4 +32,3 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		}
 	?>
 </table>
-</div>

@@ -75,7 +75,7 @@ body {
 	color: #312c3c;
 	background: #FFFFFF;
 	border: none;
-	width: 84.33333%;
+	width: 74.33333%;
 	line-height: 1.5em;
 	position: relative;
 	font-size: 0.8725em;
@@ -91,7 +91,8 @@ body {
 	line-height: 1.5em;
 	outline: none;
 	position: absolute;
-	right: 0px;
+	right: 90px;
+	top: 9px;
 }
 .h_search input[type="submit"]:hover {
 	background: url('../images/search_h.png') no-repeat 10px 5px;
@@ -524,6 +525,11 @@ body {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+/* content minimum width */
+.content-min-height{
+	min-height: 90%;
+}
+/* end of content min width */
 /* start footer */
 .footer_bg{
 	background: #47585b;	
@@ -1301,6 +1307,26 @@ span.psw {
 }
 /* end of detail buttons */
 
+/* start of my cart */
+table.tablemycart { 
+    width: 100%;
+}
+table.tablemycart th{
+    text-align: center;	
+	font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+table.tablemycart td {
+    padding: 5%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+	width: 1%;
+}
+
+table.tablemycart tr:hover{background-color:#f5f5f5}
+		
+/* end of my cart */
+
 /* start sellers */
 .sellers{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -1313,7 +1339,7 @@ span.psw {
 	line-height: 1.5em;
 	text-shadow: 0 1px 0 #1C6159;
 	padding: 10px 20px;
-	background: #4CCFC1;
+	background: #13a04e;
 }
 .single-nav li {
 	list-style-image: url(../images/marker1.gif);
