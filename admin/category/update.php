@@ -10,9 +10,11 @@ $row=mysql_fetch_array($query)
 	<div class="ccontainer">
 	<div class="contact-form">
 	<span><label>Name</label></span>
-	<input type="text" name="name" value="<?=$row['name']?>" required></br>
+	<input type="text" name="name" value="<?=$row['name']?>" required>
+	
 	<span><label>Description</label></span>
-	<textarea name="description" class="description"><?=$row['description']?></textarea></br>
+	<textarea name="description" class="description"><?=$row['description']?></textarea>
+	
 	<span><label>Upload Photo:</label></span>
 	<input type="file" name="upload_file"/><br>
 	</br>

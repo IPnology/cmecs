@@ -14,12 +14,16 @@ $row=mysql_fetch_array($query)
 	
 	<span><label>First name</label></span>
 	<input type="text" name="firstname" value="<?=$row['fname']?>" placeholder="your first name">
+	
 	<span><label>Last name</label></span>
 	<input type="text" name="lastname" value="<?=$row['lname']?>" placeholder="your last name">
+	
 	<span><label>Password</label></span>
 	<input type="password" name="password" placeholder="enter password">
+	
 	<span><label>Repeat Password</label></span>
 	<input type="password" name="repeatpassword" placeholder="enter password">
+	
 	<button class="button updatebtn" type="submit" value="Update">Save Changes</button>
 	</div>
 	</div>

@@ -868,13 +868,15 @@ p.para{
 	font-family: 'Source Sans Pro', sans-serif;
 	-webkit-appearance: none;
 	cursor:pointer;
-	color: #ffffff;
-	background: #3CC395;
-	border:none;
+	background-color:#3a7fcc;
+	min-width: 30%;
+	height:30px;
+	border-radius:5px;
 	outline:none;
 	display: inline-block;
 	text-transform: uppercase;
 	padding: 12px 38px;
+	padding-bottom:20px;
 	font-size: 0.875em;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -890,8 +892,99 @@ p.para{
 	background-color:black;
 }
 
-/*-- start details--*/
+/*-- start account --*/
+table.tableaccount {
+		border-collapse: collapse;
+		width: 100%;
+		font-family: Arial;
+		font-size: 80%;
+	}
+table.tableaccount {
+		border-collapse: collapse;
+		width: 100%;
+		font-family: Arial;
+		font-size: 80%;
+	}
 
+table.tableaccount th, td {
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		text-decoration: none;
+	}
+	
+table.tableaccount th {
+		background-color: #167F92;
+		border-bottom:1px solid white;
+		color: white;
+	}
+table.tableaccount tr, td{
+	background-color: #D9E4E6;
+	
+}
+table.tableaccount tr:hover{background-color:#f5f5f5}
+	
+button {
+		border: none;
+		border-radius: 5px;
+		padding: 5px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 90%;
+		margin: 2px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	
+.deletebtn:hover {
+		background-color: #ac1414;
+	}
+	
+.deletebtn {
+		color: white;
+		background-color: #e52828;
+	}
+	
+.updatebtn {
+		color: white;
+		background-color: #2391d6;
+	}
+	
+.updatebtn:hover {
+	background-color: #186799;
+}
+/*-- end account --*/
+/*-- start order --*/
+table.tableorder {
+		border-collapse: collapse;
+		width: 100%;
+		font-family: Arial;
+		font-size: 80%;
+	}
+
+table.tableorder th, td {
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		text-decoration: none;
+	}
+	
+table.tableorder th {
+		background-color: #167F92;
+		border-right:1px solid white;
+		border-bottom:1px solid white;
+		color: white;
+	}
+table.tableorder tr, td{
+	background-color: #D9E4E6;
+	border-right:1px solid white;
+	
+}
+table.tableorder tr:hover{background-color:#f5f5f5;
+}
+/*-- end of order --*/
 /*-- login details--*/
 form {
     border: 3px solid #f1f1f1;

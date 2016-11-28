@@ -1,10 +1,10 @@
 <?php
 $query = mysql_query("select * from checkout");
 ?>
-
-ORDER
-
-<table>
+<div style="min-height: 55%;">
+<h1></br>Order Details</br></h1>
+</br>
+<table class="tableorder">
 
 	<tr>
 		<th>Username</th>
@@ -31,3 +31,4 @@ ORDER
 	?>
 	
 </table>
+</div>
