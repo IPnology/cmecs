@@ -14,7 +14,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		if(mysql_num_rows($query)>0){ 
 			while($row=mysql_fetch_array($query)){
 		?>	
-		<table>
+		<table class="mycart">
 			<tr>
 				<th>Product Name</th>
 				<th>Quantity</th>
@@ -38,5 +38,5 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			<button onclick="location.href='?view=checkout">Checkout</button>
 		</div>
 	</div>
-<div class="clear"></div>
 </div>
+<div class="clear"></div>
