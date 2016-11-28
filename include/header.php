@@ -23,7 +23,7 @@
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form action="/cmecs/admin/product" method="GET">
+    		<form action="../../admin/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
@@ -38,11 +38,11 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="/cmecs/admin/home">Home</a></li> |
-				<li><a href="/cmecs/admin/user/?view=list">Accounts</a></li> |
-				<li><a href="/cmecs/admin/category">category</a></li> |
-				<li><a href="/cmecs/admin/product">product</a></li> |
-				<li><a href="/cmecs/admin/user/process.php?action=logout">logout</a></li>
+				<li class="active"><a href="../../admin/home">Home</a></li> |
+				<li><a href="../../admin/user/?view=list">Accounts</a></li> |
+				<li><a href="../../admin/category">category</a></li> |
+				<li><a href="../../admin/product">product</a></li> |
+				<li><a href="../../admin/user/process.php?action=logout">logout</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
