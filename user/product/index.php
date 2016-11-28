@@ -53,6 +53,20 @@ switch ($view) {
 		$header 	= '../../include/headerCustomer.php';
 		$footer 	= '../../include/footer.php';		
 		break;
+		
+	case 'shipping-address' :
+		$content 	= 'shippingAddress.php';
+		$template = '../../include/template-main.php';		
+		$header 	= '../../include/headerCustomer.php';
+		$footer 	= '../../include/footer.php';		
+		break;
+		
+	case 'success' :
+		$content 	= 'success.php';
+		$template = '../../include/template-main.php';		
+		$header 	= '../../include/headerCustomer.php';
+		$footer 	= '../../include/footer.php';		
+		break;
 			
 	default :
 		$content 	= 'list.php';

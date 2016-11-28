@@ -42,4 +42,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		</div>
 	</div>
 </div>
+
+<button onClick="location.href='?view=shipping-address'">Next</button>
+
 <div class="clear"></div>
