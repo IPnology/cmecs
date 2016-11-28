@@ -43,19 +43,30 @@ body {
 	padding: 2%;
 }
 .logo{
-	float:left;
+	display:inline-block;
+}
+/* customer header */
+.welcome {
+	font-family Arial;
+	color: #fff;
+	font-size: 1.2em;
+	float:right;
+}
+.welcome a {
+	color: #13a04e;
+	font-size: .7em;
+	font-weight: bold;
+}
+.welcome a:hover {
+	color: #c0c0c0;
+	font-size: .7em;
 }
 /*search*/
 .h_search{
 	float: right;
 	position: relative;
-	border: 1px solid rgb(216, 216, 216);
 	width: 40.3333%;
-	margin: 0.5% 15% 0;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-o-border-radius: 2px;
+	margin: 0.5% 5% 0;
 }
 .h_search input[type="text"]{
 	-webkit-appearance: none;
@@ -217,6 +228,13 @@ body {
 }
 .header_sub{
 	padding: 0 2%;
+}
+/* header customer */
+.customerh_menu {
+	font-family: 'Arial';
+	float:left;
+	color:#ffffff;
+	font-size: .65em;
 }
 /* start menu */
 .h_menu{
@@ -975,15 +993,6 @@ span.psw {
 	margin-top:5px;;
 	border-radius:6px;
 	float:right;
-}
-.btn-category{
-	height:40px;
-	width:150px;
-	background-color:green;
-	margin-left:20px;
-	margin-top:5px;;
-	border-radius:6px;
-	float:left;
 }
 .btn-addcategory{
 	height:34px;

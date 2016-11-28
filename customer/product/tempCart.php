@@ -15,7 +15,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	</tr>
 		
 	<?php
-		while($row=mysql_fetch_array($query)){
+		if(mysql_num_rows($query)>0){ 
+			while($row=mysql_fetch_array($query)){
 	?>	
 		
 	<tr>
@@ -25,6 +26,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	</tr>
 	
 	<?php
+		}
+		}
+		else
+		{
+			echo "Cart is empty";
 		}
 	?>
 	

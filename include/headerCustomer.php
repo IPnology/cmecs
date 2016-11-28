@@ -9,21 +9,18 @@
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
+		<div class="welcome">
+			Welcome, <?=$_SESSION['customer_session'];?>!
+			<div>
+				<a href="../../customer/user/?view=list">My Account</a>  | 
+				<a href="../../customer/user/process.php?action=logout">Logout</a>
+			</div>	
+		</div>
 		<div class="logo">
 			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>
-		<div class="h_icon">
-		<ul class="icon1 sub-icon1">
-			<li><a class="active-icon c1" href="#"><i><?=$_SESSION['customer_session'];?></i></a>
-				<ul class="sub-icon1 list">
-					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wishlit are missing, <a href="contact.html">contact us</a> to view them</p></li>
-				</ul>
-			</li>
-		</ul>
-		</div>
 		<div class="h_search">
-    		<form action="../../customer/product" method="GET">
+    		<form action="../../admin/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
@@ -39,11 +36,9 @@
 		<div class="h_menu">
 			<ul>
 				<li class="active"><a href="../../customer/home">Home</a></li> |
-				<li><a href="../../customer/user/?view=list">My Account</a></li> |
 				<li><a href="../../customer/category">category</a></li> |
 				<li><a href="../../customer/product">product</a></li> |
-				<li><a href="../../customer/product">wishlist</a></li>
-				<li><a href="../../customer/user/process.php?action=logout">logout</a></li>
+				<li><a href="../../customer/product">wishlist</a></li>	
 			</ul>
 		</div>
 		<div class="top-nav">
