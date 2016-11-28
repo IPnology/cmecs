@@ -20,7 +20,7 @@
 			<a href="index.html"><img src="../../include/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
-    		<form action="../../admin/product" method="GET">
+    		<form class="formsearch" action="../../admin/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
