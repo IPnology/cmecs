@@ -39,6 +39,7 @@
 			<ul>
 				<li class="active"><a href="../../admin/home">Home</a></li> |
 				<li><a href="../../admin/user/?view=list">Accounts</a></li> |
+				<li><a href="../../admin/order">Order</a></li> |
 				<li><a href="../../admin/category">category</a></li> |
 				<li><a href="../../admin/product">product</a></li> |
 				<li><a href="../../admin/order">order</a></li>

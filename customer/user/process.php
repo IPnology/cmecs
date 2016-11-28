@@ -58,9 +58,8 @@ function login()
 function logout()
 
 {
-	if (isset($_SESSION['user_session'])) {
-		unset($_SESSION['user_session']);
-		session_unregister('user_session');
+	if (isset($_SESSION['customer_session'])) {
+		unset($_SESSION['customer_session']);
 	}
 	header('Location: index.php');
 	exit;
