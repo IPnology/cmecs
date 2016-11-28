@@ -46,6 +46,13 @@ switch ($view) {
 		$header 	= '../../include/headerCustomer.php';
 		$footer 	= '../../include/footer.php';		
 		break;
+		
+	case 'checkout' :
+		$content 	= 'checkout.php';
+		$template = '../../include/template-main.php';		
+		$header 	= '../../include/headerCustomer.php';
+		$footer 	= '../../include/footer.php';		
+		break;
 			
 	default :
 		$content 	= 'list.php';
