@@ -14,3 +14,4 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
         
     <button type="submit">Login</button>
 </form>
+<a href="register.php">Add Account</a>

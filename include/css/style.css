@@ -248,6 +248,7 @@ body {
 .h_menu ul li.active a{
 	color:#f0f0f0;
 }
+
 /* start icon styles */
 .h_icon{
 	float: right;
@@ -356,6 +357,10 @@ body {
 	border-bottom:20px solid transparent;
 	border-top: 20px solid transparent;
 	border-right:20px solid #323757;
+}
+.h_admin{
+	color:#fff;
+	font-size: 1.2em;
 }
 /* Mobile */
 .icon1-trigger {
@@ -508,6 +513,7 @@ body {
 .footer{
 	padding: 1.5%;
 	color: #fff;
+
 }
 /* start grids_of_3 */
 .grids_of_4{
@@ -874,8 +880,8 @@ form {
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
+    width: 500px;
+    padding: 6px 10px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -932,6 +938,106 @@ span.psw {
 }
 
 /*-- login details--*/
+/*-- category details--*/
+
+.ccontainer{
+	
+	font-family: Arial; 
+	margin-left:50px;
+	margin-right:auto;
+	margin-top:20px;
+	margin-bottom:10px;
+	width:350px;
+	
+}
+.c2container{
+	
+	font-family: Arial;
+	margin-left:auto;
+	margin-right:auto;
+	
+	
+}
+.btn-cupdate{
+	height:40px;
+	width:100px;
+	background-color:green;
+	margin-left:30px;
+	margin-top:-50px;;
+	border-radius:5px;
+}
+.btn-product{
+	height:40px;
+	width:100px;
+	background-color:green;
+	margin-right:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:right;
+}
+.btn-addAccount{
+	height:40px;
+	width:200px;
+	background-color:green;
+	margin-right:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:right;
+}
+.btn-category{
+	height:40px;
+	width:150px;
+	background-color:green;
+	margin-left:20px;
+	margin-top:5px;;
+	border-radius:6px;
+	float:left;
+}
+.btn-addcategory{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;;
+	border-radius:5px;
+}
+.btn-addproduct{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;;
+	border-radius:5px;
+}
+.btn-cupdate2{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;
+	border-radius:5px;
+	
+}
+.btn-pupdate{
+	height:34px;
+	width:100px;
+	background-color:green;
+	margin-left:-1px;
+	margin-top:-29px;
+	border-radius:5px;
+	
+}
+.btn-cdelete{
+	height:40px;
+	width:100px;
+	background-color:red;
+	margin-left:60px;
+	border-radius:5px;
+	margin-top:-50px;
+	
+	
+}
+/*-- category details--*/
 
 .single{
 	padding:2% 0;
@@ -1095,6 +1201,21 @@ span.psw {
 	float: right;
 }
 /* end description */
+
+/* start of detail buttons */
+.updatebtn {
+	background-color: #3a7fcc;
+	border-radius: 5px;
+	min-width: 30%;
+}
+
+.deletebtn {
+	background-color: #d43030;
+	border-radius: 5px;
+	min-width: 30%;
+}
+/* end of detail buttons */
+
 /* start sellers */
 .sellers{
 	font-family: 'Source Sans Pro', sans-serif;

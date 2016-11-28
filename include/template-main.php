@@ -2,6 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 <link href="../../include/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="../../include/font-awesome/css/font-awesome-min.css">
 <script type="text/javascript" src="../../include/js/jquery.min.js"></script>
 <head>
 <!-- start slider -->		
