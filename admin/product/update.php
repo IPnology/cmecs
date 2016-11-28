@@ -17,5 +17,5 @@ $row=mysql_fetch_array($query)
 	Upload Photo:</br>
 	<input type="file" name="upload_file"  /><br>
 	</br></br>
-	<input type="submit" class="btn-pupdate" value="Update">
+	<button class="button updatebtn" type="submit" value="Update">Save Changes</button>
 </form>

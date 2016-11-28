@@ -958,14 +958,6 @@ span.psw {
 	
 	
 }
-.btn-cupdate{
-	height:40px;
-	width:100px;
-	background-color:green;
-	margin-left:30px;
-	margin-top:-50px;;
-	border-radius:5px;
-}
 .btn-product{
 	height:40px;
 	width:100px;
@@ -1008,24 +1000,6 @@ span.psw {
 	margin-left:-1px;
 	margin-top:-29px;;
 	border-radius:5px;
-}
-.btn-cupdate2{
-	height:34px;
-	width:100px;
-	background-color:green;
-	margin-left:-1px;
-	margin-top:-29px;
-	border-radius:5px;
-	
-}
-.btn-pupdate{
-	height:34px;
-	width:100px;
-	background-color:green;
-	margin-left:-1px;
-	margin-top:-29px;
-	border-radius:5px;
-	
 }
 .btn-cdelete{
 	height:40px;

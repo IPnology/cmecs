@@ -19,7 +19,7 @@
 	Repeat Password:</br>
 	<input type="password" name="repeatpassword" style="width:350px;" placeholder="enter password">
 	</br></br>
-	<input type="submit" value="Register">
+	<button class="button updatebtn" type="submit" value="Register">Register</button>
 </form>
 	
 </body>
