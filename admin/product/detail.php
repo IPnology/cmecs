@@ -22,7 +22,7 @@ $row=mysql_fetch_array($query)
 						</div>
 					</div>
 				</div>
-				<div class="span1_of_1_des">
+				<div class="span1_of_1_des"">
 					<div class="desc1">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Category: <?=getCategoryName($row['categoryId'])?></p>

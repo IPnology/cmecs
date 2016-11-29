@@ -7,21 +7,24 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST">
-	<div class="ccontainer" style="border:1px solid; border-color:grey; padding:10px 20px; margin-left:500px;">
-	Username:</br>
-	<input type="text" name="username" style="width:350px;" value="<?=$row['username']?>" placeholder="your username">
-	</br>
-	First Name:</br>
-	<input type="text" name="firstname" style="width:350px;" value="<?=$row['fname']?>" placeholder="your first name">
-	</br>
-	Last Name:</br>
-	<input type="text" name="lastname" style="width:350px;" value="<?=$row['lname']?>" placeholder="your last name">
-	</br>
-	Password:</br>
-	<input type="password" name="password" style="width:350px;"  placeholder="enter password">
-	</br>
-	Repeat Password:</br>
-	<input type="password" name="repeatpassword" style="width:350px;" placeholder="enter password">
-	</br></br>
+	<div class="ccontainer">
+	<div class="contact-form">
+	<span><label>Username</label></span>
+	<input type="text" name="username"  value="<?=$row['username']?>" placeholder="your username">
+	
+	<span><label>First name</label></span>
+	<input type="text" name="firstname" value="<?=$row['fname']?>" placeholder="your first name">
+	
+	<span><label>Last name</label></span>
+	<input type="text" name="lastname" value="<?=$row['lname']?>" placeholder="your last name">
+	
+	<span><label>Password</label></span>
+	<input type="password" name="password" placeholder="enter password">
+	
+	<span><label>Repeat Password</label></span>
+	<input type="password" name="repeatpassword" placeholder="enter password">
+	
 	<button class="button updatebtn" type="submit" value="Update">Save Changes</button>
+	</div>
+	</div>
 </form>

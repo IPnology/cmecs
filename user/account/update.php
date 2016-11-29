@@ -7,6 +7,8 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST">
+	<div class="ccontainer">
+	<div class="contact-form">
 	Username:</br>
 	<input type="text" name="username" value="<?=$row['username']?>" placeholder="your username">
 	</br>

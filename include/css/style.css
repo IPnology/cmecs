@@ -860,7 +860,7 @@ p.para{
 	border: 1px solid #E7E7E7;
 	color: rgba(85, 81, 81, 0.84);
 	display: block;
-	width: 172px;
+	width: 350px;
 	outline: none;
 	-webkit-appearance: none;
 	text-transform: capitalize;
@@ -874,13 +874,15 @@ p.para{
 	font-family: 'Source Sans Pro', sans-serif;
 	-webkit-appearance: none;
 	cursor:pointer;
-	color: #ffffff;
-	background: #3CC395;
-	border:none;
+	background-color:#3a7fcc;
+	min-width: 30%;
+	height:30px;
+	border-radius:5px;
 	outline:none;
 	display: inline-block;
 	text-transform: uppercase;
 	padding: 12px 38px;
+	padding-bottom:20px;
 	font-size: 0.875em;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -896,7 +898,109 @@ p.para{
 	background-color:black;
 }
 
-/*-- start details--*/
+/*-- start of table account --*/
+table.tableaccount {
+		border-collapse: collapse;
+		width: 100%;
+		font-family: Arial;
+		font-size: 90%;
+	}
+table.tableaccount tr, th {
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		text-decoration: none;
+		background-color: #167F92;
+		
+	}
+table.tableaccount tr:nth-child(even){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#D9E4E6;
+	}
+table.tableaccount tr:nth-child(odd){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#fefefe;
+	}
+table.tableaccount tr:hover{
+	background-color:#f5f5f5;
+	}
+table.tableaccount td:hover{
+	background-color:#f5f5f5;
+	}
+button {
+		border: none;
+		border-radius: 5px;
+		padding: 5px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 90%;
+		margin: 2px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	
+.deletebtn:hover {
+		background-color: #ac1414;
+	}
+	
+.deletebtn {
+		color: white;
+		background-color: #e52828;
+		margin-left:-4px;
+	}
+	
+.updatebtn {
+		color: white;
+		background-color: #2391d6;
+	}
+	
+.updatebtn:hover {
+	background-color: #186799;
+}
+/*-- end account --*/
+
+/*-- start of order --*/
+
+table.tableorder {
+		border-collapse: collapse;
+		width: 100%;
+		font-family: Arial;
+		font-size: 90%;
+	}
+table.tableorder tr, th {
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		text-decoration: none;
+		background-color: #167F92;
+		
+	}
+table.tableorder tr:nth-child(even){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#D9E4E6;
+	}
+table.tableorder tr:nth-child(odd){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#fefefe;
+	}
+table.tableorder tr:hover{
+	background-color:#f5f5f5;
+	}
+table.tableorder td:hover{
+	background-color:#f5f5f5;
+	}
+	
+/*-- end of order --*/
 
 /*-- login details--*/
 form {
@@ -904,7 +1008,7 @@ form {
 }
 
 input[type=text], input[type=password] {
-    width: 500px;
+    width: 350px;
     padding: 6px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -917,6 +1021,11 @@ input[type=text], input[type=password] {
 	margin-top: 10px;
 	font-style: bold;
 	font-size: 1.2em;
+}
+.description {
+	width:350px; 
+	height:100px; 
+	padding:6px 10px;
 }
 button {
     background-color: #4CAF50;
@@ -967,12 +1076,14 @@ span.psw {
 .ccontainer{
 	
 	font-family: Arial; 
-	margin-left:50px;
 	margin-right:auto;
 	margin-top:20px;
 	margin-bottom:10px;
 	width:350px;
-	
+	border:1px solid; 
+	border-color:grey;
+	padding:10px 20px; 
+	margin-left:500px;
 }
 .c2container{
 	
@@ -993,7 +1104,7 @@ span.psw {
 }
 .btn-addAccount{
 	height:40px;
-	width:200px;
+	width:150px;
 	background-color:green;
 	margin-right:20px;
 	margin-top:5px;;
@@ -1045,9 +1156,11 @@ span.psw {
 	width: 52.3333%;
 }
 .span1_of_1_des{
-	float: right;
 	width: 44.3333%;
 	margin-left: 3.333%;
+	margin-left:-190px;
+	float:left; 
+	display:block;
 }
 /* start desc1 */
 .desc1 {
