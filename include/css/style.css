@@ -898,38 +898,39 @@ p.para{
 	background-color:black;
 }
 
-/*-- start account --*/
+/*-- start of table account --*/
 table.tableaccount {
 		border-collapse: collapse;
 		width: 100%;
 		font-family: Arial;
-		font-size: 80%;
+		font-size: 90%;
 	}
-table.tableaccount {
-		border-collapse: collapse;
-		width: 100%;
-		font-family: Arial;
-		font-size: 80%;
-	}
-
-table.tableaccount th, td {
+table.tableaccount tr, th {
 		padding: 8px;
 		text-align: center;
 		border-bottom: 1px solid #ddd;
 		text-decoration: none;
-	}
-	
-table.tableaccount th {
 		background-color: #167F92;
-		border-bottom:1px solid white;
-		color: white;
+		
 	}
-table.tableaccount tr, td{
-	background-color: #D9E4E6;
-	
-}
-table.tableaccount tr:hover{background-color:#f5f5f5}
-	
+table.tableaccount tr:nth-child(even){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#D9E4E6;
+	}
+table.tableaccount tr:nth-child(odd){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#fefefe;
+	}
+table.tableaccount tr:hover{
+	background-color:#f5f5f5;
+	}
+table.tableaccount td:hover{
+	background-color:#f5f5f5;
+	}
 button {
 		border: none;
 		border-radius: 5px;
@@ -951,6 +952,7 @@ button {
 .deletebtn {
 		color: white;
 		background-color: #e52828;
+		margin-left:-4px;
 	}
 	
 .updatebtn {
@@ -962,35 +964,44 @@ button {
 	background-color: #186799;
 }
 /*-- end account --*/
-/*-- start order --*/
+
+/*-- start of order --*/
+
 table.tableorder {
 		border-collapse: collapse;
 		width: 100%;
 		font-family: Arial;
-		font-size: 80%;
+		font-size: 90%;
 	}
-
-table.tableorder th, td {
+table.tableorder tr, th {
 		padding: 8px;
 		text-align: center;
 		border-bottom: 1px solid #ddd;
 		text-decoration: none;
-	}
-	
-table.tableorder th {
 		background-color: #167F92;
-		border-right:1px solid white;
-		border-bottom:1px solid white;
-		color: white;
+		
 	}
-table.tableorder tr, td{
-	background-color: #D9E4E6;
-	border-right:1px solid white;
+table.tableorder tr:nth-child(even){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#D9E4E6;
+	}
+table.tableorder tr:nth-child(odd){
+		padding: 8px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		background-color:#fefefe;
+	}
+table.tableorder tr:hover{
+	background-color:#f5f5f5;
+	}
+table.tableorder td:hover{
+	background-color:#f5f5f5;
+	}
 	
-}
-table.tableorder tr:hover{background-color:#f5f5f5;
-}
 /*-- end of order --*/
+
 /*-- login details--*/
 form {
     border: 3px solid #f1f1f1;

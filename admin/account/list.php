@@ -25,8 +25,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<td><?=$row['username']?></td>
 		<td><?=$row['fname']?></td>
 		<td><?=$row['lname']?></td>
-		<td style="width:10%;"><button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button></td>
-		<td style="width:10%;"><button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></td>
+		<td style="width:5%;"><button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button></td>
+		<td style="width:5%;"><button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></td>
 	</tr>
 	<?php
 		}
