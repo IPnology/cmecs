@@ -77,6 +77,14 @@ switch ($view) {
 
 require_once $template;
 
+#this is to get the values
+
+function getProductName($productId)
+{
+	$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));
+	return $get['name'];
+}
+
 ?>
 
 

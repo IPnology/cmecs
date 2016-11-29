@@ -17,28 +17,38 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 					<th></th>
 					<th>PRICE</th>
 				</tr>
-				<?php
-				if(mysql_num_rows($query)>0){ 
-					while($row=mysql_fetch_array($query)){
-				?>	
-			
+
+			<?php
+			$totalPrice = 0;
+			if(mysql_num_rows($query)>0){ 
+				while($row=mysql_fetch_array($query)){
+					
+					$totalPrice += $row['price'];
+			?>	
 				<tr>
-					<td><?=$row['productId']?></td>
-					<td>x</td>
+					<td><?=getProductName($row['productId'])?></td>
+					<td>X</td>
 					<td><?=$row['quantity']?></td>
 					<td>=</td>
 					<td><?=$row['price']?>.00</td>
 				</tr>
 			
-				<?php
-					}
-				?>
-				<td colspan="5"><button onclick="location.href='?view=checkout'">Checkout</button></td>
-				<?php
-					}
-					else
-					{
-						echo "Cart is empty";
+
+			<?php
+				}
+			?>
+				<tr>
+					<td colspan="5"> total = <?=$totalPrice;?>
+				</tr>
+				<tr>
+					<td colspan="5"><button onclick="location.href='?view=checkout'">Checkout</button>
+				</tr>
+				
+			<?php
+				}
+				else
+				{
+					echo "Cart is empty";
 
 					}
 				?>

@@ -50,6 +50,14 @@ switch ($view) {
 
 require_once $template;
 
+#get values
+
+function getCategoryName($catId)
+{
+	$get = mysql_fetch_array(mysql_query("select name from category where Id=$catId"));
+	return $get['name'];
+}
+
 ?>
 
 
