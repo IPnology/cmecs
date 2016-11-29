@@ -5,10 +5,6 @@ require_once '../../config/database.php';
 $action = $_GET['action'];	
 	
 switch ($action) {
-    
-	case 'login' :
-		login();
-		break;
 
 	case 'add' :
 		add();
@@ -25,33 +21,9 @@ switch ($action) {
 	default :
 }
 
-
-function login()
-{
-	// if we found an error save the error message in this variable
-	
-	$userName = $_POST['username'];
-	$password = $_POST['password'];
-	
-	$query = mysql_query("select * from user where username = '".$userName."' and password = '".$password."'");
-	
-	if (mysql_num_rows($query) != 0)
-	{
-
-		$_SESSION['user_session'] = $userName;
-		header('Location: ../home/');
-
-			
-	}
-	else
-	{
-		header('Location: index.php?error=User not found in the Database');
-	}
-	
-}
-
 function add()
 {
+	$categoryId = $_POST['category'];
 	$name = $_POST['name'];
 	$description = $_POST['description'];
 	$price = $_POST['price'];
@@ -66,7 +38,8 @@ function add()
 	$temp = explode(".", $_FILES["upload_file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	
-	mysql_query("insert into product set name='".$name."',
+	mysql_query("insert into product set categoryId='".$categoryId."',
+											name='".$name."',
 											description='".$description."',
 											price='".$price."',
 											image='".$newfilename."'");
@@ -96,6 +69,7 @@ function update()
 {
 	$id = $_GET['id'];	
 	
+	$categoryId = $_POST['category'];
 	$name = $_POST['name'];
 	$description = $_POST['description'];
 	$price = $_POST['price'];
@@ -111,7 +85,8 @@ function update()
 	$temp = explode(".", $_FILES["upload_file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	
-	mysql_query("update product set name='".$name."',
+	mysql_query("update product set categoryId='".$categoryId."',
+										name='".$name."',
 										description='".$description."',
 										price='".$price."',
 										image='".$newfilename."'

@@ -16,6 +16,5 @@ $row=mysql_fetch_array($query);
 		Barangay: <?=$row['brgy']?></br></br>
 		City: <?=$row['city']?></br></br>
 		Province: <?=$row['province']?></br></br>
-		Country: <?=$row['country']?></br></br>
 		Postal Code: <?=$row['postal']?></br></br>
 		<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>	

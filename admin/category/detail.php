@@ -29,6 +29,7 @@ $row=mysql_fetch_array($query)
 						<div class="available">
 								<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
 								<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+								<button class="button updatebtn" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
 							<div class="clear"></div>
 						</div>
 					 </div>

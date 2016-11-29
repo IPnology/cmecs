@@ -1,5 +1,5 @@
 <?php
-$query = mysql_query("select * from user");
+$query = mysql_query("select * from admin");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>

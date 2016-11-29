@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-28 19:39:46
+# Date: 2016-11-28 21:27:36
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -32,18 +32,18 @@ INSERT INTO `admin` VALUES (1,'admin','i am','admin','1234','admin'),(2,'dalelic
 DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `orderId` int(10) DEFAULT NULL,
+  `orderNumber` int(10) DEFAULT NULL,
   `productId` int(255) DEFAULT NULL,
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "cart"
 #
 
-INSERT INTO `cart` VALUES (1,NULL,5,1,600),(2,NULL,5,1,600);
+INSERT INTO `cart` VALUES (1,NULL,5,1,600),(2,NULL,5,1,600),(3,NULL,7,1,1000),(4,NULL,8,1,1000),(5,1480338895,7,1,1000),(6,1480338895,8,1,1000),(7,1480339067,7,1,1000),(8,1480339067,8,1,1000),(9,1480339118,8,1,1000),(10,1480339118,7,1,1000),(11,1480339118,5,1,600),(12,1480339118,3,1,0),(13,1480339333,8,1,1000);
 
 #
 # Structure for table "category"
@@ -73,18 +73,22 @@ CREATE TABLE `checkout` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(11) DEFAULT NULL,
   `orderNumber` varchar(11) DEFAULT NULL,
-  `address` varchar(11) DEFAULT NULL,
-  `date` varchar(11) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
   `status` varchar(11) DEFAULT NULL,
   `totalPrice` float DEFAULT NULL,
+  `street` text,
+  `brgy` text,
+  `city` text,
+  `province` text,
+  `postal` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "checkout"
 #
 
-INSERT INTO `checkout` VALUES (1,'dalelicious','1','bacolod','1-1-2017','delivered',100);
+INSERT INTO `checkout` VALUES (1,'dalelicious','1','0000-00-00 00:00:00','delivered',100,NULL,NULL,NULL,NULL,NULL),(2,'dalelicious','1480338046',NULL,NULL,NULL,'medel encarnacion','','bacolod','negros occidental','6100'),(3,'dalelicious','1480338083',NULL,NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(4,'dalelicious','1480338284','2016-11-28 21:04:44',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(5,'dalelicious','1480338761','2016-11-28 21:12:40',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(6,'dalelicious','1480338833','2016-11-28 21:13:52',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(7,'dalelicious','1480338895','2016-11-28 21:14:55',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(8,'dalelicious','1480339067','2016-11-28 21:17:46',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(9,'dalelicious','1480339118','2016-11-28 21:18:37',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(10,'dalelicious','1480339333','2016-11-28 21:22:12',NULL,NULL,'medel encarnacion','granada','bacolod','negros occidental','6100');
 
 #
 # Structure for table "item"
@@ -150,7 +154,7 @@ CREATE TABLE `temp_cart` (
 # Data for table "temp_cart"
 #
 
-INSERT INTO `temp_cart` VALUES (1,'dalelicious',7,1,1000);
+INSERT INTO `temp_cart` VALUES (8,'dalelicious',3,1,0),(9,'fredowinz23',8,1,1000),(10,'fredowinz23',7,1,1000);
 
 #
 # Structure for table "user"
@@ -159,18 +163,17 @@ INSERT INTO `temp_cart` VALUES (1,'dalelicious',7,1,1000);
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL,
-  `fname` varchar(255) DEFAULT NULL,
-  `lname` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `fname` varchar(20) DEFAULT NULL,
+  `lname` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
   `email` varchar(20) DEFAULT NULL,
-  `birthdate` varchar(11) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
   `gender` varchar(11) DEFAULT NULL,
-  `street` varchar(20) DEFAULT NULL,
-  `brgy` varchar(20) DEFAULT NULL,
-  `city` varchar(20) DEFAULT NULL,
-  `province` varchar(20) DEFAULT NULL,
-  `country` varchar(20) DEFAULT NULL,
+  `street` text,
+  `brgy` text,
+  `city` text,
+  `province` text,
   `postal` varchar(20) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
@@ -180,4 +183,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'admin','i am','admin','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'admin'),(2,'dalelicious','dale','torre','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client'),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client');
+INSERT INTO `user` VALUES (1,'admin','i am','admin','1234','','0000-00-00 00:00:00','','','','','','','admin'),(2,'dalelicious','dale','torre','123','daletorre1014@gmail.','0000-00-00 00:00:00','male','medel encarnacion','granada','bacolod','negros occidental','6100','client'),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client');
