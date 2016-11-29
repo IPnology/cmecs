@@ -1,7 +1,5 @@
 <?php
-$username = $_SESSION['customer_session'];
-
-$query = mysql_query("select * from temp_cart where username = '$username'");
+$query = mysql_query("select * from temp_cart");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
@@ -26,7 +24,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			
 				<tr>
 					<td><?=$row['productId']?></td>
-					<td>X</td>
+					<td>x</td>
 					<td><?=$row['quantity']?></td>
 					<td>=</td>
 					<td><?=$row['price']?>.00</td>
