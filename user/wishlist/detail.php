@@ -1,6 +1,5 @@
 <?php
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
-$username = $_SESSION['user_session'];
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query)
 ?>	
@@ -26,31 +25,15 @@ $row=mysql_fetch_array($query)
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price:<?=$row['price']?><p>
-							<form action="../wishlist/process.php?action=add-to-cart" method="POST" >
-										<input type="hidden" name="username" value="<?=$_SESSION['customer_session']?>">
-										<input type="hidden" name="productId" value="<?=$id?>">
-										
-										<?php
-										$countData = mysql_num_rows(mysql_query("select * from wishlis where productId = $id and username = $username"));
-										?>
-										<?php
-											if ($countData > 0){
-												echo "<button class='button updatebtn' type='button'>Already Added to Wishlist</button>";
-											}
-											else{
-												echo "<button class='button updatebtn' type='submit'>Add to Wishlist</button>";
-											}
-										?>
-							</form>
 							<div class="available">
 										<form action="process.php?action=add-to-cart" method="POST" >
-										<input type="hidden" name="username" value="<?=$_SESSION['user_session']?>">
+										<input type="hidden" name="username" value="<?=$_SESSION['customer_session']?>">
 										<input type="hidden" name="productId" value="<?=$id?>">
 										<input type="hidden" name="quantity" value="1">
 										<input type="hidden" name="price" value="<?=$row['price']?>">
 										
 										<?php
-										$countData = mysql_num_rows(mysql_query("select * from temp_cart where productId = $id and username = $username"));
+										$countData = mysql_num_rows(mysql_query("select * from temp_cart where productId = $id"));
 										?>
 										<?php
 											if ($countData > 0){
