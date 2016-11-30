@@ -39,22 +39,6 @@ $catQuery = mysql_query("select * from category");
 	<input type="file" name="upload_file"/>
 	</br>
 	<button class="button updatebtn" type="submit" value="Update">Save Changes</button>
-	<div class="ccontainer" style="border:1px solid; padding:10px 20px; margin-left:500px;">
-	Choose Category:</br>
-	<select name="category" style="width:350px;" required>
-		<option value="<?=$row['categoryId']?>"><?=getCategoryName($row['categoryId'])?></option>
-		<?php
-		if(mysql_num_rows($catQuery)>0){ 
-				while($catRow=mysql_fetch_array($catQuery)){
-		?>
-		<option value="<?=$catRow['Id']?>"><?=$catRow['name']?></option>
-		<?php
-				}
-		}
-		?>
-	
-	</select>
-	
-	</div>
+
 	</div>
 </form>
