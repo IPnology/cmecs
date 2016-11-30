@@ -1,8 +1,14 @@
 <?php
 $query = mysql_query("select * from temp_cart where username='$username'");
 
+#count to be sent to process for array
+$count=mysql_num_rows($query);
+
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
+
+
+<?=$message;?>
 
  <div class="left_sidebar">
 	<div class="sellers">
@@ -16,20 +22,24 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 					<th></th>
 					<th>PRICE</th>
 				</tr>
+				
+			<form action="process.php?action=update-quantity" method="POST">
+			<input type="hidden" name="count" value="<?=$count;?>">
 			<?php
 			$totalPrice = 0;
 			if(mysql_num_rows($query)>0){ 
 				while($row=mysql_fetch_array($query)){
 					$totalPrice += $row['price'];
+							
 			?>	
-			
-				
+				<input type="hidden" name="id[]" value="<?=$row['Id'];?>">
+				<input type="hidden" name="price[]" value="<?=$row['price'];?>">
 				<tr>
 					<td><?=getProductName($row['productId'])?></td>
 					<td>X</td>
-					<td><?=$row['quantity']?></td>
+					<td><input type="text" name="quantity[]" value="<?=$row['quantity']?>" required></td>
 					<td>=</td>
-					<td><?=$row['price']?>.00</td>
+					<td><?=$row['price']?></td>
 				</tr>
 			
 			<?php
@@ -48,11 +58,18 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 							</tr>";
 				}
 			?>
+			<tr>
+				<td>
+					<input type="submit" name="Submit" value="Update Cart">
+				</td>
+			</tr>
+			</form>
 			</table>		
 		</div>
 	</div>
 </div>
 
-<button onClick="location.href='?view=shipping-address'">Next</button>
+<button onClick="location.href='index.php'">Continue Shopping</button>
+<button onClick="location.href='?view=shipping-address'">Checkout</button>
 
 <div class="clear"></div>

@@ -14,6 +14,10 @@ switch ($action) {
 		confirmAddress();
 		break;
 	
+	case 'update-quantity' :
+		updateQuantity();
+		break;
+	
 	default :
 }
 
@@ -30,6 +34,22 @@ function addToCart()
 											price='".$price."'");
 											
 	header('Location: ../product/?view=detail&id='.$productId);
+}
+
+function updateQuantity()
+{
+	$count = $_POST['count'];
+	
+	for($i=0;$i<$count;$i++){
+		$id = $_POST['id'];
+		$quantity = $_POST['quantity'];
+		$price = $_POST['price'];
+		$totalPrice = $quantity[$i] * $price[$i];
+		mysql_query("UPDATE temp_cart SET quantity='$quantity[$i]',
+											price='$totalPrice'
+											WHERE id='$id[$i]'");
+		}
+	header('Location: ../product/?view=checkout&message=You have successfully Updated Quantity');
 }
 
 function confirmAddress()
@@ -73,6 +93,8 @@ function confirmAddress()
 	
 	header('Location: ../product/?view=success');
 }
+
+
 
 
 ?>
