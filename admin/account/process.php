@@ -102,13 +102,13 @@ function update()
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$password = $_POST['password'];
-	$repeatpassword = $_POST['repeatpassword'];
+	$level = $_POST['level'];
 	
 	mysql_query("update admin set username='".$username."',
 												fname='".$firstname."',
 												lname='".$lastname."',
 												password='".$password."',
-												level='client'
+												level='".$level."',
 												where Id = '".$id."'");
 												
 	header('Location: ../account/?view=list&message=Successfully Updated.');
