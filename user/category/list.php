@@ -9,7 +9,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">	
-<button onClick="location.href='?view=add'">Add Category</button>
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>

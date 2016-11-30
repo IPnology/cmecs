@@ -33,8 +33,7 @@ else
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Description: <?=$row['description']?></p>
 						<div class="available">
-								<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
-								<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+								<button class="button updatebtn" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
 							<div class="clear"></div>
 						</div>
 					 </div>

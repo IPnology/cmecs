@@ -1,5 +1,17 @@
 <?php
-$query = mysql_query("select * from product");
+$catId = (isset($_GET['catId']) && $_GET['catId'] != '') ? $_GET['catId'] : '';
+
+if ($catId!="")
+{
+	$getCatId = "where categoryId=$catId";
+}
+else
+{
+	$getCatId ="";
+}
+	
+
+$query = mysql_query("select * from product $getCatId");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
