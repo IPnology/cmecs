@@ -46,7 +46,7 @@
 				<li><a href="../../admin/account/?view=list">Accounts</a></li> |
 				<li><a href="../../admin/order">Order</a></li> |
 				<li><a href="../../admin/category">category</a></li> |
-				<li><a href="../../admin/product">product</a></li> |
+				<li><a href="../../admin/product">product</a></li> 
 			</ul>
 		</div>
 		<div class="top-nav">

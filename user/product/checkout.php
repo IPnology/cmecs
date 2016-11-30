@@ -8,13 +8,12 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 
 
-<?=$message;?>
-
- <div class="left_sidebar">
-	<div class="sellers">
-		<h4>MY CART</h4>
-		<div class="single-nav">
-			<table class="mycart">
+<br><?=$message;?>
+ <div class="checkoutwrap">
+	<div>
+		<div>
+		<div class="mycartheader">YOUR ORDER</div>
+			<table class="tablemycart">
 				<tr>
 					<th>PRODUCT NAME</th>
 					<th></th>
@@ -46,8 +45,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				}	
 				?>
 				
-				<tr>
-					<td colspan="5"> total = <?=$totalPrice;?>
+				<tr class="checkouttotal">
+					<td class="checkoutfont">TOTAL</td>
+					<td></td>
+					<td></td><td></td>
+					<td class="checkoutfont">PHP <?=$totalPrice;?>.00</td>
 				</tr>
 				<?php
 				}
@@ -67,9 +69,12 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			</table>		
 		</div>
 	</div>
-</div>
-
+	
 <button onClick="location.href='index.php'">Continue Shopping</button>
 <button onClick="location.href='?view=shipping-address'">Checkout</button>
+
+</div>
+
+
 
 <div class="clear"></div>

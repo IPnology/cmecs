@@ -1,19 +1,23 @@
 <?php
-$query = mysql_query("select * from temp_cart where username = '$username'");
+$query = mysql_query("select * from temp_cart");
+
+$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
- <div class="left_sidebar">
-	<div class="sellers">
-		<h4>MY CART</h4>
-		<div class="single-nav">
+<br><?=$message;?>
+ <div class="mycartwrapper">
+	<div>
+		<div>
+		<div class="mycartheader">MY CART</div>
 			<table class="tablemycart">
 				<tr>
-					<th>PRODUCT NAME</th>
+					<th class="prodnamemycart">PRODUCT NAME</th>
 					<th></th>
 					<th>QTY.</th>
 					<th></th>
 					<th>PRICE</th>
 				</tr>
+
 			<?php
 			$totalPrice = 0;
 			if(mysql_num_rows($query)>0){ 
@@ -29,6 +33,7 @@ $query = mysql_query("select * from temp_cart where username = '$username'");
 					<td><?=$row['price']?>.00</td>
 				</tr>
 			
+
 			<?php
 				}
 			?>
@@ -45,8 +50,8 @@ $query = mysql_query("select * from temp_cart where username = '$username'");
 				{
 					echo "Cart is empty";
 
-				}
-			?>
+					}
+				?>
 			</table>		
 		</div>
 	</div>
