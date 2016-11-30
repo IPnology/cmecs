@@ -1,8 +1,7 @@
-<?
-	if (!$_SESSION['user_session'])
-	{
-		header("Location: ../user");	
-	}
+<?php
+
+$username = $_SESSION['user_session'];:
+
 ?>
 
 <!-- start header -->
