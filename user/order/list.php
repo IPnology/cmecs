@@ -1,5 +1,4 @@
 <?php
-$username = $_SESSION['user_session'];
 $query = mysql_query("select * from checkout where username = '$username'");
 ?>
 <div style="min-height: 55%;">

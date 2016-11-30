@@ -1,7 +1,6 @@
 <?php
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : ''; 
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
-$username = $_SESSION['user_session'];
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
 

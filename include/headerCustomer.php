@@ -1,6 +1,6 @@
 <?php
 
-$username = $_SESSION['user_session'];:
+$username = $_SESSION['user_session'];
 
 ?>
 
