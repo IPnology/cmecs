@@ -9,6 +9,20 @@ $query = mysql_query("select * from category");
 <form action="process.php?action=add" method="POST" enctype="multipart/form-data">
 	<div class="ccontainer">
 	<div class="contact-form">
+	<span><label>Choose Category:</label></span>
+	<select name="category" style="width:350px;" required>
+		<option value="">--Select Category--</option>
+		<?php
+		if(mysql_num_rows($query)>0){ 
+				while($row=mysql_fetch_array($query)){
+		?>
+		<option value="<?=$row['Id']?>"><?=$row['name']?></option>
+		<?php
+				}
+		}
+		?>
+	
+	</select>
 	<span><label>Name</label></span>
 	<input type="text" name="name" placeholder="Add product name" required>
 	

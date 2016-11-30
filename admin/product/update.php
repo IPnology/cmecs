@@ -12,6 +12,20 @@ $catQuery = mysql_query("select * from category");
 <form action="process.php?action=update&id=<?=$id?>" method="POST" enctype="multipart/form-data">
 	<div class="ccontainer">
 	<div class="contact-form">
+	<span><label>Choose Category:</label></span>
+	<select name="category" style="width:350px;" required>
+		<option value="<?=$row['categoryId']?>"><?=getCategoryName($row['categoryId'])?></option>
+		<?php
+		if(mysql_num_rows($catQuery)>0){ 
+				while($catRow=mysql_fetch_array($catQuery)){
+		?>
+		<option value="<?=$catRow['Id']?>"><?=$catRow['name']?></option>
+		<?php
+				}
+		}
+		?>
+	
+	</select>
 	<span><label>Name</label></span>
 	<input type="text" name="name" value="<?=$row['name']?>" placeholder="Add category">
 	
