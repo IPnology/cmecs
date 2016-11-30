@@ -1,7 +1,13 @@
 <?php
-
-$username = $_SESSION['user_session'];
-
+if (!isset($_SESSION['user_session']))
+	{
+		$headerName="Please login.";
+	}
+else
+	{
+		$username = $_SESSION['user_session'];
+		$headerName = "Welcome ".$username."!";
+	}
 ?>
 
 <!-- start header -->
@@ -9,7 +15,7 @@ $username = $_SESSION['user_session'];
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome <?=$_SESSION['user_session'];?>!
+			<?=$headerName;?>
 			<div>
 				<a href="../../user/account/?view=detail">My Account</a>  | 
 				<a href="../../user/account/process.php?action=logout">Logout</a>
