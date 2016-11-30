@@ -2,11 +2,8 @@
 $username = $_SESSION['user_session'];
 
 $query = mysql_query("select * from temp_cart where username = '$username'");
-
-$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<br><?=$message;?>
  <div class="left_sidebar">
 	<div class="sellers">
 		<h4>MY CART</h4>

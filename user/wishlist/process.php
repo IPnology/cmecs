@@ -10,6 +10,10 @@ switch ($action) {
 		addToWishlist();
 		break;
 	
+	case 'delete':
+		delete();
+		break;
+	
 	default :
 }
 
@@ -22,5 +26,15 @@ function addToWishlist()
 											productId='".$productId."'");
 											
 	header('Location: ../product/?view=detail&id='.$productId);
+}
+
+function delete()
+{
+	$id = $_GET['id'];	
+	
+	mysql_query("delete from wishlist where productId = '".$id."'");
+	
+	header('Location: ../product/?view=detail&id='.$id.'&message=Successfully Removed from Wishlist.');
+	
 }
 ?>
