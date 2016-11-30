@@ -1,5 +1,10 @@
 <?php
-$query = mysql_query("select * from checkout");
+if (!isset($username)){
+	echo "Please login.";
+}
+else{
+
+$query = mysql_query("select * from checkout where username = '$username'");
 ?>
 <div style="min-height: 55%;">
 <h1></br>Order Details</br></h1>
@@ -32,3 +37,6 @@ $query = mysql_query("select * from checkout");
 	
 </table>
 </div>
+<?php
+}
+?>

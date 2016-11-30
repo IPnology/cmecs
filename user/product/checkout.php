@@ -1,5 +1,4 @@
 <?php
-$username = $_SESSION['user_session'];
 $query = mysql_query("select * from temp_cart where username='$username'");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
@@ -44,7 +43,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				}
 				else
 				{
-					echo "Cart is empty";
+					echo "<tr>
+							<td colspan='5'>Cart is empty
+							</tr>";
 				}
 			?>
 			</table>		

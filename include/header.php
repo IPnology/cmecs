@@ -4,6 +4,10 @@
 	{
 		header("Location: ../account");	
 	}
+	else
+	{
+		$username = $_SESSION['admin_session'];
+	}
 ?>
 
 <!-- start header -->
@@ -11,7 +15,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome <?=$_SESSION['admin_session'];?>!
+			Welcome <?=$username;?>!
 			<div>
 				<a href="../../admin/account/process.php?action=logout">Logout</a>
 			</div>	

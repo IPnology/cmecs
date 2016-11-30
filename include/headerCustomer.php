@@ -1,7 +1,12 @@
-<?
-	if (!$_SESSION['customer_session'])
+<?php
+if (!isset($_SESSION['user_session']))
 	{
-		header("Location: ../user");	
+		$headerName="Please login.";
+	}
+else
+	{
+		$username = $_SESSION['user_session'];
+		$headerName = "Welcome ".$username."!";
 	}
 ?>
 
@@ -10,11 +15,24 @@
 <div class="wrap">
 	<div class="header">
 		<div class="welcome">
-			Welcome <?=$_SESSION['customer_session'];?>!
+			<?=$headerName;?>
+			<?php
+			if (!isset($username)){
+			?>
+			<div>
+				<a href="../../user/account">Login</a>
+			</div>
+			<?php
+			}
+			else{
+			?>
 			<div>
 				<a href="../../user/account/?view=detail">My Account</a>  | 
 				<a href="../../user/account/process.php?action=logout">Logout</a>
-			</div>	
+			</div>
+			<?php
+			}
+			?>
 		</div>
 		<div class="logo">
 			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
@@ -38,7 +56,8 @@
 				<li class="active"><a href="../../user/home">Home</a></li> |
 				<li><a href="../../user/category">category</a></li> |
 				<li><a href="../../user/product">product</a></li> |
-				<li><a href="../../user/product">wishlist</a></li>	
+				<li><a href="../../user/wishlist">wishlist</a></li> |
+				<li><a href="../../user/order">order</a></li>				
 			</ul>
 		</div>
 		<div class="top-nav">

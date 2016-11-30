@@ -4,6 +4,12 @@ $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from category where Id = $id");
 
 $row=mysql_fetch_array($query);
+
+if(file_exists("../../media/".$row['image']))
+    $fileName = $row['image'];
+else
+    $fileName = "default.png";
+
 ?>
 
 <div class="main_bg">
@@ -16,7 +22,7 @@ $row=mysql_fetch_array($query);
 						<div class="product-essential">
 							<div class="product-img-box">
 								<div class="product-image">
-									<img src="../../media/<?=$row['image']?>"></br>
+									<img src="../../media/<?=$fileName;?>"></br>
 							   </div>
 							</div>
 						</div>
@@ -27,8 +33,7 @@ $row=mysql_fetch_array($query);
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Description: <?=$row['description']?></p>
 						<div class="available">
-								<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
-								<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+								<button class="button updatebtn" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
 							<div class="clear"></div>
 						</div>
 					 </div>

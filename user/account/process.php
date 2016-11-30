@@ -42,7 +42,7 @@ function login()
 	if (mysql_num_rows($query) != 0)
 	{
 
-		$_SESSION['customer_session'] = $userName;
+		$_SESSION['user_session'] = $userName;
 		header('Location: ../home/');
 
 			
@@ -58,8 +58,8 @@ function login()
 function logout()
 
 {
-	if (isset($_SESSION['customer_session'])) {
-		unset($_SESSION['customer_session']);
+	if (isset($_SESSION['user_session'])) {
+		unset($_SESSION['user_session']);
 	}
 	header('Location: index.php');
 	exit;
@@ -101,12 +101,29 @@ function update()
 	$username = $_POST['username'];
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
+	$birthdate = $_POST['birthdate'];
+	$gender = $_POST['gender'];
+	$phoneNumber = $_POST['phoneNumber'];
+	$street = $_POST['street'];
+	$brgy = $_POST['brgy'];
+	$city = $_POST['city'];
+	$province = $_POST['province'];
+	$postal = $_POST['postal'];
 	$password = $_POST['password'];
 	$repeatpassword = $_POST['repeatpassword'];
+
 	
 	mysql_query("update user set username='".$username."',
 												fname='".$firstname."',
 												lname='".$lastname."',
+												birthdate='".$birthdate."',
+												gender='".$gender."',
+												phoneNumber='".$phoneNumber."',
+												street='".$street."',
+												brgy='".$brgy."',
+												city='".$city."',
+												province='".$province."',
+												postal='".$postal."',											
 												password='".$password."',
 												level='client'
 												where Id = '".$id."'");

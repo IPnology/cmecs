@@ -10,6 +10,10 @@ switch ($action) {
 	update();
 	break;
 	
+	case 'cancel' :
+	cancel();
+	break;
+	
 	default:
 }
 
@@ -23,5 +27,14 @@ function update()
 												
 	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Updated.');
 	
+}
+
+function cancel()
+{
+	$id = $_GET['id'];
+	
+	mysql_query("update checkout set status='Canceled' where Id = '".$id."'");
+	
+	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Canceled Order.');
 }
 ?>

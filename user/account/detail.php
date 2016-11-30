@@ -1,6 +1,4 @@
 <?php
-$username = $_SESSION['customer_session'];
-
 $query = mysql_query("select * from user where username = '$username'");
 
 $row=mysql_fetch_array($query);
@@ -13,6 +11,7 @@ $row=mysql_fetch_array($query);
 		Email: <?=$row['email']?></br></br>
 		Birthdate: <?=$row['birthdate']?></br></br>
 		Gender: <?=$row['gender']?></br></br>
+		Phone Number: <?=$row['phoneNumber']?></br></br>
 		Street: <?=$row['street']?></br></br>
 		Barangay: <?=$row['brgy']?></br></br>
 		City: <?=$row['city']?></br></br>
