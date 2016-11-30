@@ -44,7 +44,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				}
 				else
 				{
-					echo "Cart is empty";
+					echo "<tr>
+							<td colspan='5'>Cart is empty
+							</tr>";
 				}
 			?>
 			</table>		
