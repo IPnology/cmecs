@@ -34,7 +34,7 @@ function addToCart()
 
 function confirmAddress()
 {
-	$username = $_SESSION['customer_session'];
+	$username = $_SESSION['user_session'];
 	$street = $_POST['street'];
 	$brgy = $_POST['brgy'];
 	$city = $_POST['city'];
