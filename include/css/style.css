@@ -1318,6 +1318,44 @@ span.psw {
 }
 /* end of detail buttons */
 
+/* start of checkout */
+.checkoutwrap {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.checkouttotal {
+	border-top: 2px solid black;
+}
+.checkoutfont {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+/* end of checkout */
+
+/* start of accountdetails */
+.accountdetails{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4%;
+}
+.myaccountheader{
+	font-size: 1.8em;
+	border-bottom: 2px solid #ddd;
+	font-weight: bold;
+	color: #09340E;
+}
+.myaccountfont{
+	font-size: .9em;
+}
+.accountbtn{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* end of accountdetails */
+
 /* start of my cart */
 .mycartwrapper{
 	min-width: 25%;
