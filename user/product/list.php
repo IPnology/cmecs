@@ -54,7 +54,10 @@ else
 </div>
 
 <?php
+if (!isset($username)){}
+else{
 require_once 'tempCart.php';
+}
 ?>
 
 <div class="clear"></div>

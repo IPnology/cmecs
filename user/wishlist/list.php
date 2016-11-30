@@ -1,4 +1,9 @@
 <?php
+if (!isset($username)){
+	echo "Please login.";
+}
+else{
+	
 $query = mysql_query("select * from wishlist where username='$username'");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
@@ -36,3 +41,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 </div>
 
 <div class="clear"></div>
+<?php
+}
+?>

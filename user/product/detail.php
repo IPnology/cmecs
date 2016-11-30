@@ -32,8 +32,23 @@ else
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price:<?=$row['price']?><p>
+						
+							<?php
+							# This is for users that are not logged in!!! DO NOT DELETE!
+							if (!isset($username)){ #start if 
+							?>
+							
+							<button type="button" class="button updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button>
+							<button type="button" class="button updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
+							
+							<?php
+							}
+							else {
+							?>
+							<!--This is for the users that are logged in!!! DO NOT DELETE! -->
+							
 							<form action="../wishlist/process.php?action=add-to-wishlist" method="POST" >
-										<input type="hidden" name="username" value="<?=$_SESSION['user_session']?>">
+										<input type="hidden" name="username" value="<?=$username?>">
 										<input type="hidden" name="productId" value="<?=$id?>">
 										
 										<?php
@@ -51,8 +66,8 @@ else
 										?>
 							</form>
 							<div class="available">
-										<form action="process.php?action=add-to-cart" method="POST" >
-										<input type="hidden" name="username" value="<?=$_SESSION['user_session']?>">
+									<form action="process.php?action=add-to-cart" method="POST" >
+										<input type="hidden" name="username" value="<?=$username?>">
 										<input type="hidden" name="productId" value="<?=$id?>">
 										<input type="hidden" name="quantity" value="1">
 										<input type="hidden" name="price" value="<?=$row['price']?>">
@@ -69,6 +84,11 @@ else
 											}
 										?>
 										</form>
+									
+							<?php
+							}#end if
+							?>
+							
 								<div class="clear"></div>
 							</div>
 						 </div>
@@ -76,7 +96,10 @@ else
 					<div class="clear"></div>
 			</div>
 			   <?php
-				require_once 'tempCart.php';
+				if (!isset($username)){}
+				else{
+					require_once 'tempCart.php';
+				}
 				?>
 		   <div class="clear"></div>
 		</div>
