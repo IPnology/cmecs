@@ -2,9 +2,11 @@
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $username = $_SESSION['user_session'];
 $query = mysql_query("select * from product where Id = $id");
-$row=mysql_fetch_array($query)
+$row=mysql_fetch_array($query);
+$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : ''; 
 ?>	
-	
+
+<?=$message;?>
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
@@ -34,8 +36,10 @@ $row=mysql_fetch_array($query)
 										$countData = mysql_num_rows(mysql_query("select * from wishlist where productId = $id and username = '$username'"));
 										?>
 										<?php
-											if ($countData > 0){
-												echo "<button class='button updatebtn' type='button'>Already Added to Wishlist</button>";
+											if ($countData > 0){					
+										?>
+											<button type="button" class="button deletebtn" onClick="location.href='../wishlist/process.php?action=delete&id=<?=$row['Id']?>'">Remove from Wishlist</button>
+										<?php
 											}
 											else{
 												echo "<button class='button updatebtn' type='submit'>Add to Wishlist</button>";
