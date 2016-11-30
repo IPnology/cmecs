@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 
 <form action="process.php?action=add" method="POST" enctype="multipart/form-data">
 	<div class="ccontainer">
@@ -18,5 +16,3 @@
 
 </form>
 	
-</body>
-</html>

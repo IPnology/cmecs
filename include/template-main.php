@@ -51,7 +51,9 @@
 </head>
 
 <?php require_once $header;?>
+
 <div class="content-min-height">
 <?php require_once $content;?>
 </div>
+
 <?php require_once $footer;?>
