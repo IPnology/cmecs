@@ -38,7 +38,7 @@
 				<li class="active"><a href="../../user/home">Home</a></li> |
 				<li><a href="../../user/category">category</a></li> |
 				<li><a href="../../user/product">product</a></li> |
-				<li><a href="../../user/product">wishlist</a></li>	
+				<li><a href="../../user/wishlist">wishlist</a></li>	
 			</ul>
 		</div>
 		<div class="top-nav">

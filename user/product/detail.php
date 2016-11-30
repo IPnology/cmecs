@@ -26,12 +26,12 @@ $row=mysql_fetch_array($query)
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price:<?=$row['price']?><p>
-							<form action="../wishlist/process.php?action=add-to-cart" method="POST" >
-										<input type="hidden" name="username" value="<?=$_SESSION['customer_session']?>">
+							<form action="../wishlist/process.php?action=add-to-wishlist" method="POST" >
+										<input type="hidden" name="username" value="<?=$_SESSION['user_session']?>">
 										<input type="hidden" name="productId" value="<?=$id?>">
 										
 										<?php
-										$countData = mysql_num_rows(mysql_query("select * from wishlis where productId = $id and username = $username"));
+										$countData = mysql_num_rows(mysql_query("select * from wishlist where productId = $id and username = '$username'"));
 										?>
 										<?php
 											if ($countData > 0){
@@ -50,7 +50,7 @@ $row=mysql_fetch_array($query)
 										<input type="hidden" name="price" value="<?=$row['price']?>">
 										
 										<?php
-										$countData = mysql_num_rows(mysql_query("select * from temp_cart where productId = $id and username = $username"));
+										$countData = mysql_num_rows(mysql_query("select * from temp_cart where productId = $id and username = '$username'"));
 										?>
 										<?php
 											if ($countData > 0){
