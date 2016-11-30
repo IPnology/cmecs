@@ -9,10 +9,10 @@ $query = mysql_query("select * from checkout");
 	<tr>
 		<th>Username</th>
 		<th>Order Number</th>
-		<th>Address</th>
 		<th>Date</th>
 		<th>Status</th>
 		<th>Total Price</th>
+		<th></th>
 	</tr>
 	
 	<?php
@@ -21,10 +21,10 @@ $query = mysql_query("select * from checkout");
 	<tr>
 		<td><?=$row['username']?></td>
 		<td><?=$row['orderNumber']?></td>
-		<td><?=$row['address']?></td>
 		<td><?=$row['date']?></td>
 		<td><?=$row['status']?></td>
 		<td><?=$row['totalPrice']?></td>
+		<td><button onClick="location.href='?view=detail&id=<?=$row['Id']?>'">View Order</button></td>
 	</tr>
 	<?php
 		}

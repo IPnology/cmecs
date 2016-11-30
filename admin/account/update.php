@@ -19,10 +19,10 @@ $row=mysql_fetch_array($query)
 	<input type="text" name="lastname" value="<?=$row['lname']?>" placeholder="your last name" required>
 	
 	<span><select name="level" required>
-		<option value="<?=$row['level']?>"><?=$row['level']?></option>
-		<option value="admin">Admin</option>
-		<option value="staff">Staff</option>
-		<option value="delivery">Delivery</option>
+			<option value="<?=$row['level']?>"><?=$row['level']?></option>
+			<option value="admin">Admin</option>
+			<option value="staff">Staff</option>
+			<option value="delivery">Delivery</option>
 		</select>
 	</span>
 	
