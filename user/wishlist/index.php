@@ -29,6 +29,7 @@ function getProductName($productId)
 	return $get['name'];
 }
 
+#this is to get the image
 function getProductImage($productId)
 {
 	$get = mysql_fetch_array(mysql_query("select image from product where Id=$productId"));

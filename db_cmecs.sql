@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-28 21:27:36
+# Date: 2016-11-30 14:22:41
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -37,7 +37,7 @@ CREATE TABLE `cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "cart"
@@ -82,7 +82,7 @@ CREATE TABLE `checkout` (
   `province` text,
   `postal` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "checkout"
@@ -134,7 +134,7 @@ CREATE TABLE `product` (
 # Data for table "product"
 #
 
-INSERT INTO `product` VALUES (1,NULL,'prod1',NULL,NULL,NULL),(2,NULL,'prod2',NULL,NULL,NULL),(3,NULL,'prod3',NULL,NULL,NULL),(5,NULL,'prouduct','super','600','ab'),(7,NULL,'proddds','prodds','1000','1479722823.jpg'),(8,NULL,'Product1','pro','1000','1479731194.jpg');
+INSERT INTO `product` VALUES (1,NULL,'prod1',NULL,NULL,NULL),(2,NULL,'prod2',NULL,NULL,NULL),(3,NULL,'prod3',NULL,NULL,NULL),(5,NULL,'prouduct','super','600','ab'),(7,NULL,'proddds','prodds','1000','1479722823.jpg'),(8,NULL,'Product1','pro','1000','1479731194.jpg'),(9,1,'wishlist','wish','500','1480486276.jpg');
 
 #
 # Structure for table "temp_cart"
@@ -148,7 +148,7 @@ CREATE TABLE `temp_cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "temp_cart"
@@ -184,3 +184,21 @@ CREATE TABLE `user` (
 #
 
 INSERT INTO `user` VALUES (1,'admin','i am','admin','1234','','0000-00-00 00:00:00','','','','','','','admin'),(2,'dalelicious','dale','torre','123','daletorre1014@gmail.','0000-00-00 00:00:00','male','medel encarnacion','granada','bacolod','negros occidental','6100','client'),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client');
+
+#
+# Structure for table "wishlist"
+#
+
+DROP TABLE IF EXISTS `wishlist`;
+CREATE TABLE `wishlist` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `productId` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "wishlist"
+#
+
+INSERT INTO `wishlist` VALUES (1,'dalelicious','8'),(2,'dalelicious','9');
