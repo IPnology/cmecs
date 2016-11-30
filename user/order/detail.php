@@ -12,3 +12,14 @@ Address:<?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['p
 Date:<?=$row['date'];?></br></br>
 Total Price:<?=$row['totalPrice'];?></br></br>
 Status:<?=$row['status'];?>
+
+<?php
+	if ($row['status'] == 'Pending'){
+?>
+	<button onClick="location.href='process.php?action=cancel&id=<?=$id?>'">Cancel Order</button>
+<?php
+	}
+	else{
+		echo "This order cannot be canceled.";
+	}
+?>
