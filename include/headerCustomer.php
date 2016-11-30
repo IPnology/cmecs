@@ -16,10 +16,23 @@ else
 	<div class="header">
 		<div class="welcome">
 			<?=$headerName;?>
+			<?php
+			if (!isset($username)){
+			?>
+			<div>
+				<a href="../../user/account">Login</a>
+			</div>
+			<?php
+			}
+			else{
+			?>
 			<div>
 				<a href="../../user/account/?view=detail">My Account</a>  | 
 				<a href="../../user/account/process.php?action=logout">Logout</a>
-			</div>	
+			</div>
+			<?php
+			}
+			?>
 		</div>
 		<div class="logo">
 			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
