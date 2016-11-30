@@ -11,7 +11,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<div class="mycartheader">MY CART</div>
 			<table class="tablemycart">
 				<tr>
-					<th class="prodname">PRODUCT NAME</th>
+					<th class="prodnamemycart">PRODUCT NAME</th>
 					<th></th>
 					<th>QTY.</th>
 					<th></th>

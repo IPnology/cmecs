@@ -1333,9 +1333,10 @@ table.tablemycart th{
     text-align: center;	
 	padding: 2%;
 	font-weight: bold;
-    border-bottom: 2px solid #ddd;	
+    border-bottom: 2px solid #ddd;
+	background-color: white;
 }
-table.tablemycart th.prodname{
+table.tablemycart th.prodnamemycart{
 	min-width: 20px;
 }
 .mycartheader{
