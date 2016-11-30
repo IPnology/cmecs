@@ -10,6 +10,7 @@ $row=mysql_fetch_array($query);
 		Email: <?=$row['email']?></br></br>
 		Birthdate: <?=$row['birthdate']?></br></br>
 		Gender: <?=$row['gender']?></br></br>
+		Phone Number: <?=$row['phoneNumber']?></br></br>
 		Street: <?=$row['street']?></br></br>
 		Barangay: <?=$row['brgy']?></br></br>
 		City: <?=$row['city']?></br></br>
