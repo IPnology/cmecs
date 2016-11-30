@@ -2,7 +2,13 @@
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $username = $_SESSION['user_session'];
 $query = mysql_query("select * from product where Id = $id");
-$row=mysql_fetch_array($query)
+$row=mysql_fetch_array($query);
+
+if(file_exists("../../media/".$row['image']))
+    $fileName = $row['image'];
+else
+    $fileName = "default.png";
+
 ?>	
 	
 <div class="main_bg">
@@ -15,7 +21,7 @@ $row=mysql_fetch_array($query)
 							<div class="product-essential">
 								<div class="product-img-box">
 									<div class="product-image"> 
-										<img src="../../media/<?=$row['image']?>"></br>
+										<img src="../../media/<?=$fileName;?>"></br>
 								   </div>
 								</div>
 							</div>
