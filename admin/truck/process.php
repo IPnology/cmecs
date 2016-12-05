@@ -25,7 +25,7 @@ function add()
 {
 	$name = $_POST['name'];
 	
-	mysql_query("insert into truck set name='".$name."'");
+	mysql_query("insert into truck set name='$name'");
 	
 	header('Location: ../truck/');
 }
@@ -34,7 +34,7 @@ function delete()
 {
 	$id = $_GET['id'];	
 	
-	mysql_query("delete from truck where Id = '".$id."'");
+	mysql_query("delete from truck where Id = '$id'");
 	
 	header('Location: ../truck/?view=list&message=Successfully Deleted.');
 }
@@ -45,7 +45,7 @@ function update()
 	
 	$name = $_POST['name'];
 	
-	mysql_query("update truck set name='".$name."' where Id = '".$id."'");
+	mysql_query("update truck set name='$name' where Id = '$id'");
 							
 	header('Location: ../truck/?view=list&message=Successfully Updated.');
 }

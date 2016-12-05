@@ -1,8 +1,8 @@
-# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2016-11-30 15:27:31
-# Generator: MySQL-Front 5.4  (Build 1.4)
+﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
+# Date: 2016-12-05 17:56:20
+# Generator: MySQL-Front 5.4  (Build 1.40)
 
-/*!40101 SET NAMES latin1 */;
+/*!40101 SET NAMES utf8 */;
 
 #
 # Structure for table "admin"
@@ -17,13 +17,13 @@ CREATE TABLE `admin` (
   `password` varchar(255) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (1,'admin','i am','admin','1234','admin'),(2,'dalelicious','dale','torre','123','client'),(3,'fredowinz23','fred','garcia','123','client');
+INSERT INTO `admin` VALUES (1,'admin','i am','admin','1234','admin'),(2,'dalelicious','dale','torre','123','client'),(3,'fredowinz23','fred','garcia','123','client'),(4,'admin2','mark','bautista','1234','admin'),(5,'deliveryboy','fritz','gad','1234','delivery');
 
 #
 # Structure for table "cart"
@@ -37,13 +37,13 @@ CREATE TABLE `cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "cart"
 #
 
-INSERT INTO `cart` VALUES (1,NULL,5,1,600),(2,NULL,5,1,600),(3,NULL,7,1,1000),(4,NULL,8,1,1000),(5,1480338895,7,1,1000),(6,1480338895,8,1,1000),(7,1480339067,7,1,1000),(8,1480339067,8,1,1000),(9,1480339118,8,1,1000),(10,1480339118,7,1,1000),(11,1480339118,5,1,600),(12,1480339118,3,1,0),(13,1480339333,8,1,1000);
+INSERT INTO `cart` VALUES (1,1480494235,10,1,1000),(2,1480498770,10,1,1000),(3,1480500130,10,1,1000),(4,1480504849,10,1,1000),(5,1480918721,10,2,8000),(6,1480918721,11,5,1000),(7,1480919752,10,1,1000),(8,1480919752,11,2,400);
 
 #
 # Structure for table "category"
@@ -56,12 +56,13 @@ CREATE TABLE `category` (
   `description` text,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "category"
 #
 
+INSERT INTO `category` VALUES (5,'Cabinet','Cabinets','1480492788.jpg');
 
 #
 # Structure for table "checkout"
@@ -73,7 +74,7 @@ CREATE TABLE `checkout` (
   `username` varchar(11) DEFAULT NULL,
   `orderNumber` varchar(11) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
-  `status` varchar(11) DEFAULT NULL,
+  `status` varchar(11) DEFAULT 'Pending',
   `totalPrice` float DEFAULT NULL,
   `street` text,
   `brgy` text,
@@ -81,10 +82,30 @@ CREATE TABLE `checkout` (
   `province` text,
   `postal` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "checkout"
+#
+
+INSERT INTO `checkout` VALUES (1,'dalelicious','1480494235','2016-11-30 16:23:55','Approved',NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(2,'userk','1480498770','2016-11-30 17:39:29','Pending',NULL,'medel','dira','bacolod','neg occ','6100'),(3,'userk','1480498770','2016-11-30 17:39:29','Pending',NULL,'medel','dira','bacolod','neg occ','6100'),(4,'userk','1480500130','2016-11-30 18:02:10','Pending',NULL,'','','','',''),(5,'dalelicious','1480504849','2016-11-30 19:20:49','Pending',NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(6,'dalelicious','1480918721','2016-12-05 14:18:41','Pending',NULL,'medel encarnacion','granada','bacolod','negros occidental','6100'),(7,'dalelicious','1480919752','2016-12-05 14:35:52','Pending',1400,'medel encarnacion','granada','bacolod','negros occidental','6100');
+
+#
+# Structure for table "delivery"
+#
+
+DROP TABLE IF EXISTS `delivery`;
+CREATE TABLE `delivery` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `truckId` int(11) DEFAULT NULL,
+  `orderNumber` varchar(20) DEFAULT NULL,
+  `deliveryDate` date DEFAULT NULL,
+  `status` varchar(20) DEFAULT 'Pending',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "delivery"
 #
 
 
@@ -101,12 +122,13 @@ CREATE TABLE `product` (
   `price` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "product"
 #
 
+INSERT INTO `product` VALUES (10,5,'Small Cabinet','Small Cabinet','1000','1480492814.jpg'),(11,5,'big cabinet','big','200','1480917918.jpg'),(12,5,'Medium Cabinet','medium','500','1480931691.jpg');
 
 #
 # Structure for table "temp_cart"
@@ -120,12 +142,30 @@ CREATE TABLE `temp_cart` (
   `quantity` int(11) DEFAULT '1',
   `price` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "temp_cart"
 #
 
+INSERT INTO `temp_cart` VALUES (4,'userk',10,1,1000);
+
+#
+# Structure for table "truck"
+#
+
+DROP TABLE IF EXISTS `truck`;
+CREATE TABLE `truck` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "truck"
+#
+
+INSERT INTO `truck` VALUES (1,'Wild truck Updated'),(4,'truck ni fred u');
 
 #
 # Structure for table "user"
@@ -139,7 +179,7 @@ CREATE TABLE `user` (
   `lname` varchar(20) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   `email` varchar(20) DEFAULT NULL,
-  `birthdate` datetime DEFAULT NULL,
+  `birthdate` varchar(11) DEFAULT NULL,
   `gender` varchar(11) DEFAULT NULL,
   `street` text,
   `brgy` text,
@@ -147,14 +187,15 @@ CREATE TABLE `user` (
   `province` text,
   `postal` varchar(20) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
+  `phoneNumber` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'admin','i am','admin','1234','','0000-00-00 00:00:00','','','','','','','admin'),(2,'dalelicious','dale','torre','123','daletorre1014@gmail.','0000-00-00 00:00:00','male','medel encarnacion','granada','bacolod','negros occidental','6100','client'),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client');
+INSERT INTO `user` VALUES (1,'admin','i am','admin','1234','','0000-00-00 ','','','','','','','admin',NULL),(2,'dalelicious','dale','torre','123','daletorre1014@gmail.','0000-00-00 ','male','medel encarnacion','granada','bacolod','negros occidental','6100','client',NULL),(3,'fredowinz23','fred','garcia','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client',NULL),(4,'userk','john','doe','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'client',NULL);
 
 #
 # Structure for table "wishlist"
@@ -166,9 +207,10 @@ CREATE TABLE `wishlist` (
   `username` varchar(20) DEFAULT NULL,
   `productId` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "wishlist"
 #
 
+INSERT INTO `wishlist` VALUES (3,'userk','10'),(4,'dalelicious','10');
