@@ -7,9 +7,8 @@ $count=mysql_num_rows($query);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-
-<br><?=$message;?>
- <div class="checkoutwrap">
+<div class="checkoutwrap">
+	<div class="successmessage"><?=$message;?></div>
 	<div>
 		<div>
 		<div class="mycartheader">YOUR ORDER</div>
@@ -38,7 +37,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 					<td>X</td>
 					<td><input type="text" name="quantity[]" value="<?=$row['quantity']?>" required></td>
 					<td>=</td>
-					<td><?=$row['price']?></td>
+					<td><?=$row['price']?>.00</td>
 				</tr>
 			
 			<?php
@@ -63,22 +62,18 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			?>
 			<td></td>
 			<td></td>
-				<td>
-					<input type="submit" style="background-color: #197F92; height: 35px; width: 150px; color: white; border: none; border-radius: 2px;" name="Submit" value="Update Cart">
-				</td>	
 			<td></td>
 			<td></td>
-				
+			<td><input type="submit" class="updatebtn" name="Submit" value="Update Cart"></td>				
 			</form>
 			</table>		
 		</div>
 	</div>
-<button onClick="location.href='index.php'">Continue Shopping</button>
-<button onClick="location.href='?view=shipping-address&tp=<?=$totalPrice;?>'">Proceed to Checkout</button>
-
+	</br>
+	<div style="margin-left:auto; margin-right: auto; width: 390px;"> 
+	<button class="myButton" style="height: 36px;" onClick="location.href='index.php'">Continue Shopping</button>
+	<button class="deletebtn" onClick="location.href='?view=shipping-address&tp=<?=$totalPrice;?>'">Proceed to Checkout >></button>
+	</br></br>
+	</div>
 
 </div>
-
-
-
-<div class="clear"></div>

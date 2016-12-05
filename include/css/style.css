@@ -1617,6 +1617,17 @@ table.tablemycart tr:hover{
 }	
 /* end of my cart */
 
+/* messages */
+.successmessage {
+	font-weight: bold;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 310px;
+	color: #2A8C00;
+}	
+
 /* wishlist */
 .wishbtn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
