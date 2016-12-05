@@ -29,7 +29,7 @@ else
 					</div>
 				</div>
 				<div class="span1_of_1_des">
-					<div class="desc1">
+					<div class="desc1" style="margin-right:-110px;">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Description: <?=$row['description']?></p>
 						<div class="available">

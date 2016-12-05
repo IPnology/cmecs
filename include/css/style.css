@@ -1181,7 +1181,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 2px solid #ddd;
     box-sizing: border-box;
-	border-radius:0 !important;
+	border-radius:0 !important;	
 	transition: border-color ease-in-out .15s;
 	font-size: .95em;
 }
@@ -1193,15 +1193,6 @@ input[type=text], input[type=password] {
 	font-style: bold;
 	font-size: 1.2em;
 }
-.viewbtn {
-	width:40%;
-	background-color: #14a154;
-	margin-bottom: -30px;
-	font-size: 1.1em;
-}
-.viewbtn:hover {
-	background-color: #0e8041;
-}	
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
