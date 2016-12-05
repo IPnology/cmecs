@@ -73,6 +73,6 @@ $row=mysql_fetch_array($query)
 	<input type="password" name="repeatpassword" placeholder="enter password">
 	</div></br></br>
 	
-	<input type="submit" class="registerbtn" value="Register"></br></br>
+	<input type="submit" class="registerbtn" value="Update Profile">
 </form>
 </div>
