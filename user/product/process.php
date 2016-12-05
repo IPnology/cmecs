@@ -60,6 +60,7 @@ function confirmAddress()
 	$city = $_POST['city'];
 	$province = $_POST['province'];
 	$postal = $_POST['postal'];
+	$tp = $_POST['tp'];
 	$orderNumber = round(microtime(true));
 	
 	# input data to checkout
@@ -70,6 +71,7 @@ function confirmAddress()
 											province='".$province."',
 											postal='".$postal."',
 											orderNumber='".$orderNumber."',
+											totalPrice='".$tp."',
 											date=NOW()");
 
 	#copy data from temp_cart to cart
