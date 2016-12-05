@@ -38,11 +38,11 @@ function add()
 	$temp = explode(".", $_FILES["upload_file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	
-	mysql_query("insert into product set categoryId='".$categoryId."',
-											name='".$name."',
-											description='".$description."',
-											price='".$price."',
-											image='".$newfilename."'");
+	mysql_query("insert into product set categoryId='$categoryId',
+											name='$name',
+											description='$description',
+											price='$price',
+											image='$newfilename'");
 							
 	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
 							
@@ -59,7 +59,7 @@ function delete()
 {
 	$id = $_GET['id'];	
 	
-	mysql_query("delete from product where Id = '".$id."'");
+	mysql_query("delete from product where Id = '$id'");
 	
 	header('Location: ../product/?view=list&message=Successfully Deleted.');
 	
@@ -85,12 +85,12 @@ function update()
 	$temp = explode(".", $_FILES["upload_file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	
-	mysql_query("update product set categoryId='".$categoryId."',
-										name='".$name."',
-										description='".$description."',
-										price='".$price."',
-										image='".$newfilename."'
-										where Id = '".$id."'");
+	mysql_query("update product set categoryId='$categoryId',
+										name='$name',
+										description='$description',
+										price='$price',
+										image='$newfilename'
+										where Id = '$id'");
 	
 	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
 							
