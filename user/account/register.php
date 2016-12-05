@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <form action="process.php?action=register" method="POST">
 	<div class="wrapper">
 	<div class="fwhole">
@@ -29,6 +25,6 @@
 	<input type="password" name="repeatpassword" placeholder="enter password">
 	</div></br></br></br>
 	
-	<input type="submit" value="Register">
+	<input type="submit" class="registerbtn" value="Register">
 </form>
 </div>

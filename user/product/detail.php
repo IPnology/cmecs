@@ -10,10 +10,10 @@ else
     $fileName = "default.png";
 ?>	
 
-<?=$message;?>
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
+		<div class="wishmessage"><?=$message;?></div>
 		<div class="single">
 			<div class="left_content">
 					<div class="span1_of_1">
@@ -64,6 +64,7 @@ else
 												echo "<button class='wishbtn' type='submit'>Add to Wishlist</button>";
 											}
 										?>
+										
 							</form>
 							<div class="available">
 									<form action="process.php?action=add-to-cart" method="POST" >
@@ -80,7 +81,7 @@ else
 												echo "<button class='deletebtn' type='button'>Already Added to Cart</button>";
 											}
 											else{
-												echo "<button class='button updatebtn' type='submit'>Add to Cart</button>";
+												echo "<button class='updatebtn' type='submit'>Add to Cart</button>";
 											}
 										?>
 										</form>
