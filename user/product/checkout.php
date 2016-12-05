@@ -71,7 +71,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	</div>
 	
 <button onClick="location.href='index.php'">Continue Shopping</button>
-<button onClick="location.href='?view=shipping-address'">Checkout</button>
+<button onClick="location.href='?view=shipping-address&tp=<?=$totalPrice;?>'">Checkout</button>
 
 </div>
 
