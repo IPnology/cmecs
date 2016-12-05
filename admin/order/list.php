@@ -1,9 +1,13 @@
 <?php
-$query = mysql_query("select * from checkout");
+$status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : 'Pending';
+$query = mysql_query("select * from checkout where status='$status'");
 ?>
 <div style="min-height: 55%;">
 <h1></br>Order Details</br></h1>
 </br>
+<a href="?status=Pending">Pending</a>
+<a href="?status=Approved">Approved</a>
+<a href="?status=Rejected">Rejected</a>
 <table class="tableorder">
 
 	<tr>
