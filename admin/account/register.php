@@ -1,34 +1,34 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <form action="process.php?action=register" method="POST">
-	<div class="ccontainer">
-	<div class="contact-form">
-	<span><label>Username</label></span>
-	<input type="text" name="username" placeholder="your username" required>
-	
-	<span><label>First name</label></span>
+	<div class="wrapper">
+	<div class="fnhalf">
+	<label>FIRST NAME *</label></br>
 	<input type="text" name="firstname"  placeholder="your first name" required>
+	</div>
 	
-	<span><label>Last name</label></span>
+	<div class="lnhalf">
+	<label>LAST NAME *</label></br>
 	<input type="text" name="lastname"  placeholder="your last name" required>
+	</div></br></br></br>
 	
-	<span><select name="level" required>
+	<div class="fnhalf">
+	<label>USERNAME *</label></br>
+	<input type="text" name="username" placeholder="your username" required>
+	</div>
+	
+	<div class="lnhalf">
+	<label>PASSWORD *</label></br>
+	<input type="password" name="password" placeholder="enter password" required>
+	</div>
+	</br>
+	</br>
+	<select name="level" class="select" required>
 			<option value="">Select Level</option>
 			<option value="admin">Admin</option>
 			<option value="staff">Staff</option>
 			<option value="delivery">Delivery</option>
 		</select>
-	</span>
-	
-	<span><label>Password</label></span>
-	<input type="password" name="password" placeholder="enter password" required>
-
-	<button class="button updatebtn" type="submit">Register</button>
-	</div>
-	</div>
+	</br></br>
+	<button class="registerbtn" type="submit">REGISTER</button>
 </form>
+</div>
 	
-</body>
-</html>
