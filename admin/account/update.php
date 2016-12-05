@@ -7,29 +7,35 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST">
-	<div class="ccontainer">
-	<div class="contact-form">
-	<span><label>Username</label></span>
-	<input type="text" name="username"  value="<?=$row['username']?>" placeholder="your username" required>
-	
-	<span><label>First name</label></span>
+	<div class="wrapper">
+	<div class="fnhalf">
+	<label>FIRST NAME *</label>
 	<input type="text" name="firstname" value="<?=$row['fname']?>" placeholder="your first name" required>
+	</div>
 	
-	<span><label>Last name</label></span>
+	<div class="lnhalf">
+	<label>LAST NAME *</label>
 	<input type="text" name="lastname" value="<?=$row['lname']?>" placeholder="your last name" required>
+	</div></br></br></br>
 	
-	<span><select name="level" required>
+	<div class="fnhalf">
+	<label>USERNAME *</label>
+	<input type="text" name="username"  value="<?=$row['username']?>" placeholder="your username" required>
+	</div>
+	
+	<div class="lnhalf">
+	<label>PASSWORD *</label>
+	<input type="password" name="password" placeholder="enter password" required>
+	</div></br></br>
+	
+	<select name="level" class="select" required>
 			<option value="<?=$row['level']?>"><?=$row['level']?></option>
 			<option value="admin">Admin</option>
 			<option value="staff">Staff</option>
 			<option value="delivery">Delivery</option>
-		</select>
-	</span>
+	</select>
+	</br></br>
 	
-	<span><label>Password</label></span>
-	<input type="password" name="password" placeholder="enter password" required>
-	
-	<button class="button updatebtn" type="submit" value="Update">Save Changes</button>
-	</div>
-	</div>
+	<button type="submit" value="Update">Save Changes</button>
 </form>
+</div>

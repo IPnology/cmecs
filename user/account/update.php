@@ -7,46 +7,72 @@ $row=mysql_fetch_array($query)
 ?>
 
 <form action="process.php?action=update&id=<?=$id?>" method="POST">
-	<div class="ccontainer">
-	<div class="contact-form">
-	Username:</br>
+	<div class="wrapper">
+	<div class="fwhole">
+	USERNAME *</br>
 	<input type="text" name="username" value="<?=$row['username']?>" placeholder="your username">
-	</br>
-	First Name:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	FIRST NAME *</br>
 	<input type="text" name="firstname" value="<?=$row['fname']?>" placeholder="your first name">
-	</br>
-	Last Name:</br>
+	</div>
+	
+	<div class="lnhalf">
+	LAST NAME *</br>
 	<input type="text" name="lastname" value="<?=$row['lname']?>" placeholder="your last name">
-	</br>
-	Birthdate:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	BIRTHDATE *</br>
 	<input type="text" name="birthdate" value="<?=$row['birthdate']?>" placeholder="your birthdate">
-	</br>
-	Gender:</br>
+	</div>
+	
+	<div class="lnhalf">
+	GENDER *</br>
 	<input type="text" name="gender" value="<?=$row['gender']?>" placeholder="your gender">
-	</br>
-	Street:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	STREET *</br>
 	<input type="text" name="street" value="<?=$row['street']?>" placeholder="your Street">
-	</br>
-	Barangay:</br>
+	</div>
+	
+	<div class="lnhalf">
+	BARANGAY *</br>
 	<input type="text" name="brgy" value="<?=$row['brgy']?>" placeholder="your Barangay">
-	</br>
-	City:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	CITY *</br>
 	<input type="text" name="city" value="<?=$row['city']?>" placeholder="your City">
-	</br>
-	Province:</br>
+	</div>
+	
+	<div class="lnhalf">
+	PROVINCE *</br>
 	<input type="text" name="province" value="<?=$row['province']?>" placeholder="your Province">
-	</br>
-	Postal:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	POSTAL *</br>
 	<input type="text" name="postal" value="<?=$row['postal']?>" placeholder="your Postal">
-	</br>
-	Phone Number:</br>
+	</div>
+	
+	<div class="lnhalf">
+	PHONE NUMBER *</br>
 	<input type="text" name="phoneNumber" value="<?=$row['phoneNumber']?>" placeholder="your phone number">
-	</br>
-	Password:</br>
+	</div></br></br>
+	
+	<div class="fnhalf">
+	PASSWORD *</br>
 	<input type="password" name="password" placeholder="enter password">
-	</br>
-	Repeat Password:</br>
+	</div>
+	
+	<div class="lnhalf">
+	REPEAT PASSWORD *</br>
 	<input type="password" name="repeatpassword" placeholder="enter password">
-	</br></br>
+	</div></br></br>
+	
 	<input type="submit" value="Register">
 </form>
+</div>
