@@ -48,7 +48,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				<tr class="checkouttotal">
 					<td class="checkoutfont">TOTAL</td>
 					<td></td>
-					<td></td><td></td>
+					<td></td>
+					<td></td>
 					<td class="checkoutfont">PHP <?=$totalPrice;?>.00</td>
 				</tr>
 				<?php
@@ -60,18 +61,20 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 							</tr>";
 				}
 			?>
-			<tr>
+			<td></td>
+			<td></td>
 				<td>
-					<input type="submit" name="Submit" value="Update Cart">
+					<input type="submit" style="background-color: #197F92; height: 35px; width: 150px; color: white; border: none; border-radius: 2px;" name="Submit" value="Update Cart">
 				</td>
-			</tr>
+			<td></td>
+			<td></td>
+				
 			</form>
 			</table>		
 		</div>
 	</div>
-	
 <button onClick="location.href='index.php'">Continue Shopping</button>
-<button onClick="location.href='?view=shipping-address'">Checkout</button>
+<button onClick="location.href='?view=shipping-address'">Proceed to Checkout</button>
 
 </div>
 
