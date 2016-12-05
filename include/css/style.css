@@ -1056,18 +1056,68 @@ table.tablelist tr:hover{
 }
 /** end of buttons **/
 /*-- login details--*/
+.loginwrapper {
+	width: 33.333%;
+	margin-left:auto;
+	margin-right: auto;
+	background-color: #f8f8f8; 
+}
 form {
     border: 3px solid #f1f1f1;
 }
-
+.labels{
+	font-size: 1.1em;
+	color: #2a2a2a;
+}
+.loginbtn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #52b374;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #52b374;
+	box-shadow:inset 0px 1px 0px 0px #52b374;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #36a05d), color-stop(1, #208746));
+	background:-moz-linear-gradient(top, #36a05d 5%, #208746 100%);
+	background:-webkit-linear-gradient(top, #36a05d 5%, #208746 100%);
+	background:-o-linear-gradient(top, #36a05d 5%, #208746 100%);
+	background:-ms-linear-gradient(top, #36a05d 5%, #208746 100%);
+	background:linear-gradient(to bottom, #36a05d 5%, #208746 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#36a05d', endColorstr='#208746',GradientType=0);
+	background-color:#36a05d;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #1e6637;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	padding:2% 8%;
+	text-decoration:none;
+}
+.loginbtn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #208746), color-stop(1, #36a05d));
+	background:-moz-linear-gradient(top, #208746 5%, #36a05d 100%);
+	background:-webkit-linear-gradient(top, #208746 5%, #36a05d 100%);
+	background:-o-linear-gradient(top, #208746 5%, #36a05d 100%);
+	background:-ms-linear-gradient(top, #208746 5%, #36a05d 100%);
+	background:linear-gradient(to bottom, #208746 5%, #36a05d 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#208746', endColorstr='#36a05d',GradientType=0);
+	background-color:#208746;
+}
+.loginbtn:active {
+	position:relative;
+	top:1px;
+}
+	
 input[type=text], input[type=password] {
-    width: 350px;
+    width: 100%;
     padding: 6px 10px;
-    margin: 8px 0;
+    margin: 10px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+	font-size: .95em;
 }
+/** end of login **/
 .descname  {
 	font-family: Arial;
 	color: #222b2d;
