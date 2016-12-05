@@ -8,6 +8,7 @@ $query = mysql_query("select * from checkout where status='$status'");
 <a href="?status=Pending">Pending</a>
 <a href="?status=Approved">Approved</a>
 <a href="?status=Rejected">Rejected</a>
+<a href="?status=Delivery">Delivery</a>
 <table class="tablelist">
 
 	<tr>
