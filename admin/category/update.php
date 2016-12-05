@@ -21,7 +21,7 @@ $row=mysql_fetch_array($query)
 	<label>UPLOAD PHOTO *</label>
 	</br>
 	<input type="file" name="upload_file"/></br></br>
-	<button type="submit">Save Changes</button>
+	<button class="myButton" type="submit">Save Changes</button>
 	
 </form>
 </div>

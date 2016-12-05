@@ -38,7 +38,7 @@ else
 			<img src="../../media/<?=$fileName;?>" alt=""/>
 				<div class="descname"><?=$row['name']?></div>
 				<div class="price">
-					<button class="viewbtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">view</button>
+					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW PRODUCT</button>
 				</div>
 			</div>
 	</div>

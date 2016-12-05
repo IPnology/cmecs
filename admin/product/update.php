@@ -44,7 +44,7 @@ $catQuery = mysql_query("select * from category");
 	<label>UPLOAD PHOTO *</label>
 	<input type="file" name="upload_file"/><br></br>
 	
-	<button type="submit" value="Update">Save Changes</button>
+	<button type="submit" class="myButton"  value="Update">Save Changes</button>
 
 	
 </form>

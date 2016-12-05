@@ -1088,16 +1088,6 @@ table.tablelist tr:hover{
 	text-decoration:none;
 	text-shadow:0px 1px 0px #346ca3;
 	}
-.registerbtn {
-	border: 2px solid #444;
-    background-color: transparent;
-    color: #333;
-    text-shadow: none;
-	width:10%;
-	height:7%;
-	padding:3px 3px;
-	font-weight:600;
-	}
 	
 .updatebtn:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #709ec7), color-stop(1, #81bfe6));
@@ -1172,6 +1162,46 @@ form {
 	position:relative;
 	top:1px;
 }
+.registerbtn {
+	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:8px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.registerbtn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.registerbtn:active {
+	position:relative;
+	top:1px;
+}
 	
 input[type=text], input[type=password] {
     width: 100%;
@@ -1181,7 +1211,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 2px solid #ddd;
     box-sizing: border-box;
-	border-radius:0 !important;
+	border-radius:0 !important;	
 	transition: border-color ease-in-out .15s;
 	font-size: .95em;
 }
@@ -1193,15 +1223,6 @@ input[type=text], input[type=password] {
 	font-style: bold;
 	font-size: 1.2em;
 }
-.viewbtn {
-	width:40%;
-	background-color: #14a154;
-	margin-bottom: -30px;
-	font-size: 1.1em;
-}
-.viewbtn:hover {
-	background-color: #0e8041;
-}	
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
@@ -1551,9 +1572,99 @@ table.tablemycart td {
 table.tablemycart tr:hover{
 	background-color:#f5f5f5
 }
-		
+.checkoutbtn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #52b374;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #52b374;
+	box-shadow:inset 0px 1px 0px 0px #52b374;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #15ab53), color-stop(1, #0e8a41));
+	background:-moz-linear-gradient(top, #15ab53 5%, #0e8a41 100%);
+	background:-webkit-linear-gradient(top, #15ab53 5%, #0e8a41 100%);
+	background:-o-linear-gradient(top, #15ab53 5%, #0e8a41 100%);
+	background:-ms-linear-gradient(top, #15ab53 5%, #0e8a41 100%);
+	background:linear-gradient(to bottom, #15ab53 5%, #0e8a41 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#15ab53', endColorstr='#0e8a41',GradientType=0);
+	background-color:#15ab53;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #1e6637;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:.90em;
+	font-weight: bold;
+	padding:6px 52px;
+	text-decoration:none;
+}
+.checkoutbtn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0e8a41), color-stop(1, #15ab53));
+	background:-moz-linear-gradient(top, #0e8a41 5%, #15ab53 100%);
+	background:-webkit-linear-gradient(top, #0e8a41 5%, #15ab53 100%);
+	background:-o-linear-gradient(top, #0e8a41 5%, #15ab53 100%);
+	background:-ms-linear-gradient(top, #0e8a41 5%, #15ab53 100%);
+	background:linear-gradient(to bottom, #0e8a41 5%, #15ab53 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e8a41', endColorstr='#15ab53',GradientType=0);
+	background-color:#0e8a41;
+}
+.checkoutbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.totalprice {
+	font-weight: bold;
+}	
 /* end of my cart */
 
+/* wishlist */
+.wishbtn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 38px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.wishbtn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.wishbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.wishmessage { 
+	font-size: .85em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #e41b1b;
+}
 /* start sellers */
 .sellers{
 	font-family: 'Source Sans Pro', sans-serif;

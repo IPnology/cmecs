@@ -108,7 +108,7 @@ function update()
 												fname='".$firstname."',
 												lname='".$lastname."',
 												password='".$password."',
-												level='".$level."',
+												level='".$level."'
 												where Id = '".$id."'");
 												
 	header('Location: ../account/?view=list&message=Successfully Updated.');
