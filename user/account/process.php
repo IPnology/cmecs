@@ -128,7 +128,7 @@ function update()
 												level='client'
 												where Id = '".$id."'");
 												
-	header('Location: ../user/?view=list&message=Successfully Updated.');
+	header('Location: ../account/?view=detail&message=Successfully Updated.');
 	
 }
 

@@ -7,8 +7,7 @@ $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 <?=$message;?></br></br>
-
-ORDER</br></br>
+FOR DELIVERY ORDER</br></br>
 <?php
 if(mysql_num_rows($cartQuery)>0){
 	while($cartRow=mysql_fetch_array($cartQuery)){
@@ -35,12 +34,3 @@ Address:<?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['p
 Date:<?=$row['date'];?></br></br>
 Total Price:<?=$row['totalPrice'];?></br></br>
 Status:<?=$row['status'];?></br></br>
-<?php
-if ($row['status'] == 'Approved'){
-?>
-<button onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
-<?php
-}
-?>
-<button class="button updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
-<button class="button deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>

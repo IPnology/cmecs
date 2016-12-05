@@ -11,6 +11,13 @@ switch ($view) {
 		$header 	= '../../include/header.php';
 		$footer 	= '../../include/footer.php';
 		break;
+	
+	case 'set-delivery' :
+		$content 	= 'setDelivery.php';
+		$template = '../../include/template-main.php';		
+		$header 	= '../../include/header.php';
+		$footer 	= '../../include/footer.php';
+		break;
 		
 	default :
 		$content 	= 'list.php';
