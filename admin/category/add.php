@@ -13,7 +13,7 @@
 	<label>UPLOAD PHOTO *</label>
 	</br>
 	<input type="file" name="upload_file"/></br></br>
-	<input type="submit" value="Add">
+	<input type="submit" class="myButton" value="Add">
 	
 
 </form>

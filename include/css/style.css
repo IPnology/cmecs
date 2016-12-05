@@ -1221,7 +1221,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 2px solid #ddd;
     box-sizing: border-box;
-	border-radius:0 !important;
+	border-radius:0 !important;	
 	transition: border-color ease-in-out .15s;
 	font-size: .95em;
 }
