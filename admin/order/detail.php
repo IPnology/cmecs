@@ -8,18 +8,23 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 <?=$message;?></br></br>
 
-ORDER</br></br>
+&nbsp;&nbsp;&nbsp;ORDER DETAILS</br></br>
 <?php
 if(mysql_num_rows($cartQuery)>0){
 	while($cartRow=mysql_fetch_array($cartQuery)){
 ?>
+
 <!-- Put space check layout in document page 50 -->
-Name: <?=getProductName($cartRow['productId']);?>&nbsp;&nbsp;&nbsp;
-Product ID:<?=$cartRow['productId'];?>&nbsp;&nbsp;&nbsp;
-Quantity:<?=$cartRow['quantity'];?>&nbsp;&nbsp;&nbsp;
-Price: <?=getProductPrice($cartRow['productId']);?>&nbsp;&nbsp;&nbsp;
-Total:<?=$cartRow['price'];?>
-</br></br>
+<table class="tablelist">
+	<tr>
+		<td>Name: <?=getProductName($cartRow['productId']);?></td>
+		<td>Product ID:<?=$cartRow['productId'];?></td>
+		<td>Quantity:<?=$cartRow['quantity'];?></td>
+		<td>Price: <?=getProductPrice($cartRow['productId']);?></td>
+		<td>Total:<?=$cartRow['price'];?></td>
+	</tr>
+	</br></br>
+</table>	
 <?php
 	}
 }
@@ -27,14 +32,15 @@ else{
 	echo "Cart is Empty.";
 }
 ?>
+<div style="text-align:center; margin-top:30px;">
 </br>
 Shipping Information</br></br>
-Username:<?=$row['username'];?></br></br>
-Order Number:<?=$row['orderNumber'];?></br></br>
-Address:<?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
-Date:<?=$row['date'];?></br></br>
-Total Price:<?=$row['totalPrice'];?></br></br>
-Status:<?=$row['status'];?></br></br>
+Username: <?=$row['username'];?></br></br>
+Order Number: <?=$row['orderNumber'];?></br></br>
+Address: <?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
+Date: <?=$row['date'];?></br></br>
+Total Price: <?=$row['totalPrice'];?></br></br>
+Status: <?=$row['status'];?></br></br>
 <?php
 if ($row['status'] == 'Approved'){
 ?>
@@ -42,5 +48,9 @@ if ($row['status'] == 'Approved'){
 <?php
 }
 ?>
-<button class="button updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
-<button class="button deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+
+<button class="approvedorder" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
+<button class="rejectedorder" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+
+
+</div>

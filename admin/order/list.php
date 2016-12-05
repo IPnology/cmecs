@@ -3,11 +3,15 @@ $status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : 
 $query = mysql_query("select * from checkout where status='$status'");
 ?>
 <div class="listwrapper">
-<h1></br>Order Details</br></h1>
+<h1></br>ORDER DETAILS</br></h1>
 </br>
-<a href="?status=Pending">Pending</a>
-<a href="?status=Approved">Approved</a>
-<a href="?status=Rejected">Rejected</a>
+<table class="tablelist">
+	<tr>
+		<th class="pendingorder" onClick="location.href='?status=Pending'">PENDING</th>
+		<th class="approvedorder" onClick="location.href='?status=Approved'">APPROVED</th>
+		<th class="rejectedorder" onClick="location.href='?status=Rejected'">REJECTED</a></th>
+	</tr>
+</table>
 <table class="tablelist">
 
 	<tr>

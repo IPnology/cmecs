@@ -1494,6 +1494,24 @@ span.psw {
 	border-radius: 5px;
 	min-width: 30%;
 }
+
+.pendingorder {
+	background-color:#C3B8B6; 
+	cursor:pointer;
+	color:white; 
+	border-right:1px solid;
+}
+.approvedorder {
+	background-color:#67B442;
+	color:white;
+	cursor:pointer;
+	border-right:1px solid;
+}
+.rejectedorder {
+	background-color:#CA503D; 
+	cursor:pointer; 
+	color:white; 
+}
 /* end of detail buttons */
 
 /* start of checkout */
