@@ -6,22 +6,34 @@ $action = $_GET['action'];
 
 switch ($action) {
 	
-	case 'update' :
-	update();
+	case 'approve' :
+	approve();
+	break;
+	
+	case 'reject' :
+	reject();
 	break;
 	
 	default:
 }
 
-function update()
+function approve()
 {
 	$id = $_GET['id'];	
 	
-	$status = $_POST['status'];
-	
-	mysql_query("update checkout set status='".$status."' where Id = '".$id."'");
+	mysql_query("update checkout set status='Approved' where Id = '".$id."'");
 												
-	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Updated.');
+	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Approved.');
+	
+}
+
+function reject()
+{
+	$id = $_GET['id'];	
+	
+	mysql_query("update checkout set status='Rejected' where Id = '".$id."'");
+												
+	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Rejected.');
 	
 }
 ?>
