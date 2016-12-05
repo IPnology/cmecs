@@ -2,20 +2,20 @@
 $status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : 'Pending';
 $query = mysql_query("select * from checkout where status='$status'");
 ?>
-<div style="min-height: 55%;">
+<div class="listwrapper">
 <h1></br>Order Details</br></h1>
 </br>
 <a href="?status=Pending">Pending</a>
 <a href="?status=Approved">Approved</a>
 <a href="?status=Rejected">Rejected</a>
-<table class="tableorder">
+<table class="tablelist">
 
 	<tr>
-		<th>Username</th>
-		<th>Order Number</th>
-		<th>Date</th>
-		<th>Status</th>
-		<th>Total Price</th>
+		<th>USERNAME</th>
+		<th>ORDER NUMBER</th>
+		<th>DATE</th>
+		<th>STATUS</th>
+		<th>TOTAL PRICE</th>
 		<th></th>
 	</tr>
 	
@@ -28,7 +28,7 @@ $query = mysql_query("select * from checkout where status='$status'");
 		<td><?=$row['date']?></td>
 		<td><?=$row['status']?></td>
 		<td><?=$row['totalPrice']?></td>
-		<td><button onClick="location.href='?view=detail&id=<?=$row['Id']?>'">View Order</button></td>
+		<td><button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW ORDER</button></td>
 	</tr>
 	<?php
 		}
