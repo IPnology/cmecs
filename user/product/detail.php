@@ -38,8 +38,8 @@ else
 							if (!isset($username)){ #start if 
 							?>
 							
-							<button type="button" class="button updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button>
-							<button type="button" class="button updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
+							<button type="button" class="updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button>
+							<button type="button" class="updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
 							
 							<?php
 							}
@@ -61,7 +61,7 @@ else
 										<?php
 											}
 											else{
-												echo "<button class='button updatebtn' type='submit'>Add to Wishlist</button>";
+												echo "<button class='wishbtn' type='submit'>Add to Wishlist</button>";
 											}
 										?>
 							</form>
@@ -77,7 +77,7 @@ else
 										?>
 										<?php
 											if ($countData > 0){
-												echo "<button class='button updatebtn' type='button'>Already Added to Cart</button>";
+												echo "<button class='deletebtn' type='button'>Already Added to Cart</button>";
 											}
 											else{
 												echo "<button class='button updatebtn' type='submit'>Add to Cart</button>";

@@ -11,7 +11,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<div class="mycartheader">MY CART</div>
 			<table class="tablemycart">
 				<tr>
-					<th class="prodnamemycart">PRODUCT NAME</th>
+					<th>PRODUCT NAME</th>
 					<th></th>
 					<th>QTY.</th>
 					<th></th>
@@ -38,10 +38,10 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				}
 			?>
 				<tr>
-					<td colspan="5"> total = <?=$totalPrice;?>
+					<td colspan="5"><div class="totalprice">TOTAL = PHP<?=$totalPrice;?>.00</div>
 				</tr>
 				<tr>
-					<td colspan="5"><button onclick="location.href='?view=checkout'">Checkout</button>
+					<td colspan="5"><button class="checkoutbtn" onClick="location.href='?view=checkout'">CHECKOUT</button>
 				</tr>
 				
 			<?php

@@ -31,11 +31,9 @@ else
 				<div class="span1_of_1_des" style="">
 					<div class="desc1">
 						<h3>Name: <?=$row['name']?></br></h3>
-						<p>Description: <?=$row['description']?></p>
-						<div class="available">
-								<button class="button updatebtn" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
+						<p>DESCRIPTION: <?=$row['description']?></p>
+								<button class="myButton" onClick="location.href='../product/?catId=<?=$row['Id']?>'">VIEW PRODUCT</button>
 							<div class="clear"></div>
-						</div>
 					 </div>
 				</div>
 				<div class="clear"></div>
