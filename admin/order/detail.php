@@ -36,11 +36,5 @@ Date:<?=$row['date'];?></br></br>
 Total Price:<?=$row['totalPrice'];?></br></br>
 Status:<?=$row['status'];?>
 
-<form action="process.php?action=update&id=<?=$id?>" method="POST">
-	<select name="status" required>
-		<option value="<?=$row['status']?>"><?=$row['status']?></option>
-		<option value="shipping">Shipping</option>
-		<option value="delivered">Delivered</option>
-	</select>
-	<button class="button updatebtn" type="submit" value="Update">Update Status</button>
-</form>
+<button class="button updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
+<button class="button deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
