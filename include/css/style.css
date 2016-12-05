@@ -1526,6 +1526,7 @@ span.psw {
 }
 .myaccountfont{
 	font-size: .9em;
+	text-transform: capitalize;
 }
 .accountbtn{
 	width: 30%;
