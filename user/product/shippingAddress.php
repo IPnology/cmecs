@@ -21,7 +21,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	</br>
 	Postal Code:</br>
 	<input type="text" name="postal" value="<?=$row['postal']?>" placeholder="postal">
-	</br></br>
+	</br>
+	<input type="hidden" name="tp" value="<?=$_GET['tp']?>">
+	</br>
 	<input type="submit" value="Confirm">
 </form>
 
