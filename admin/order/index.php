@@ -21,4 +21,16 @@ switch ($view) {
 
 require_once $template;
 
+function getProductName($productId)
+{
+	$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));
+	return $get['name'];
+}
+
+function getProductPrice($productId)
+{
+	$get = mysql_fetch_array(mysql_query("select price from product where Id=$productId"));
+	return $get['price'];
+}
+
 ?>
