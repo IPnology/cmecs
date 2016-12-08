@@ -10,9 +10,7 @@ else
     $fileName = "default.png";
 ?>	
 
-<div class="main_bg">
-<div class="wrap">	
-	<div class="main">
+<div style="width: 90%; margin-left: auto; margin-right: auto;">
 		<div class="wishmessage"><?=$message;?></div>
 		<div class="single">
 			<div class="left_content">
@@ -27,12 +25,13 @@ else
 							</div>
 						</div>
 					</div>
-					<div class="span1_of_1_des">
+
+					<div style="margin-right: 15%;">
 						<div class="desc1">
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
-							<p>Price:<?=$row['price']?><p>
-						
+							<p>Price: <?=$row['price']?><p>
+							</br>
 							<?php
 							# This is for users that are not logged in!!! DO NOT DELETE!
 							if (!isset($username)){ #start if 
@@ -104,8 +103,5 @@ else
 				?>
 		   <div class="clear"></div>
 		</div>
-	</div>
-</div>
-</div>
 
-
+</div>
