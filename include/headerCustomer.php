@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION['user_session']))
 	{
-		$headerName="Please login.";
+		$headerName="Please login";
 	}
 else
 	{

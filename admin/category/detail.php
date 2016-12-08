@@ -28,14 +28,16 @@ else
 						</div>
 					</div>
 				</div>
-				<div class="span1_of_1_des">
-					<div class="desc1" style="margin-right:-110px;">
+				<div style="margin-right: 1%;">
+					<div class="desc1">
 						<h3>Name: <?=$row['name']?></br></h3>
-						<p>Description: <?=$row['description']?></p>
-						<div class="available">
-								<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
-								<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
-								<button class="button updatebtn" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
+						<p>Description: <?=$row['description']?></p></br>
+						<div style="width: 400px;">
+								<button class="updatebtn" style=" width: 160px;" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
+								</br></br>
+								<button class="deletebtn" style=" width: 160px;" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+								</br></br>
+								<button class="myButton" style=" width: 160px;" onClick="location.href='../product/?catId=<?=$row['Id']?>'">View Product</button>
 							<div class="clear"></div>
 						</div>
 					 </div>
