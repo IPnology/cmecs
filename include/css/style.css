@@ -942,6 +942,8 @@ p.para{
 	background-color:black;
 }
 
+
+
 /*-- start of table list --*/
 .listwrapper {
 	width: 73.333%;
@@ -1537,21 +1539,58 @@ width:80px; height:35px; background-color:red;border-radius:4px; color:white; cu
 }
 /* end of checkout */
 
+
+
 /* start of accountdetails */
 .accountdetails{
-	width: 50%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 4%;
+	margin-top:2%;
+	word-wrap: break-word;
 }
+.personalinfo{
+	width: 100%;
+	word-wrap: break-word;
+	border-bottom: 3px solid #c0c0c0;	
+}
+.accountlabels{
+	text-transform: uppercase;
+	font-size: .9em;
+	display: inline-block;
+	font-weight: bold;
+}
+.accountleft{
+	width: 49.3333%;	
+	height:300px;
+	display: inline-block;
+	margin: 0px 1px;
+	word-wrap: break-word;
+	margin-top:1%;
+	padding: 1px;
+	font-size: 1em;
+	text-transform: capitalize;
+}
+
+.accountright{
+	width: 49.3333%;
+	height:300px;
+	word-wrap: break-word;
+	margin-top:1%;
+	padding: 1px;
+	font-size: 1em;
+	text-transform: capitalize;
+}
+
 .myaccountheader{
-	font-size: 1.8em;
-	border-bottom: 2px solid #ddd;
+	font-size: 1.4em;
 	font-weight: bold;
 	color: #09340E;
+	border-bottom: 1px solid #cecece;
 }
 .myaccountfont{
-	font-size: .9em;
+	font-size: 1em;
+	text-transform: capitalize;
 }
 .accountbtn{
 	width: 30%;
@@ -1650,8 +1689,7 @@ table.tablemycart tr:hover{
 	margin-left: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
-	width: 310px;
-	color: #2A8C00;
+	color: #4F8A10;
 }	
 
 /* wishlist */

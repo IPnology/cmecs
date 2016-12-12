@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION['user_session']))
 	{
-		$headerName="Please login.";
+		$headerName="Please login";
 	}
 else
 	{
@@ -20,7 +20,8 @@ else
 			if (!isset($username)){
 			?>
 			<div>
-				<a href="../../user/account">Login</a>
+				<a href="../../user/account">Login</a> |
+				<a href="../../user/account/?view=register">Sign up</a>
 			</div>
 			<?php
 			}

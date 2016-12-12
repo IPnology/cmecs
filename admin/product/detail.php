@@ -12,9 +12,7 @@ else
 
 ?>	
 	
-<div class="main_bg">
-<div class="wrap">	
-	<div class="main">
+<div style="width: 90%; margin-left: auto; margin-right: auto;">
 	<div class="single">
 			<div class="left_content">
 				<div class="span1_of_1">
@@ -28,15 +26,16 @@ else
 						</div>
 					</div>
 				</div>
-				<div class="span1_of_1_des"">
+					<div style="margin-right: 15%;">
 					<div class="desc1">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Category: <?=getCategoryName($row['categoryId'])?></p>
 						<p>Description: <?=$row['description']?></p>
-						<p>Price:<?=$row['price']?><p>
-						<div class="available">
-								<button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
-								<button class="button deletebtn" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+						<p>Price:<?=$row['price']?><p></br>
+						<div>
+								<button class="button updatebtn" style=" width: 160px;"onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></br>
+								</br>
+								<button class="button deletebtn" style=" width: 160px;"onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
 							<div class="clear"></div>
 						</div>
 					 </div>
@@ -45,6 +44,4 @@ else
 	       </div>
 	   <div class="clear"></div>
 	</div>
-</div>
-</div>	
 </div>	
