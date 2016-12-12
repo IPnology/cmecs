@@ -4,12 +4,12 @@ $query = mysql_query("select * from category");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<br><?=$message;?>
-
 <div class="main_bg">
 <div class="wrap">	
-<div class="main">	
+<div class="main">
+<div style="width: 74.3333%; margin-left:auto; margin-right:auto;">
 <button class ="myButton" onClick="location.href='?view=add'">Add Category</button>
+<div class="successmessage"><?=$message;?></div>
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
@@ -37,6 +37,7 @@ else
 	}
 ?>
 <div class="clear"></div>
+</div>
 </div>
 </div>
 </div>	

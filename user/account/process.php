@@ -74,13 +74,19 @@ function register()
 	$password = $_POST['password'];
 	$repeatpassword = $_POST['repeatpassword'];
 	
-	mysql_query("insert into user set username='".$username."',
-													fname='".$firstname."',
-													lname='".$lastname."',
-													password='".$password."',
-													level='client'");
-							
-	header('Location: ../user/?view=list');
+	if($password == $repeatpassword){
+		mysql_query("insert into user set username='".$username."',
+														fname='".$firstname."',
+														lname='".$lastname."',
+														password='".$password."',
+														level='client'");
+		
+		$_SESSION['user_session'] = $username;
+		header('Location: ../home/');
+	}
+	else{
+		header('Location: ../account/?view=register&message=Password does not match.');
+	}
 	
 }
 

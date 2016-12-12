@@ -1509,7 +1509,7 @@ span.psw {
 	border-right:1px solid;
 }
 .delivery {
-	background-color: blue;
+	background-color: #487B99;
 	color:white;
 	cursor:pointer;
 	border-right:1px solid;
@@ -1692,6 +1692,12 @@ table.tablemycart tr:hover{
 	color: #4F8A10;
 }	
 
+.wishmessage { 
+	font-size: .85em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #e41b1b;
+}
 /* wishlist */
 .wishbtn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -1734,12 +1740,6 @@ table.tablemycart tr:hover{
 	top:1px;
 }
 
-.wishmessage { 
-	font-size: .85em;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: #e41b1b;
-}
 /* start sellers */
 .sellers{
 	font-family: 'Source Sans Pro', sans-serif;

@@ -16,11 +16,12 @@ $query = mysql_query("select * from product $getCatId");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">	
+<div style="width: 74.3333%; margin-left:auto; margin-right:auto;">
 <button class="myButton" onClick="location.href='?view=add'">Add Product</button>
+<div class="successmessage"><?=$message;?></div>
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
@@ -47,7 +48,9 @@ else
 <?php
 	}
 ?>
+
+</div>
+</div>
+</div>
 <div class="clear"></div>
-</div>
-</div>
 </div>	
