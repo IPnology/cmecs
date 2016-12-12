@@ -113,6 +113,7 @@ function update()
 	$brgy = $_POST['brgy'];
 	$city = $_POST['city'];
 	$province = $_POST['province'];
+	$email = $_POST['email'];
 	$postal = $_POST['postal'];
 	$password = $_POST['password'];
 	$repeatpassword = $_POST['repeatpassword'];
@@ -122,6 +123,7 @@ function update()
 												fname='".$firstname."',
 												lname='".$lastname."',
 												birthdate='".$birthdate."',
+												email='".$email."',
 												gender='".$gender."',
 												phoneNumber='".$phoneNumber."',
 												street='".$street."',
