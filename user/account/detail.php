@@ -25,7 +25,6 @@ $row=mysql_fetch_array($query);
 			<?=$row['city']?></br></br>
 			<?=$row['province']?></br></br>
 			<?=$row['postal']?></br></br>
-			<button class="myButton" onClick="location.href='?view=update&id=<?=$row['Id']?>'">UPDATE</button>
 		</div>
 	</div>
 		
@@ -36,8 +35,11 @@ $row=mysql_fetch_array($query);
 			<?=$row['city']?></br></br>
 			<?=$row['province']?></br></br>
 			<?=$row['postal']?></br></br>
-			<button class="myButton" onClick="location.href='?view=update&id=<?=$row['Id']?>'">UPDATE</button>
 		</div>
+	</div>
+	
+	<div class="accountleft" style="margin-top:-8%;">	
+		<button class="myButton" onClick="location.href='?view=update&id=<?=$row['Id']?>'">UPDATE</button>
 	</div>
 	<div class="clear"></div>
 </div>
