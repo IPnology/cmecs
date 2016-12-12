@@ -36,6 +36,6 @@ $row=mysql_fetch_array($query)
 	</select>
 	</br></br>
 	
-	<button type="submit" value="Update">Save Changes</button>
+	<button type="submit" class="myButton" value="Update">Save Changes</button>
 </form>
 </div>
