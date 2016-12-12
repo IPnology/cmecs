@@ -20,7 +20,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">
-<div style="width: 74.3333%; float:left;">
+<div style="width: 74.3333%; float:left; margin-top: -2.3%;">
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>

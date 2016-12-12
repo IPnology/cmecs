@@ -3,7 +3,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
-
 if(file_exists("../../media/".$row['image']))
     $fileName = $row['image'];
 else
@@ -11,7 +10,7 @@ else
 ?>	
 
 <div style="width: 90%; margin-left: auto; margin-right: auto;">
-		<div class="wishmessage"><?=$message;?></div>
+		<div class="successmessage"><?=$message;?></div>
 		<div class="single">
 			<div class="left_content">
 					<div class="span1_of_1">
@@ -80,7 +79,7 @@ else
 												echo "<button class='deletebtn' type='button'>Already Added to Cart</button>";
 											}
 											else{
-												echo "<button class='updatebtn' type='submit'>Add to Cart</button>";
+												echo "<button class='updatebtn' style='width: 182px;' type='submit'>Add to Cart</button>";
 											}
 										?>
 										</form>
