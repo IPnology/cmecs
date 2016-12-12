@@ -8,10 +8,10 @@ $query = mysql_query("select * from checkout where status='$status'");
 
 <table class="tablelist">
 	<tr>
-		<th class="pendingorder" onClick="location.href='?status=Pending'">PENDING</th>
-		<th class="approvedorder" onClick="location.href='?status=Approved'">APPROVED</th>
-		<th class="rejectedorder" onClick="location.href='?status=Rejected'">REJECTED</th>
-		<th class="rejectedorder" onClick="location.href='?status=Delivery'">DELIVERY</th>
+		<th class="pendingOrder" onClick="location.href='?status=Pending'">PENDING</th>
+		<th class="approvedOrder" onClick="location.href='?status=Approved'">APPROVED</th>
+		<th class="rejectedOrder" onClick="location.href='?status=Rejected'">REJECTED</th>
+		<th class="delivery" onClick="location.href='?status=Delivery'">DELIVERY</th>
 	</tr>
 </table>
 

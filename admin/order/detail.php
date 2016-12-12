@@ -7,24 +7,31 @@ $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 <?=$message;?></br></br>
-
-&nbsp;&nbsp;&nbsp;ORDER DETAILS</br></br>
+<div style="width:73.333%; margin-left:auto;margin-right:auto;">
+<div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">Order Number: #<?=$row['orderNumber'];?></br></br></div>
+&nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
 <?php
 if(mysql_num_rows($cartQuery)>0){
 	while($cartRow=mysql_fetch_array($cartQuery)){
 ?>
 
 <!-- Put space check layout in document page 50 -->
+<table class="tablelist" style="border-top:2px solid grey;">
+	<tr>
+		 <td style="float:left;">Product</td>
+
+		<td style="float:right;">Price:</td> 
+	</tr>
+	</br>
+</table>
+	</br>
 <table class="tablelist">
 	<tr>
-		<td>Name: <?=getProductName($cartRow['productId']);?></td>
-		<td>Product ID:<?=$cartRow['productId'];?></td>
-		<td>Quantity:<?=$cartRow['quantity'];?></td>
-		<td>Price: <?=getProductPrice($cartRow['productId']);?></td>
-		<td>Total:<?=$cartRow['price'];?></td>
+
+		<td style="float:left;"><?=getProductName($cartRow['productId']);?></br></br>Product ID: #<?=$cartRow['productId'];?></td>
+		<td style="float:right;">PHP <?=$cartRow['price'];?></td> 
 	</tr>
-	</br></br>
-</table>	
+</table>
 <?php
 	}
 }
@@ -32,15 +39,17 @@ else{
 	echo "Cart is Empty.";
 }
 ?>
-<div style="text-align:center; margin-top:30px;">
 </br>
-Shipping Information</br></br>
-Username: <?=$row['username'];?></br></br>
-Order Number: <?=$row['orderNumber'];?></br></br>
-Address: <?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
-Date: <?=$row['date'];?></br></br>
-Total Price: <?=$row['totalPrice'];?></br></br>
-Status: <?=$row['status'];?></br></br>
+
+<!--Shipping Information</br></br>
+
+Address: , , , </br></br>
+ -->
+
+		<td style="float:left; font-weight:bold;">TOTAL:</td>
+		<td style="float:right;font-weight:bold; "><?=$row['totalPrice'];?></td>
+</br>
+</br>
 <?php
 if ($row['status'] == 'Approved'){
 ?>
@@ -48,9 +57,38 @@ if ($row['status'] == 'Approved'){
 <?php
 }
 ?>
+<div style="width:200px;">
+<button class="updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
+<button class="deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+</div>
+</br></br></br>
+<table class="tablelist" style="border-bottom:2px solid grey;">
+<td><div style="font-weight:bold;">Username: <?=$row['username'];?></div></br>
+<td><div style="font-weight:bold;">Status: <?=$row['status'];?></div>
 
-<button class="approvedorder" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
-<button class="rejectedorder" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+</table></br>
 
 
+<div style="margin-left:150px;">
+Billing Address
+</br>John Lorenz Tajonera
+</br><?=$row['street'];?>, <?=$row['brgy'];?>
+</br><?=$row['city'];?>
+</br><?=$row['province'];?>
+<?=$row['postal'];?>
+
+
+</div>
+<div style="float:right; margin-top:-90px; margin-right:150px;">
+Shipping Address
+</br>John Lorenz Tajonera
+</br><?=$row['street'];?>, <?=$row['brgy'];?>
+</br><?=$row['city'];?>
+</br><?=$row['province'];?>
+<?=$row['postal'];?>
+
+
+
+
+</div></br></br>
 </div>
