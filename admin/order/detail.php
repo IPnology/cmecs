@@ -54,11 +54,11 @@ Address: , , , </br></br>
 <?php
 if ($row['status'] == 'Approved'){
 ?>
-<button onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
+<button style="margin-left:195px; margin-bottom:-35px; height:37px;" class="myButton" onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
 <?php
 }
 ?>
-<div style="width:200px;">
+<div style="width:300px;">
 <button class="updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
 <button class="deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
 </div>
