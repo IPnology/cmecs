@@ -16,10 +16,10 @@ $query = mysql_query("select * from product where name like '%$search%'");
 		<div class="grid1_of_3">
 			<img src="../../media/<?=$fileName;?>" alt=""/>
 				<div class="descname">
-					CATEGORY ID: <?=$row['categoryId']?></br>
-					<a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></a></br>
-					PRICE: <?=$row['price']?>.00</br>
-					DESCRIPTION: <?=$row['description']?>
+					<div class="accountlabels">CATEGORY ID:</div> <?=$row['categoryId']?></br>
+					<div class="accountlabels"><a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></a></div></br>
+					<div class="accountlabels">PRICE:</div> <?=$row['price']?>.00</br>
+					<div class="accountlabels">DESCRIPTION:</div> <?=$row['description']?>
 				</div>
 				<div class="price"></br>
 					<button class="updatebtn" style="width: 150px;" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></br></br>
