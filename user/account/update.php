@@ -30,7 +30,12 @@ $row=mysql_fetch_array($query)
 	
 	<div class="lnhalf">
 	GENDER *</br>
-	<input type="text" name="gender" value="<?=$row['gender']?>" placeholder="your gender" required>
+	<select name="gender" class="select" required>
+			<option value="">Select Gender</option>
+			<option value="female">Female</option>
+			<option value="male">Male</option>
+	</select>
+	 
 	</div></br></br>
 	
 	<div class="fnhalf">
