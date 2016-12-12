@@ -52,17 +52,31 @@ Address: , , , </br></br>
 		<td style="float:right;font-weight:bold; "><?=$row['totalPrice'];?></td>
 </br>
 </br>
+<div style="width:300px;">
 <?php
-if ($row['status'] == 'Approved'){
+if ($row['status'] != "Approved"){
 ?>
-<button style="margin-left:195px; margin-bottom:-35px; height:37px;" class="myButton" onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
-<?php
+<button class="updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
+<?php 
 }
 ?>
-<div style="width:300px;">
-<button class="updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
+<?php
+if ($row['status'] != "Rejected"){
+?>
 <button class="deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+<?php 
+}
+?>
+<?php
+if ($row['status'] == "Approved"){
+?>
+<button class="myButton" onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
+<?php 
+}
+?>
+
 </div>
+
 </br></br></br>
 <table class="tablelist" style="border-bottom:2px solid grey;">
 <td><div style="font-weight:bold;">Username: <?=$row['username'];?></div></br>
