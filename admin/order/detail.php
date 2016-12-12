@@ -6,8 +6,9 @@ $orderNumber = $row['orderNumber'];
 $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
+
 <?=$message;?></br></br>
-<div style="width:73.333%; margin-left:auto;margin-right:auto;">
+<div class="wrapper">
 <div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">Order Number: #<?=$row['orderNumber'];?></br></br></div>
 &nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
 <?php
@@ -70,22 +71,26 @@ if ($row['status'] == 'Approved'){
 
 
 <div style="margin-left:150px;">
-Billing Address
-</br>John Lorenz Tajonera
-</br><?=$row['street'];?>, <?=$row['brgy'];?>
-</br><?=$row['city'];?>
-</br><?=$row['province'];?>
-<?=$row['postal'];?>
+Billing Address</br>
+		<div class="myaccountfont">
+			</br>John Lorenz Tajonera</br>
+			<?=$row['street']?>, <?=$row['brgy']?></br>
+			<?=$row['city']?></br>
+			<?=$row['province']?></br>
+			<?=$row['postal']?></br>
+</div>
 
 
 </div>
-<div style="float:right; margin-top:-90px; margin-right:150px;">
-Shipping Address
-</br>John Lorenz Tajonera
-</br><?=$row['street'];?>, <?=$row['brgy'];?>
-</br><?=$row['city'];?>
-</br><?=$row['province'];?>
-<?=$row['postal'];?>
+<div style="float:right; margin-top:-115px; margin-right:150px;">
+Shipping Address</br>
+		<div class="myaccountfont">
+			</br>John Lorenz Tajonera</br>
+			<?=$row['street']?>, <?=$row['brgy']?></br>
+			<?=$row['city']?></br>
+			<?=$row['province']?></br>
+			<?=$row['postal']?></br>
+</div>
 
 
 
