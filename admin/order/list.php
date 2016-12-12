@@ -3,7 +3,7 @@ $status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : 
 $query = mysql_query("select * from checkout where status='$status'");
 ?>
 <div class="listwrapper">
-<h1></br>ORDER DETAILS</br></h1>
+<div class="myaccountheader" style=" font-size: 1.6em;"></br>ORDER DETAILS</br></h1></div>
 </br>
 
 <table class="tablelist">
