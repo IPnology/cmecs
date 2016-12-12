@@ -7,8 +7,7 @@ else{
 $query = mysql_query("select * from checkout where username = '$username'");
 ?>
 <div class="listwrapper">
-<h1></br>Order Details</br></h1>
-</br>
+<div class="myaccountheader" style=" font-size: 1.6em;"></br>ORDER DETAILS</br></h1></div>
 <table class="tablelist">
 
 	<tr>

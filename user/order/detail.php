@@ -23,7 +23,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<?php
 		}
 		else{
-			echo "This order cannot be canceled.";
+			echo "This order cannot be cancelled.";
 		}
 	?>
 </div>

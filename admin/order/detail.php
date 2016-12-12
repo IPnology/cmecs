@@ -7,8 +7,8 @@ $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<?=$message;?></br></br>
 <div class="wrapper">
+
 <div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">
 Order Number: #<?=$row['orderNumber'];?></br></br></div>
 &nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
