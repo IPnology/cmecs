@@ -5,7 +5,7 @@ $query = mysql_query("select * from category where Id = $id");
 
 $row=mysql_fetch_array($query);
 
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";

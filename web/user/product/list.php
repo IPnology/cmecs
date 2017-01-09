@@ -28,14 +28,14 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <!-- start grids_of_3 -->
 <?php
 
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
 ?>
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<img src="../../media/<?=$fileName;?>" alt=""/>
+			<img src="../../../media/<?=$fileName;?>" alt=""/>
 				<div class="descname"><?=$row['name']?></div>
 				<div class="price">
 					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW PRODUCT</button>

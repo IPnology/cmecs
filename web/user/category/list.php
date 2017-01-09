@@ -16,7 +16,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <!-- start grids_of_3 -->
 <?php
 
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";

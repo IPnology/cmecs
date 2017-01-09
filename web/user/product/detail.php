@@ -3,7 +3,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
@@ -18,7 +18,7 @@ else
 							<div class="product-essential">
 								<div class="product-img-box">
 									<div class="product-image"> 
-										<img src="../../media/<?=$fileName;?>"></br>
+										<img src="../../../media/<?=$fileName;?>"></br>
 								   </div>
 								</div>
 							</div>

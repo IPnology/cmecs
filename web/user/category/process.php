@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../config/database.php';
+require_once '../../../config/database.php';
 
 $action = $_GET['action'];	
 	
@@ -56,7 +56,7 @@ function add()
 	$description = $_POST['description'];
 	
 	// Where the file is going to be placed 
-	$target_path = "../../media/";
+	$target_path = "../../../media/";
 
 	/* Add the original filename to our target path.  
 	Result is "uploads/filename.extension" */
@@ -69,7 +69,7 @@ function add()
 											description='".$description."',
 											image='".$newfilename."'");
 	
-	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
+	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../../media/" . $newfilename)) {
 							
 	header('Location: ../category/');
 	}
@@ -98,7 +98,7 @@ function update()
 	$description = $_POST['description'];
 	
 	// Where the file is going to be placed 
-	$target_path = "../../media/";
+	$target_path = "../../../media/";
 
 	/* Add the original filename to our target path.  
 	Result is "uploads/filename.extension" */
@@ -112,7 +112,7 @@ function update()
 										image='".$newfilename."'
 										where Id = '".$id."'");
 												
-	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../media/" . $newfilename)) {
+	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../../media/" . $newfilename)) {
 							
 	header('Location: ../category/?view=list&message=Successfully Updated.');
 	}
