@@ -7,7 +7,7 @@ switch ($view) {
 		$header 	= 'header.php';
 		$content 	= 'content.php';
 		$footer 	= 'footer.php';
-		$template = 'template.php';
+		$template = 'web/template.php';
 }
 
 require_once $template;

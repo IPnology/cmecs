@@ -22,7 +22,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<img src="../../media/<?=getProductImage($row['productId'])?>" alt=""/>
+			<img src="../../../media/<?=getProductImage($row['productId'])?>" alt=""/>
 				<div class="descname"><?=getProductName($row['productId'])?></div>
 				<div class="price">
 					<button class="myButton" onClick="location.href='../product/?view=detail&id=<?=$row['productId']?>'">VIEW PRODUCT</button>

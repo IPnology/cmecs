@@ -8,9 +8,9 @@ switch ($view) {
 		
 	default :
 		$content 	= 'content.php';
-		$template	= '../../../include/template-main.php';
-		$header 	= '../../../include/headerCustomer.php';
-		$footer 	= '../../../include/footer.php';
+		$template	= '../../../include/web/template-main.php';
+		$header 	= '../../../include/web/headerCustomer.php';
+		$footer 	= '../../../include/web/footer.php';
 }
 
 require_once $template;

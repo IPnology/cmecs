@@ -1,5 +1,5 @@
 <?php
-include_once("../../config/database.php");
+include_once("../../../config/database.php");
 
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
@@ -7,29 +7,29 @@ switch ($view) {
 	
 	case 'register' :
 		$content = 'register.php';
-		$template = '../../include/template-main.php';
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
+		$template = '../../../include/web/template-main.php';
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
 		break;
 		
 	case 'list' :
 		$content 	= 'list.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
 		break;
 		
 	case 'update' :
 		$content 	= 'update.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';		
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
 		break;
 		
 			
 	default :
 		$content 	= 'login.php';
-		$template = '../../include/template-login.php';
+		$template = '../../../include/web/template-login.php';
 }
 
 require_once $template;

@@ -22,7 +22,7 @@ else
 						<div class="product-essential">
 							<div class="product-img-box">
 								<div class="product-image">
-									<img src="../../media/<?=$fileName;?>"></br>
+									<img src="../../../media/<?=$fileName;?>"></br>
 							   </div>
 							</div>
 						</div>
