@@ -37,8 +37,8 @@
 		    </script>
 		   <!-- //Owl Carousel Assets -->
 		<!-- start top_js_button -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="../../../include/web/js/move-top.js"></script>
+		<script type="text/javascript" src="../../../include/web/js/easing.js"></script>
 		   <script type="text/javascript">
 				jQuery(document).ready(function($) {
 					$(".scroll").click(function(event){		
