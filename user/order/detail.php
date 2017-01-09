@@ -5,7 +5,11 @@ $row = mysql_fetch_array($query);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 <div class="wrapper" style="width:40%;">
-	<?=$message;?></br></br>
+
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	</br>
 	<div class="myaccountfont">
 	<div style="font-size: 1.3em; color:#09340E;" class="accountlabels">Order Number #<?=$row['orderNumber'];?></br></div> 
 	</br></br><div class="accountlabels">Username:</div> <?=$row['username'];?></br></br>
