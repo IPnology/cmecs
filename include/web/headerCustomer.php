@@ -36,7 +36,7 @@ else
 			?>
 		</div>
 		<div class="logo">
-			<a href="../../admin/home"><img src="../../include/images/logo.png" alt=""/> </a>
+			<a href="../../../admin/home"><img src="../../../include/web/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
     		<form class="formsearch" action="../../admin/product" method="GET">
