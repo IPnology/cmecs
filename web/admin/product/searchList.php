@@ -14,7 +14,7 @@ $query = mysql_query("select * from product where name like '%$search%'");
 	
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<img src="../../media/<?=$fileName;?>" alt=""/>
+			<img src="../../../media/<?=$fileName;?>" alt=""/>
 				<div class="descname">
 					<div class="accountlabels">CATEGORY ID:</div> <?=$row['categoryId']?></br>
 					<div class="accountlabels"><a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></a></div></br>
