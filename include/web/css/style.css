@@ -1697,6 +1697,25 @@ table.tablemycart tr:hover{
 	border-radius:5px;
 	
 }
+.successmessageorder {
+	font-family: Arial;
+    margin-right: auto;
+	font-size:30px;
+	text-transform:uppercase;
+    margin-left: auto;
+    margin-top: 12%;
+    margin-bottom: 1%;
+    color: #666;
+    height: 80px;
+    background-color: #f6f6f6;
+    padding-top:40px;
+	padding-bottom: 40px;
+    padding-left: 17px;
+	border-radius:5px;
+	width:73.333%; 
+	text-align:center;
+	
+}
 .errormessage {
 	font-weight: bold;
     margin-right: auto;
