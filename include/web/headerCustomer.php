@@ -36,10 +36,10 @@ else
 			?>
 		</div>
 		<div class="logo">
-			<a href="../../../admin/home"><img src="../../../include/web/images/logo.png" alt=""/> </a>
+			<a href="../../../user/home"><img src="../../../include/web/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
-    		<form class="formsearch" action="../../admin/product" method="GET">
+    		<form class="formsearch" action="../../user/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
