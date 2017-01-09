@@ -5,19 +5,21 @@ $truckQuery = mysql_query("select * from truck");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-
+<br>
+<center>
 <form action="" method="GET">
 <input type="date" name="schedule">
-<button type="submit">View</button>
+<button type="submit" class="button updatebtn">OK</button>
 </form>
+</center>
 
-Schedule on <?=$schedule;?>
 
+<?php if(!$schedule) {}else{?>
 <div class="listwrapper">
 	
 	<table class="tablelist">
 	<tr>
-		<th>SCHEDULES</th>
+		<th>SCHEDULES on <?=$schedule;?></th>
 		<th></th>
 	</tr> 
 	<?php
@@ -34,3 +36,5 @@ Schedule on <?=$schedule;?>
 	</table>
 	<div class="clear"></div>
 </div>
+
+<?php }?>

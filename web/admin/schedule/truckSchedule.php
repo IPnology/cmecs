@@ -7,9 +7,10 @@ $query = mysql_query("select * from delivery where truckId='$truckId' and delive
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-
+<br>
+<center>
 <?=getTruckName($truckId)?> Schedule on <?=$schedule?>
-		
+</center>
 <div class="listwrapper">
 	
 	<table class="tablelist">
