@@ -1,1 +1,7 @@
-<div class="successmessage" style="width:73.333%; text-align:center;">You have successfully placed an order!</div>
+<div class="successmessageorder">Thank You! Your Order Has Been successfully completed.
+</br>
+</br>
+</br>
+
+<button class="updatebtn" onClick="location.href="#">Go Back to Home Page</button>
+</div>
