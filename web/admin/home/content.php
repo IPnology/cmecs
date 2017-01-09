@@ -16,7 +16,6 @@
 					<h2>Revolution</h2>
 					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 					<a href="details.html" class="da-link">shop now</a>
-					<div class="da-img"><img src="../../../include/web/images/slider3.png" alt="image01" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Quality Control</h2>
@@ -91,7 +90,6 @@
 		<div class="item" onclick="location.href='details.html';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="../../../include/web/images/c3.jpg" alt="Lazy Owl Image">
-			</div>
 			<div class="cau_left">
 				<h4><a href="details.html">branded jeens</a></h4>
 				<a href="details.html" class="btn">shop</a>
@@ -116,7 +114,7 @@
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic1.jpg" alt=""/>
+					<img src="../../../include/images/pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>
@@ -126,7 +124,7 @@
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic2.jpg" alt=""/>
+					<img src="../../../include/images/pic2.jpg" alt=""/>
 					<h3>branded t-shirts</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>
@@ -136,7 +134,7 @@
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic3.jpg" alt=""/>
+					<img src="../../../include/images/pic3.jpg" alt=""/>
 					<h3>branded tees</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>
@@ -149,7 +147,7 @@
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic4.jpg" alt=""/>
+					<img src="../../../include/images/pic4.jpg" alt=""/>
 					<h3>branded bags</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>
@@ -159,7 +157,7 @@
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic5.jpg" alt=""/>
+					<img src="../../../include/images/pic5.jpg" alt=""/>
 					<h3>ems women bag</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>
@@ -169,7 +167,7 @@
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.html">
-					<img src="../../include/images/pic6.jpg" alt=""/>
+					<img src="../../../include/images/pic6.jpg" alt=""/>
 					<h3>branded cargos</h3>
 					<div class="price">
 						<h4>$300<span>indulge</span></h4>

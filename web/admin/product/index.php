@@ -37,7 +37,7 @@ switch ($view) {
 		$content 	= 'searchList.php';
 		$template = '../../../include/web/template-main.php';		
 		$header 	= '../../../include/web/header.php';
-		$footer 	= '../../../include/web/footer.php';		
+		$footer 	= '../../../include/web/footer.php';
 		break;
 		
 			

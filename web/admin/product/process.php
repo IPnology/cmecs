@@ -29,7 +29,7 @@ function add()
 	$price = $_POST['price'];
 	
 	// Where the file is going to be placed 
-	$target_path = "../../media/";
+	$target_path = "../../../media/";
 
 	/* Add the original filename to our target path.  
 	Result is "uploads/filename.extension" */

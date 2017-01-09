@@ -23,7 +23,7 @@ switch ($view) {
 		$content 	= 'update.php';
 		$template = '../../../web/include/template-main.php';		
 		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';		
+		$footer 	= '../../../web/include/footer.php';	
 		break;
 		
 	case 'detail' :
