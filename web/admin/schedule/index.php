@@ -5,20 +5,19 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 	
-	case 'list' :
-		$content 	= 'list.php';
+	case 'detail' :
+		$content 	= 'detail.php';
 		$template 	= '../../../include/web/template-main.php';		
 		$header 	= '../../../include/web/header.php';
 		$footer 	= '../../../include/web/footer.php';		
 		break;
 		
-	case 'detail' :
-		$content 	= 'detail.php';
+	case 'truck-schedule' :
+		$content 	= 'truckSchedule.php';
 		$template 	= '../../../include/web/template-main.php';		
 		$header 	= '../../../include/web/header.php';
-		$footer 	= '../../../include/web/footer.php';	
+		$footer 	= '../../../include/web/footer.php';		
 		break;
-		
 			
 	default :
 		$content 	= 'list.php';
@@ -29,9 +28,19 @@ switch ($view) {
 
 require_once $template;
 
+function getTruckName($truckId)
+{
+	$get = mysql_fetch_array(mysql_query("select name from truck where Id=$truckId"));
+	return $get['name'];
+}
+
+function getShippingAddress($orderNumber)
+{
+	$get = mysql_fetch_array(mysql_query("select * from checkout where orderNumber=$orderNumber"));
+	$address = $get['street']. ", " .$get['brgy']. ", " .$get['city']. ", " .$get['province']. ", " .$get['postal']; 
+	return $address;
+}
 ?>
-
-
 
 
 

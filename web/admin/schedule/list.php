@@ -1,10 +1,18 @@
 <?php
-$id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
+$schedule = (isset($_GET['schedule']) && $_GET['schedule'] != '') ? $_GET['schedule'] : '';
 
-$query = mysql_query("select * from truck");
+$truckQuery = mysql_query("select * from truck");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
+
+<form action="" method="GET">
+<input type="date" name="schedule">
+<button type="submit">View</button>
+</form>
+
+Schedule on <?=$schedule;?>
+
 <div class="listwrapper">
 	
 	<table class="tablelist">
@@ -13,11 +21,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<th></th>
 	</tr> 
 	<?php
-		while($row=mysql_fetch_array($query)){
+		while($row=mysql_fetch_array($truckQuery)){
 	?>
 	<tr>
 		<td><?=$row['name']?></td>
-		<td><button class="button updatebtn" onClick="location.href='?view=update&id=<?=$row['Id']?>'">View</button></td>
+		<td><button class="button updatebtn" onClick="location.href='?view=truck-schedule&truckId=<?=$row['Id']?>&schedule=<?=$schedule;?>'">View</button></td>
 	</tr>
 
 	<?php
