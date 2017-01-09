@@ -23,7 +23,7 @@ else
 ?>
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<img src="../../media/<?=$fileName?>" alt=""/>
+			<img src="../../../media/<?=$fileName?>" alt=""/>
 				<div class="descname"><?=$row['name']?></div>
 				<div class="price">
 					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW CATEGORY</button>

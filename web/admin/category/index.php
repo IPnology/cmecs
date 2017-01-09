@@ -7,38 +7,38 @@ switch ($view) {
 	
 	case 'add' :
 		$content = 'add.php';
-		$template = '../../../web/include/template-main.php';		
-		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
 		break;
 		
 	case 'list' :
 		$content 	= 'list.php';
-		$template = '../../../web/include/template-main.php';		
-		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';		
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';		
 		break;
 		
 	case 'update' :
 		$content 	= 'update.php';
-		$template = '../../../web/include/template-main.php';		
-		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';	
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';	
 		break;
 		
 	case 'detail' :
 		$content 	= 'detail.php';
-		$template = '../../../web/include/template-main.php';		
-		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';	
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';	
 		break;
 		
 			
 	default :
 		$content 	= 'list.php';
-		$template = '../../../web/include/template-main.php';		
-		$header 	= '../../../web/include/header.php';
-		$footer 	= '../../../web/include/footer.php';
+		$template = '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
 }
 
 require_once $template;
