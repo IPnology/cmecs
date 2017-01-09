@@ -8,8 +8,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="wrap">	
 <div class="main">
 <div style="width: 74.3333%; margin-left:auto; margin-right:auto;">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 <button class ="myButton" onClick="location.href='?view=add'">Add Category</button>
-<div class="successmessage"><?=$message;?></div>
+
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
