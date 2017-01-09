@@ -42,7 +42,7 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="../../../admin/home">Home</a></li> |
+				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
 				<li><a href="../../../web/admin/account/?view=list">Accounts</a></li> |
 				<li><a href="../../../web/admin/order">Order</a></li> |
 				<li><a href="../../../web/admin/category">category</a></li> |
