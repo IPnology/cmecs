@@ -40,6 +40,13 @@ function getShippingAddress($orderNumber)
 	$address = $get['street']. ", " .$get['brgy']. ", " .$get['city']. ", " .$get['province']. ", " .$get['postal']; 
 	return $address;
 }
+
+function getProductName($productId)
+{
+	$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));
+	return $get['name'];
+}
+
 ?>
 
 
