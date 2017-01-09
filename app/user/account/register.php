@@ -2,7 +2,9 @@
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<?=$message;?>
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 
 <form action="process.php?action=register" method="POST">
 	<div class="wrapper">

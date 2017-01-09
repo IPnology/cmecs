@@ -7,6 +7,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 
 <div class="wrapper">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 	<form action="process.php?action=confirm-address" method="POST">
 		STREET:</br>
 		<input type="text" name="street" value="<?=$row['street']?>" placeholder="Street">

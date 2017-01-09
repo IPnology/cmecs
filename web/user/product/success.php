@@ -1,1 +1,1 @@
-You have successfully placed an order!
+<div class="successmessage" style="width:73.333%; text-align:center;">You have successfully placed an order!</div>

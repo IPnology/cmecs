@@ -8,7 +8,9 @@ $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<?=$message;?></br></br>
+ <?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 <div class="wrapper">
 <div style="font-weight:bold; font-size:20px; border-bottom:2px solid grey;">FOR DELIVERY ORDER</br></div></br>
 <?php
