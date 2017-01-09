@@ -47,7 +47,8 @@
 				<li><a href="../../../web/admin/order">Order</a></li> |
 				<li><a href="../../../web/admin/category">category</a></li> |
 				<li><a href="../../../web/admin/product">product</a></li> |
-				<li><a href="../../../web/admin/truck">truck</a></li>
+				<li><a href="../../../web/admin/truck">truck</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">

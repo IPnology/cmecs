@@ -8,7 +8,7 @@ switch ($view) {
 		
 	default :
 		$content 	= 'content.php';
-		$template = '../../../include/web/template-main.php';
+		$template 	= '../../../include/web/template-main.php';
 		$header 	= '../../../include/web/header.php';
 		$footer 	= '../../../include/web/footer.php';
 }
