@@ -5,7 +5,7 @@ $query = mysql_query("select * from user where Id = $id");
 
 $row=mysql_fetch_array($query)
 ?>
-
+<div class="loginwrapper">
 <form action="process.php?action=update&id=<?=$id?>" method="POST">
 	<div class="wrapper">
 	<div class="fwhole">
@@ -83,7 +83,11 @@ $row=mysql_fetch_array($query)
 	<input type="password" name="repeatpassword" placeholder="enter password" required>
 	</div></br></br>
 	
-	<input type="submit" class="registerbtn" value="Update Profile">
+	
+	<div class="centerregbtn">
+		<input type="submit" class="registerbtn" value="Update">
+	</div>
 	</br></br>
 </form>
+</div>
 </div>

@@ -20,7 +20,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">
-<div style="width: 74.3333%; float:left; margin-top: -2.3%;">
+<div class="wrapper" style="margin-top: 5.5%;">
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
@@ -28,14 +28,14 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <!-- start grids_of_3 -->
 <?php
 
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
 ?>
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<img src="../../media/<?=$fileName;?>" alt=""/>
+			<img src="../../../media/<?=$fileName;?>" alt=""/>
 				<div class="descname"><?=$row['name']?></div>
 				<div class="price">
 					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW PRODUCT</button>

@@ -6,7 +6,8 @@ else{
 
 $query = mysql_query("select * from checkout where username = '$username'");
 ?>
-<div class="listwrapper">
+<div class="loginwrapper">
+
 <h1></br>Order Details</br></h1>
 </br>
 <table class="tablelist">

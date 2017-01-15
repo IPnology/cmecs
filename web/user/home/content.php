@@ -29,7 +29,6 @@
 					<span class="da-arrows-next"></span>
 				</nav>
 			</div>
-        </div>
 <!----start-cursual---->
 <div class="wrap">
 <!----start-img-cursual---->
