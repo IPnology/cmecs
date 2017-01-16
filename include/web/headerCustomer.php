@@ -1,12 +1,15 @@
 <?php
-if (!isset($_SESSION['user_session']))
+$username = $_SESSION['user_session'];
+$query = mysql_query("select * from user where username = '$username'");
+$querylen = mysql_num_rows($query);
+
+if ($querylen != 0)
 	{
-		$headerName="Please login";
+		$headerName = "Welcome ".$username."!";
 	}
 else
 	{
-		$username = $_SESSION['user_session'];
-		$headerName = "Welcome ".$username."!";
+		$headerName="Please login";
 	}
 ?>
 
@@ -17,7 +20,7 @@ else
 		<div class="welcome">
 			<?=$headerName;?>
 			<?php
-			if (!isset($username)){
+			if ($querylen == 0){
 			?>
 			<div>
 				<a href="../../user/account">Login</a> |
