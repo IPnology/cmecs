@@ -14,38 +14,33 @@ switch ($view) {
 		
 	case 'list' :
 		$content 	= 'list.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';		
+		$template = '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';		
 		break;
 		
 	case 'update' :
 		$content 	= 'update.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';		
+		$template = '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';		
 		break;
 		
 	case 'detail' :
 		$content 	= 'detail.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';		
+		$template = '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';		
 		break;
 		
 			
 	default :
 		$content 	= 'list.php';
-		$template = '../../include/template-main.php';		
-		$header 	= '../../include/header.php';
-		$footer 	= '../../include/footer.php';
+		$template = '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';
 }
 
 require_once $template;
 
 ?>
-
-
-
-
-

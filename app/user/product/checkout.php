@@ -7,13 +7,13 @@ $count=mysql_num_rows($query);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<div class="checkoutwrap">
+<div class="wrapper" style="font-size: 1em; margin-left: 5%;">
 	<div class="successmessage"><?=$message;?></div>
 	<div>
 		<div>
-		<div class="mycartheader">YOUR ORDER</div>
+		<div class="checkoutheader">YOUR ORDER</div>
 			<table class="tablemycart">
-				<tr>
+				<tr style="font-size:.8em">
 					<th>PRODUCT NAME</th>
 					<th></th>
 					<th>QTY.</th>
@@ -35,7 +35,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				<tr>
 					<td><?=getProductName($row['productId'])?></td>
 					<td>X</td>
-					<td><input type="text" name="quantity[]" value="<?=$row['quantity']?>" required></td>
+					<td><input type="text" name="quantity[]" value="<?=$row['quantity']?>" required style="width: 30px; padding: 1%; height: 90%;"></td>
 					<td>=</td>
 					<td><?=$row['price']?>.00</td>
 				</tr>
@@ -44,7 +44,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				}	
 				?>
 				
-				<tr class="checkouttotal">
+				<tr class="checkouttotal" style="font-size: .9em;">
 					<td class="checkoutfont">TOTAL</td>
 					<td></td>
 					<td></td>
@@ -60,18 +60,20 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 							</tr>";
 				}
 			?>
+			<tr>
+			<td><input type="submit" class="updatebtn" name="Submit" value="Update Cart" style="margin-left: 60.333%;">
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td><input type="submit" class="updatebtn" name="Submit" value="Update Cart"></td>				
+			<td></td>	
+			</tr>
 			</form>
 			</table>		
 		</div>
 	</div>
 	</br>
-	<div style="margin-left:auto; margin-right: auto; width: 390px;"> 
-	<button class="myButton" style="height: 36px;" onClick="location.href='index.php'">Continue Shopping</button>
+	<div style="width:: 90%; margin-left: 25%;"> 
+	<button class="myButton" onClick="location.href='index.php'">Continue Shopping</button><br><br>
 	<button class="deletebtn" onClick="location.href='?view=shipping-address&tp=<?=$totalPrice;?>'">Proceed to Checkout >></button>
 	</br></br>
 	</div>

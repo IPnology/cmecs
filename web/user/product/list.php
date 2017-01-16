@@ -24,8 +24,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
-<!--diri-->
-<!-- start grids_of_3 -->
 <?php
 
 if(file_exists("../../../media/".$row['image']))
@@ -42,8 +40,6 @@ else
 				</div>
 			</div>
 	</div>
-	
-	<!--asta d-->
 <?php
 	}
 ?>

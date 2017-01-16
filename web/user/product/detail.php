@@ -3,13 +3,14 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
-if(file_exists("../../../media/".$row['image']))
+if(file_exists("../../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
 ?>	
 
 <div style="width: 90%; margin-left: auto; margin-right: auto;">
+	
 		<div class="successmessage"><?=$message;?></div>
 		<div class="single">
 			<div class="left_content">
@@ -18,13 +19,13 @@ else
 							<div class="product-essential">
 								<div class="product-img-box">
 									<div class="product-image"> 
-										<img src="../../../media/<?=$fileName;?>"></br>
+										<img src="../../../../media/<?=$fileName;?>"></br>
 								   </div>
 								</div>
 							</div>
 						</div>
 					</div>
-
+						
 					<div style="margin-right: 15%;">
 						<div class="desc1">
 							<h3>Name: <?=$row['name']?></br></h3>

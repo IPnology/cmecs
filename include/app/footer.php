@@ -1,5 +1,4 @@
 <div class="footer_bg1">
-<div class="wrap">
 	<div class="footer">CASA MUEBLES
 		<!-- scroll_top_btn -->
 	    <script type="text/javascript">
@@ -20,5 +19,4 @@
 		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 		<div class="clear"></div>
 	</div>
-</div>
 </div>

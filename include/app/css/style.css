@@ -532,6 +532,15 @@ body {
 	display: block;
 	bottom: 0px;
 }
+.ctgdetail{
+	display: block;
+	margin-bottom: 10%;
+	min-width:100%;
+}
+.ctglabel{
+	text-transform: uppercase;
+	text-weight:bold;
+}
 .price{
 	display: block;
 	margin-bottom: 40px;
@@ -564,7 +573,7 @@ body {
 .footer{
 	padding: 1.5%;
 	color: #fff;
-
+	font-size: .750em;
 }
 /* start grids_of_3 */
 .grids_of_4{
@@ -897,6 +906,14 @@ p.para{
 
 .wrapper{
 	width:73.333%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:3%;
+}
+
+
+.acctwrapper{
+	width: 90%;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:3%;
@@ -1586,28 +1603,6 @@ span.psw {
 	display: inline-block;
 	font-weight: bold;
 }
-.accountleft{
-	width: 49.3333%;	
-	height:300px;
-	display: inline-block;
-	margin: 0px 1px;
-	word-wrap: break-word;
-	margin-top:1%;
-	padding: 1px;
-	font-size: 1em;
-	text-transform: capitalize;
-}
-
-.accountright{
-	width: 49.3333%;
-	height:300px;
-	word-wrap: break-word;
-	margin-top:1%;
-	padding: 1px;
-	font-size: 1em;
-	text-transform: capitalize;
-}
-
 .myaccountheader{
 	font-size: 1.4em;
 	font-weight: bold;
@@ -1627,14 +1622,14 @@ span.psw {
 
 /* start of my cart */
 .mycartwrapper{
-	min-width: 25%;
+	min-width: 100%;
 	display: inline-block;
 	border: 1px solid #ddd;
 }
 table.tablemycart { 
     width: 100%;
 	color: #444646;
-	font-size: .90em;
+	font-size: .855em;
 }
 table.tablemycart th{
     text-align: center;	
@@ -1648,13 +1643,25 @@ table.tablemycart th.prodnamemycart{
 }
 .mycartheader{
    background-color: red;
-   font-size: 2.3em;
+   font-size: 1.5em;
    background-color: #13a04e;
    color: #fff;
-   height: 8%;
+   height: 7%;
    text-align: center;
    font-family: bebas_neueregular;
-}
+	width: 100%;
+   }
+   
+.checkoutheader{
+   background-color: red;
+   font-size: 1.5em;
+   background-color: #13a04e;
+   color: #fff;
+   height: 7%;
+   text-align: center;
+   font-family: bebas_neueregular;
+	width: 125%;
+   }
 table.tablemycart td {
     padding: 2%;
     text-align: center;

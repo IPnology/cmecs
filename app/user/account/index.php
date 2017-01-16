@@ -14,14 +14,14 @@ switch ($view) {
 		
 	case 'detail' :
 		$content 	= 'detail.php';
-		$template = '../../../include/app/template-login.php';
+		$template = '../../../include/app/template-main.php';
 		$header 	= '../../../include/app/headerCustomer.php';
 		$footer 	= '../../../include/app/footer.php';
 		break;
 		
 	case 'update' :
 		$content 	= 'update.php';
-		$template = '../../../include/app/template-login.php';
+		$template = '../../../include/app/template-main.php';
 		$header 	= '../../../include/app/headerCustomer.php';
 		$footer 	= '../../../include/app/footer.php';
 		break;
@@ -29,7 +29,7 @@ switch ($view) {
 			
 	default :
 		$content 	= 'login.php';
-		$template = '../../../include/app/template-login.php';
+		$template = '../../../include/app/template-main.php';
 }
 
 require_once $template;

@@ -3,35 +3,23 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
-if(file_exists("../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
 ?>	
 
-<div style="width: 90%; margin-left: auto; margin-right: auto;">
-		<div class="successmessage"><?=$message;?></div>
-		<div class="single">
-			<div class="left_content">
-					<div class="span1_of_1">
-						<div class="product-view">
-							<div class="product-essential">
-								<div class="product-img-box">
-									<div class="product-image"> 
-										<img src="../../media/<?=$fileName;?>"></br>
-								   </div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div style="margin-right: 15%;">
-						<div class="desc1">
-							<h3>Name: <?=$row['name']?></br></h3>
-							<p>Description: <?=$row['description']?></p>
-							<p>Price: <?=$row['price']?><p>
-							</br>
-							<?php
+<div style="width: 90.333%; margin-left: auto; margin-right: auto;">
+	<div class="successmessage" style="font-size: .8em;"><?=$message;?></div>
+	<div class="grids_of_3">
+		<div class="grid1_of_3">
+			<img src="../../../media/<?=$fileName;?>" alt=""/>
+				<div class="ctgdetail">
+					Name: <?=$row['name']?></br></br>
+					<p>Description: <?=$row['description']?></p>
+					<p>Price: <?=$row['price']?><p>
+				</div>		
+				<?php 
 							# This is for users that are not logged in!!! DO NOT DELETE!
 							if (!isset($username)){ #start if 
 							?>
@@ -87,20 +75,22 @@ else
 							<?php
 							}#end if
 							?>
-							
-								<div class="clear"></div>
 							</div>
-						 </div>
+	</div>
+
 					</div>
 					<div class="clear"></div>
 			</div>
+			
+			<div style="margin-left: auto; margin-right: auto; width: 90.333%; margin-left: 8%;">
 			   <?php
 				if (!isset($username)){}
 				else{
 					require_once 'tempCart.php';
 				}
 				?>
-		   <div class="clear"></div>
+			</div>
+		 <br>
+		 <div class="clear"></div>
 		</div>
-
 </div>
