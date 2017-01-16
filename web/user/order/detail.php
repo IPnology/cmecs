@@ -2,6 +2,9 @@
 $id = $_GET['id'];
 $query = mysql_query("select * from checkout where Id=$id");
 $row = mysql_fetch_array($query);
+$orderNumber = $row['orderNumber'];
+$deliveryQuery = mysql_query("select * from delivery where orderNumber='$orderNumber'");
+$deliveryRow = mysql_fetch_array($deliveryQuery);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 <div class="wrapper" style="width:40%;">
@@ -12,7 +15,8 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<div class="accountlabels">Address:</div> <?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
 	<div class="accountlabels">Date:</div> <?=$row['date'];?></br></br>
 	<div class="accountlabels">Total Price:</div> <?=$row['totalPrice'];?></br></br>
-	<div class="accountlabels">Status:</div> <?=$row['status'];?>
+	<div class="accountlabels">Status:</div> <?=$row['status'];?></br></br>
+	<div class="accountlabels">Delivery Status:</div> <?=$deliveryRow['status'];?>
 	
 	</div>
 	</br>

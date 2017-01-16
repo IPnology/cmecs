@@ -21,4 +21,9 @@ switch ($view) {
 
 require_once $template;
 
+function getDeliveryStatus($orderNumber)
+{
+	$get = mysql_fetch_array(mysql_query("select status from delivery where orderNumber=$orderNumber"));
+	return $get['status'];
+}
 ?>
