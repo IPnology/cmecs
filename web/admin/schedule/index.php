@@ -41,6 +41,13 @@ function getShippingAddress($orderNumber)
 	return $address;
 }
 
+function getFullName($orderNumber)
+{
+	$get = mysql_fetch_array(mysql_query("select * from checkout where orderNumber=$orderNumber"));
+	$fullname = $get['fname']. "" . $get['lname'];
+	return $fullname;
+}
+
 function getProductName($productId)
 {
 	$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));

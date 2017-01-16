@@ -8,10 +8,14 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 <div class="wrapper">
 	<form action="process.php?action=confirm-address" method="POST">
+		FIRST NAME:</br>
+		<input type="text" name="fname" value="<?=$row['fname']?>" placeholder="First Name">
+		LAST NAME:</br>
+		<input type="text" name="lname" value="<?=$row['lname']?>" placeholder="Last Name">
 		STREET:</br>
 		<input type="text" name="street" value="<?=$row['street']?>" placeholder="Street">
 		</br></br>
-		BARRANGAY:</br>
+		BARANGAY:</br>
 		<input type="text" name="brgy" value="<?=$row['brgy']?>" placeholder="Barangay">
 		</br></br>
 		CITY:</br>

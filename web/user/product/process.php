@@ -55,6 +55,8 @@ function updateQuantity()
 function confirmAddress()
 {
 	$username = $_SESSION['user_session'];
+	$fname = $_POST['fname'];
+	$lname = $_POST['lname'];
 	$street = $_POST['street'];
 	$brgy = $_POST['brgy'];
 	$city = $_POST['city'];
@@ -65,6 +67,8 @@ function confirmAddress()
 	
 	# input data to checkout
 	mysql_query("insert into checkout set username='".$username."',
+											fname='".$fname."',
+											lname='".$lname."',
 											street='".$street."',
 											brgy='".$brgy."',
 											city='".$city."',

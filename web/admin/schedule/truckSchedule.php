@@ -16,6 +16,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<table class="tablelist">
 	<tr>
 		<th>Order Number</th>
+		<th>Name</th>
 		<th>Shipping Address</th>
 		<th></th>
 	</tr> 
@@ -24,6 +25,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	?>
 	<tr>
 		<td><?=$row['orderNumber']?></td>
+		<td><?=getFullName($row['orderNumber'])?></td>
 		<td><?=getShippingAddress($row['orderNumber'])?></td>
 		<td><button class="button updatebtn" onClick="location.href='?view=detail&orderNumber=<?=$row['orderNumber']?>'">View</button></td>
 	</tr>
