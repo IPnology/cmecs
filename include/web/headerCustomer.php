@@ -61,7 +61,8 @@ else
 				<li><a href="../../user/category">category</a></li> |
 				<li><a href="../../user/product">product</a></li> |
 				<li><a href="../../user/wishlist">wishlist</a></li> |
-				<li><a href="../../user/order">order</a></li>				
+				<li><a href="../../user/order">order</a></li> |
+				<li><a href="../../user/personalize">personalize</a></li>		
 			</ul>
 		</div>
 		<div class="top-nav">
