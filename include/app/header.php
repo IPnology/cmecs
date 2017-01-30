@@ -14,20 +14,18 @@
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
-		<div class="welcome">
+		<div class="logo">
+			<img src="../../../include/app/images/logo.png" alt=""/>
+		</div>
+		<div style="font-style:Arial; font-size: .80em; margin-left: auto; margin-right: auto; color: #fff; width: 100%; height: 5%;">CASA MUEBLES ADMINISTRATOR SIDE</div></br>
+		<div class="welcomead">
 			Welcome <?=$username;?>!
-			<div>
+			<div style="float:right;">
 				<a href="../../../app/admin/account/process.php?action=logout">Logout</a>
 			</div>	
 		</div>
-		<div class="logo">
-		<ul>
-			<li><a href="../../../app/admin/home"><img src="../../../include/app/images/logo.png" alt=""/></a></li>
-			<li><div style="font-style:Arial; font-size: .75em; float:left; color: #fff;">CASA MUEBLES ADMINISTRATOR SIDE</div></li>
-		</ul>
-		</div>
-		<div class="h_search">
-    		<form action="../../../app/admin/product" method="GET">
+		<div class="search_box" style="width: 100%;">
+    		<form class="formsearch" action="../../../admin/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
@@ -37,41 +35,21 @@
 	</div>
 </div>
 </div>
+
 <div class="header_btm">
-<div class="wrap">
-	<div class="header_sub">
-		<div class="h_menu">
-			<ul>
-				<li class="active"><a href="../../../app/admin/home">Home</a></li> |
-				<li><a href="../../../app/admin/account/?view=list">Accounts</a></li> |
-				<li><a href="../../../app/admin/order">Order</a></li> |
-				<li><a href="../../../app/admin/category">category</a></li> |
-				<li><a href="../../../app/admin/product">product</a></li> |
-				<li><a href="../../../app/admin/truck">truck</a></li>
-			</ul>
-		</div>
-		<div class="top-nav">
-	          <nav class="nav">	        	
-	    	    <a href="#" id="w3-menu-trigger"> </a>
-	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
-							<li class="nav-item"><a href="sale.html">Sale</a></li>
-							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
-							<li class="nav-item"><a href="accessories.html">Accessories</a></li>
-							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
-							<li class="nav-item"><a href="service.html">Services</a></li>
-							<li class="nav-item"><a href="contact.html">Contact</a></li>
-	                 </ul>
-	           </nav>
-	             <div class="search_box">
-				<form>
-				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
-			    </form>
-			</div>
-	          <div class="clear"> </div>
-	          <script src="../../../include/app/js/responsive.menu.js"></script>
-</div>
-         </div>		  
-	<div class="clear"></div>
-</div>
+<div class="dropwrap">
+	<div class="drp-dwn">
+		 	<select onchange="window.location=this.options[this.selectedIndex].value">
+				<option value="../../../app/admin/home">---------</option>
+				<option value="../../../app/admin/home">Home</option>
+				<option value="../../../app/admin/account/?view=list">Accounts</option>
+				<option value="../../../app/admin/order">Order</option>
+				<option value="../../../app/admin/product">Product</option>
+				<option value="../../../app/admin/truck">Truck</option>
+				<option value="../../../app/admin/schedule">Schedule</option>
+			</select>
+	</div>
+	
+</div>		  
+<div class="clear"></div>
 </div>

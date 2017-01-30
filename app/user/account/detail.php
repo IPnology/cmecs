@@ -1,11 +1,16 @@
 <?php
 $query = mysql_query("select * from user where username = '$username'");
+$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 
 $row=mysql_fetch_array($query);
 ?>
 
 <div class="acctwrapper">
 
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	
 	<div class="personalinfo">
 		<div class="myaccountheader" style=" font-size: 1.1em;">Personal Information</div></br>
 		<div class="myaccountfont">

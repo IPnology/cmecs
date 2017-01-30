@@ -5,7 +5,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="loginwrapper">
 	<div style="width: 90.333%; margin-left: auto; margin-right: auto;">
 		<?=$message;?>
-		
+		<?php if (!$message){} else {?>
+		<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 		<form action="process.php?action=register" method="POST">
 		</br>
 			<div class="fwhole">
@@ -32,11 +34,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			</div>
 			<br>
 			
-			<div class="fwhole">
-				<div class="registerlabels">REPEAT PASSWORD *</div>
-				<input type="password" name="repeatpassword" placeholder="Re-enter password">
-			</div>
-			</br>
 			
 			<div class="centerregbtn">
 				<input type="submit" class="registerbtn" value="Register">

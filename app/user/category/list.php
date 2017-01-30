@@ -4,12 +4,8 @@ $query = mysql_query("select * from category");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<br><?=$message;?>
-
-<div class="main_bg">
-<div class="wrap">	
-<div class="main">
 <div class="wrapper" style="margin-top: -5%;">
+<br><?=$message;?>
 	
 <?php
 	while($row=mysql_fetch_array($query)){
@@ -38,6 +34,3 @@ else
 ?>
 <div class="clear"></div>
 </div>
-</div>
-</div>
-</div>	

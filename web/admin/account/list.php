@@ -5,9 +5,12 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 <div class="listwrapper">
 
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 	<button class="myButton" onClick="location.href='?view=register'">ADD ACCOUNT</button></br>
 	<br>
-	<div class="successmessage"> <?=$message;?></div>
+	
 
 	<table class="tablelist">
 		

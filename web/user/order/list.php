@@ -15,6 +15,7 @@ $query = mysql_query("select * from checkout where username = '$username'");
 		<th>ORDER NUMBER</th>
 		<th>DATE</th>
 		<th>STATUS</th>
+		<th>DELIVERY STATUS</th>
 		<th>TOTAL PRICE</th>
 		<th></th>
 	</tr>
@@ -27,6 +28,7 @@ $query = mysql_query("select * from checkout where username = '$username'");
 		<td><?=$row['orderNumber']?></td>
 		<td><?=$row['date']?></td>
 		<td><?=$row['status']?></td>
+		<td><?=getDeliveryStatus($row['orderNumber'])?></td>
 		<td><?=$row['totalPrice']?></td>
 		<td><button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW ORDER</button></td>
 	</tr>

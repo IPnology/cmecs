@@ -29,7 +29,7 @@ switch ($view) {
 			
 	default :
 		$content 	= 'login.php';
-		$template = '../../../include/app/include/template-login.php';
+		$template = '../../../include/app/template-login.php';
 }
 
 require_once $template;

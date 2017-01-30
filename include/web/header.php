@@ -47,22 +47,11 @@
 				<li><a href="../../../web/admin/order">Order</a></li> |
 				<li><a href="../../../web/admin/category">category</a></li> |
 				<li><a href="../../../web/admin/product">product</a></li> |
-				<li><a href="../../../web/admin/truck">truck</a></li>
+				<li><a href="../../../web/admin/truck">truck</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
-	          <nav class="nav">	        	
-	    	    <a href="#" id="w3-menu-trigger"> </a>
-	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
-							<li class="nav-item"><a href="sale.html">Sale</a></li>
-							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
-							<li class="nav-item"><a href="accessories.html">Accessories</a></li>
-							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
-							<li class="nav-item"><a href="service.html">Services</a></li>
-							<li class="nav-item"><a href="contact.html">Contact</a></li>
-	                 </ul>
-	           </nav>
 	             <div class="search_box">
 				<form>
 				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">

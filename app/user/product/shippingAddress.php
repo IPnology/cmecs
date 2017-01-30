@@ -6,8 +6,15 @@ $row=mysql_fetch_array($query);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
+<<<<<<< HEAD
 <div class="loginwrapper" style="padding-top: 5%;">
 <div style="width: 90.333%; margin-left: auto; margin-right: auto;">
+=======
+<div class="wrapper">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+>>>>>>> ip/master
 	<form action="process.php?action=confirm-address" method="POST">
 		<div class="registerlabels" >STREET:</div>
 		<input type="text" name="street" value="<?=$row['street']?>" placeholder="Street">

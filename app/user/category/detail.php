@@ -19,7 +19,7 @@ else
 			<img src="../../../media/<?=$fileName;?>" alt=""/>
 			<div class="ctgdetail">
 					Name: <?=$row['name']?></br></br>
-					Description: <?=$row['description']?> qwe  qwio qwij qwioeh qwoieh wqoihe qwoihe qwoihe wqoihe qwoheoqw</br></br>
+					Description: <?=$row['description']?></br></br>
 					<button class="myButton" onClick="location.href='../product/?catId=<?=$row['Id']?>'">VIEW PRODUCT</button></br>	
 				
 			</div>

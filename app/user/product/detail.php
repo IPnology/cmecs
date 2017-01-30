@@ -9,28 +9,37 @@ else
     $fileName = "default.png";
 ?>	
 
-<div style="width: 90.333%; margin-left: auto; margin-right: auto;">
-	</br><div class="successmessage" style="font-size: 1em;"><?=$message;?></div>
-	<div class="grids_of_3">
-		<div class="grid1_of_3">
-			<img src="../../../media/<?=$fileName;?>" alt=""/>
-				<div class="ctgdetail">
-					Name: <?=$row['name']?></br></br>
-					<p>Description: <?=$row['description']?></p>
-					<p>Price: <?=$row['price']?><p>
-				</div>		
-				<?php 
-							# This is for users that are not logged in!!! DO NOT DELETE!
-							if (!isset($username)){ #start if 
-							?>
+<div style="width: 90%; margin-left: auto; margin-right: auto;">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	
+		<div class="single">
+		
+			<div class="left_content">
+					<div style="margin-right: 5%;">
+					
+						<div class="grids_of_3">
+							<div class="grid1_of_3" >
+								<img src="../../../media/<?=$fileName;?>" alt=""/>
+								<div class="ctgdetail">
+									Name: <?=$row['name']?></br></br>
+									Description: <?=$row['description']?></br></br>
+									Price: <?=$row['price']?></br></br>
+									<button class="myButton" onClick="location.href='../product/?catId=<?=$row['Id']?>'">VIEW PRODUCT</button></br></br>	
+										
+									<?php
+										# This is for users that are not logged in!!! DO NOT DELETE!
+										if (!isset($username)){ #start if 
+									?>
 							
-							<button type="button" class="updatebtn" style="width: 182px;" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button> </br></br>
-							<button type="button" class="updatebtn" style="width: 182px;"  onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
+									<button type="button" class="updatebtn" style="width: 160px; margin-left: 2px;" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button> </br></br>
+									<button type="button" class="updatebtn" style="width: 160px;"  onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
 							
-							<?php
-							}
-							else {
-							?>
+									<?php
+									}
+									else {
+									?>
 							<!--This is for the users that are logged in!!! DO NOT DELETE! -->
 							
 							<form action="../wishlist/process.php?action=add-to-wishlist" method="POST" >
@@ -76,6 +85,14 @@ else
 							}#end if
 							?>
 							</div>
+								</div>
+							</div>
+						</div>
+					
+					
+						<div class="desc1">
+							
+							
 	</div>
 
 					</div>

@@ -48,6 +48,8 @@
 					});
 				});
 			</script>
+<title>Casa Muebles E-Commerce System
+</title>
 </head>
 
 <?php require_once $header;?>

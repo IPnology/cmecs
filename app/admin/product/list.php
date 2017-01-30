@@ -19,9 +19,13 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">	
-<div style="width: 74.3333%; margin-left:auto; margin-right:auto;">
-<button class="myButton" onClick="location.href='?view=add'">Add Product</button>
-<div class="successmessage"><?=$message;?></div>
+<div style="width: 100%; margin-left:auto; margin-right:auto;">
+<div style="margin-right: 5%;">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	
+<button class="myButton" style="width: 100%; margin-left: 3%;" onClick="location.href='?view=add'">Add Product</button>
 <?php
 	while($row=mysql_fetch_array($query)){
 ?>
@@ -48,7 +52,7 @@ else
 <?php
 	}
 ?>
-
+</div>
 </div>
 </div>
 </div>

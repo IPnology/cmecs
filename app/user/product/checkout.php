@@ -9,6 +9,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 <div class="wrapper" style="font-size: 1em; margin-left: 5%;">
 	<div class="successmessage"><?=$message;?></div>
+<div class="checkoutwrap">
+	</br>
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 	<div>
 		<div>
 		<div class="checkoutheader">YOUR ORDER</div>

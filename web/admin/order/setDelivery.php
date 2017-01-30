@@ -37,6 +37,8 @@ else{
 Date:<?=$row['date'];?></br></br>
 <div style="font-weight:bold; font-size:20px;">Username:<?=$row['username'];?></br></br></div>
 
+Name: <?=$row['fname'];?> <?=$row['lname'];?></br></br>
+
 Address:
 <?=$row['street'];?>, <?=$row['brgy'];?></br>
 <?=$row['city'];?></br>

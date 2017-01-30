@@ -41,16 +41,17 @@ else
 			}
 			?>
 		</div>
+	
+		<div class="clear"></div>
 		
-		<div class="search_box">
+	</div>
+	<div class="search_box" style="width: 100%;">
     		<form class="formsearch" action="../../../user/product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
     		</form>
 		</div>
-		<div class="clear"></div>
-	</div>
 </div>
 </div>
 

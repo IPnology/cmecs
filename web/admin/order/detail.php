@@ -88,7 +88,7 @@ if ($row['status'] == "Approved"){
 <div style="margin-left:150px;">
 Billing Address</br>
 		<div class="myaccountfont">
-			</br>John Lorenz Tajonera</br>
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
 			<?=$row['street']?>, <?=$row['brgy']?></br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
@@ -100,7 +100,7 @@ Billing Address</br>
 <div style="float:right; margin-top:-115px; margin-right:150px;">
 Shipping Address</br>
 		<div class="myaccountfont">
-			</br>John Lorenz Tajonera</br>
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
 			<?=$row['street']?>, <?=$row['brgy']?></br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>

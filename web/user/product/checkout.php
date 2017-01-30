@@ -8,7 +8,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 
 <div class="checkoutwrap">
-	<div class="successmessage"><?=$message;?></div>
+	</br>
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	
 	<div>
 		<div>
 		<div class="mycartheader">YOUR ORDER</div>

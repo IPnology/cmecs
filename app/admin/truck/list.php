@@ -6,8 +6,13 @@ $query = mysql_query("select * from truck");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 <div class="listwrapper">
-	<button class="myButton" onClick="location.href='?view=add'">Add Truck</button>
-	<div class="successmessage"><?=$message;?></div>
+
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	</br>
+	<button class="myButton" style="width:100%;"onClick="location.href='?view=add'">Add Truck</button>
+	</br>
 	</br>
 	
 	<table class="tablelist">
