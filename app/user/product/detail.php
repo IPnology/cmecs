@@ -10,7 +10,7 @@ else
 ?>	
 
 <div style="width: 90.333%; margin-left: auto; margin-right: auto;">
-	<div class="successmessage" style="font-size: .8em;"><?=$message;?></div>
+	</br><div class="successmessage" style="font-size: 1em;"><?=$message;?></div>
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
 			<img src="../../../media/<?=$fileName;?>" alt=""/>
@@ -24,8 +24,8 @@ else
 							if (!isset($username)){ #start if 
 							?>
 							
-							<button type="button" class="updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button>
-							<button type="button" class="updatebtn" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
+							<button type="button" class="updatebtn" style="width: 182px;" onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Wishlist</button> </br></br>
+							<button type="button" class="updatebtn" style="width: 182px;"  onClick="location.href='?view=detail&id=<?=$row['Id']?>&message=Please Login.'">Add to Cart</button>
 							
 							<?php
 							}
