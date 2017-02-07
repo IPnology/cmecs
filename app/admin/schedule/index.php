@@ -7,23 +7,23 @@ switch ($view) {
 	
 	case 'detail' :
 		$content 	= 'detail.php';
-		$template 	= '../../../include/web/template-main.php';		
-		$header 	= '../../../include/web/header.php';
-		$footer 	= '../../../include/web/footer.php';		
+		$template 	= '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';		
 		break;
 		
 	case 'truck-schedule' :
 		$content 	= 'truckSchedule.php';
-		$template 	= '../../../include/web/template-main.php';		
-		$header 	= '../../../include/web/header.php';
-		$footer 	= '../../../include/web/footer.php';		
+		$template 	= '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';		
 		break;
 			
 	default :
 		$content 	= 'list.php';
-		$template 	= '../../../include/web/template-main.php';		
-		$header 	= '../../../include/web/header.php';
-		$footer 	= '../../../include/web/footer.php';
+		$template 	= '../../../include/app/template-main.php';		
+		$header 	= '../../../include/app/header.php';
+		$footer 	= '../../../include/app/footer.php';
 }
 
 require_once $template;
