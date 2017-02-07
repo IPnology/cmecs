@@ -10,14 +10,10 @@ else
 ?>	
 
 <div style="width: 90%; margin-left: auto; margin-right: auto;">
-<<<<<<< HEAD
-	
-		<div class="successmessage"><?=$message;?></div>
-=======
+
 	<?php if (!$message){} else {?>
 	<div class="successmessage"> <?=$message;?></div>
 	<?php } ?>
->>>>>>> ip/master
 		<div class="single">
 			<div class="left_content">
 					<div class="span1_of_1">
@@ -25,11 +21,9 @@ else
 							<div class="product-essential">
 								<div class="product-img-box">
 									<div class="product-image"> 
-<<<<<<< HEAD
-										<img src="../../../../media/<?=$fileName;?>"></br>
-=======
+
 										<img src="../../../media/<?=$fileName;?>" data-lightbox="image-1" data-title="My caption" ></br>
->>>>>>> ip/master
+
 								   </div>
 								</div>
 							</div>
