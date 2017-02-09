@@ -1,5 +1,15 @@
 <?php
+
 $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
+
+	if (!isset($_SESSION['admin_session']))
+	{
+	}
+	else
+	{
+		header("Location: ../home");	
+	}
+
 ?>
 <div class="loginwrapper">
 <form action="process.php?action=login" method="POST">
@@ -13,6 +23,6 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
     <div class="labels">Password:</div>
     <input type="password" placeholder="Enter Password" name="password" required>
     </br></br>
-	<div class="logincenter"><button class="loginbtn" type="submit">Login</button></div>
+	<div align="center"><button class="loginbtn" type="submit">Login</button></div>
 </form>
 </div>
