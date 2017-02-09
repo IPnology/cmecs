@@ -32,6 +32,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 				<div class="registerlabels">PASSWORD *</div>
 				<input type="password" name="password" placeholder="Enter password">
 			</div>
+			
+			<br><div class="fwhole">
+				<div class="registerlabels">REPEAT PASSWORD *</div>
+				<input type="password" name="repeatpassword" placeholder="Enter password">
+			</div>
 			<br>
 			
 			
