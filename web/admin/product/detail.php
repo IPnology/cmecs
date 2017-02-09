@@ -26,12 +26,13 @@ else
 						</div>
 					</div>
 				</div>
-					<div>
-					<div class="desc1" style="float:left;">
+				<div>
+					<div class="desc1" style="float:left; width: 35%;">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Category: <?=getCategoryName($row['categoryId'])?></p>
-						<p>Description: <?=$row['description']?></p>
-						<p>Price:<?=$row['price']?><p></br>
+						<p>Description: <br> <?=$row['description']?></p>
+						<p>Price: <?=$row['price']?><p>
+						<p>Quantity: <?=$row['quantity']?><p></br>
 						<div>
 								<button class="button updatebtn" style=" width: 160px;"onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></br>
 								</br>

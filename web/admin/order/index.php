@@ -18,6 +18,13 @@ switch ($view) {
 		$header 	= '../../../include/web/header.php';
 		$footer 	= '../../../include/web/footer.php';
 		break;
+	
+	case 'reject-reason' :
+		$content 	= 'rejectReason.php';
+		$template 	= '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/header.php';
+		$footer 	= '../../../include/web/footer.php';
+		break;
 		
 	default :
 		$content 	= 'list.php';

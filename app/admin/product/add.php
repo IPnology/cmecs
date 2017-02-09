@@ -42,6 +42,12 @@ $query = mysql_query("select * from category");
 			<input type="text" name="price" placeholder="Add price" required>
 			</div>
 			</br>
+			
+			<div class="fnwhole">
+			<label>QUANTITY *</label>
+			<input type="text" name="quantity" placeholder="Add quantity" required>
+			</div>
+	
 			</br>
 			<label>UPLOAD PHOTO *</label>
 			</br>

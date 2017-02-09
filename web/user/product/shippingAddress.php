@@ -22,10 +22,13 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<input type="text" name="city" value="<?=$row['city']?>" placeholder="City">
 		</br></br>
 		PROVINCE:</br>
-		<input type="text" name="province" value="<?=$row['province']?>" placeholder="province">
+		<input type="text" name="province" value="<?=$row['province']?>" placeholder="Province">
 		</br></br>
 		POSTAL CODE:</br>
-		<input type="text" name="postal" value="<?=$row['postal']?>" placeholder="postal">
+		<input type="text" name="postal" value="<?=$row['postal']?>" placeholder="Postal">
+		</br></br>
+		CONTACT NUMBER:</br>
+		<input type="text" name="contactNum" value="<?=$row['phoneNumber']?>" placeholder="Contact Number">
 		</br></br>
 		<input type="hidden" name="tp" value="<?=$_GET['tp']?>">
 		</br>

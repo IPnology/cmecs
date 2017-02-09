@@ -31,10 +31,11 @@ else
 					</div>
 						
 					<div>
-						<div class="desc1" style="display: inline-block; float:left;">
+						<div class="desc1" style="display: inline-block; float:left; width: 30%;">
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price: <?=$row['price']?><p>
+							<p>Quantity: <?=$row['quantity']?><p>
 							</br>
 							<?php
 							# This is for users that are not logged in!!! DO NOT DELETE!

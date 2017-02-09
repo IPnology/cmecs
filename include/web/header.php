@@ -1,12 +1,14 @@
+
 <?php
 	
 	if (!$_SESSION['admin_session'])
 	{
-		header("Location: ../../account");	
+		header("Location: ../account");	
 	}
 	else
 	{
 		$username = $_SESSION['admin_session'];
+		$admin = mysql_fetch_array(mysql_query("select * from admin where username='$username'"));
 	}
 ?>
 
@@ -42,6 +44,9 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
+				<?php
+				if ($admin['level']=='admin'){
+				?>
 				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
 				<li><a href="../../../web/admin/account/?view=list">Accounts</a></li> |
 				<li><a href="../../../web/admin/order">Order</a></li> |
@@ -49,6 +54,26 @@
 				<li><a href="../../../web/admin/product">product</a></li> |
 				<li><a href="../../../web/admin/truck">truck</a></li> |
 				<li><a href="../../../web/admin/schedule">schedule</a></li>
+				<?php } 
+				else if ($admin['level']=='staff'){ ?>
+				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
+				<li><a href="../../../web/admin/order">Order</a></li> |
+				<li><a href="../../../web/admin/category">category</a></li> |
+				<li><a href="../../../web/admin/product">product</a></li> |
+				<li><a href="../../../web/admin/truck">truck</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
+				<?php } 
+				
+				else if ($admin['level']=='delivery'){ ?>
+				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
+				<?php } 
+				
+				else{
+					
+				}?>
+				
+				
 			</ul>
 		</div>
 		<div class="top-nav">

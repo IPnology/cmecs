@@ -67,6 +67,13 @@ switch ($view) {
 		$header 	= '../../../include/app/headerCustomer.php';
 		$footer 	= '../../../include/app/footer.php';		
 		break;
+	
+	case 'payment-method' :
+		$content 	= 'paymentMethod.php';
+		$template 	= '../../../include/web/template-main.php';		
+		$header 	= '../../../include/web/headerCustomer.php';
+		$footer 	= '../../../include/web/footer.php';	
+		break;
 			
 	default :
 		$content 	= 'list.php';

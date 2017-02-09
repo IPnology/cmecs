@@ -13,6 +13,10 @@ switch ($action) {
 	case 'confirm-address' :
 		confirmAddress();
 		break;
+		
+	case 'payment-method' :
+		paymentMethod();
+		break;
 	
 	case 'update-quantity' :
 		updateQuantity();
@@ -60,6 +64,7 @@ function confirmAddress()
 	$city = $_POST['city'];
 	$province = $_POST['province'];
 	$postal = $_POST['postal'];
+	$contactNum = $_POST['contactNum'];
 	$tp = $_POST['tp'];
 	$orderNumber = round(microtime(true));
 	
@@ -72,6 +77,7 @@ function confirmAddress()
 											postal='".$postal."',
 											orderNumber='".$orderNumber."',
 											totalPrice='".$tp."',
+											contactNumber='".$contactNum."',
 											date=NOW()");
 
 	#copy data from temp_cart to cart
@@ -93,9 +99,18 @@ function confirmAddress()
 	#delete data from temp_cart
 	mysql_query("delete from temp_cart where username='".$username."'");
 	
-	header('Location: ../product/?view=success');
+	header("Location: ../product/?view=payment-method&username='".$username."'");
 }
 
+function paymentMethod(){
+	
+	$username = $_SESSION['user_session'];
+	
+		mysql_query("UPDATE checkout SET paymentMethod='$paymentMethod' where username=$username");
+		
+	header("Location: ../product/?view=success&username='".$username."'");
+	
+}
 
 
 

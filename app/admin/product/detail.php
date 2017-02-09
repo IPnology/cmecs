@@ -23,6 +23,7 @@ else
 							Name: <?=$row['name']?></br></br>
 							Description: <?=$row['description']?></br></br>
 							Price:<?=$row['price']?></br></br>
+							Quantity: <?=$row['quantity']?></br></br>
 							<button class="button updatebtn" style=" width: 160px;"onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></br>
 								</br>
 								<button class="button deletebtn" style=" width: 160px;"onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>

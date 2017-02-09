@@ -41,6 +41,11 @@ $catQuery = mysql_query("select * from category");
 	<input type="text" name="price" value="<?=$row['price']?>" placeholder="add price">
 	</div></br></br>
 	
+	<div class="fnwhole">
+	<label>QUANTITY *</label>
+	<input type="text" name="quantity" value="<?=$row['quantity']?>" placeholder="add price">
+	</div></br></br>
+	
 	<label>UPLOAD PHOTO *</label>
 	<input type="file" name="upload_file"/><br></br>
 	

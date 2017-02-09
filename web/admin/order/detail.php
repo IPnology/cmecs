@@ -12,10 +12,6 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 <div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">
 Order Number: #<?=$row['orderNumber'];?></br></br></div>
 &nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
-<?php
-if(mysql_num_rows($cartQuery)>0){
-	while($cartRow=mysql_fetch_array($cartQuery)){
-?>
 
 <!-- Put space check layout in document page 50 -->
 <table class="tablelist" style="border-top:2px solid grey;">
@@ -26,11 +22,18 @@ if(mysql_num_rows($cartQuery)>0){
 	</tr>
 	</br>
 </table>
+
+<?php
+if(mysql_num_rows($cartQuery)>0){
+	while($cartRow=mysql_fetch_array($cartQuery)){
+?>
+
+
 	</br>
 <table class="tablelist">
 	<tr>
 
-		<td style="float:left;"><?=getProductName($cartRow['productId']);?></br></br>Product ID: #<?=$cartRow['productId'];?></td>
+		<td style="float:left;"><?=getProductName($cartRow['productId']);?></br></td>
 		<td style="float:right;">PHP <?=$cartRow['price'];?></td> 
 	</tr>
 </table>
@@ -63,7 +66,7 @@ if ($row['status'] != "Approved"){
 <?php
 if ($row['status'] != "Rejected"){
 ?>
-<button class="deletebtn" onClick="location.href='process.php?action=reject&id=<?=$row['Id']?>'">Reject</button>
+<button class="deletebtn" onClick="location.href='index.php?view=reject-reason&id=<?=$row['Id']?>'">Reject</button>
 <?php 
 }
 ?>
@@ -81,7 +84,7 @@ if ($row['status'] == "Approved"){
 <table class="tablelist" style="border-bottom:2px solid grey;">
 <td><div style="font-weight:bold;">Username: <?=$row['username'];?></div></br>
 <td><div style="font-weight:bold;">Status: <?=$row['status'];?></div>
-
+<td><div style="font-weight:bold;">Reason: <?=$row['rejectReason'];?></div>
 </table></br>
 
 
