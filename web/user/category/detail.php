@@ -16,7 +16,7 @@ else
 <div class="wrap">	
 	<div class="main">
 	<div class="single">
-			<div class="left_content">
+			<div style="width:90%;">
 				<div class="span1_of_1">
 					<div class="product-view">
 						<div class="product-essential">
@@ -28,8 +28,8 @@ else
 						</div>
 					</div>
 				</div>
-				<div class="span1_of_1_des" style="">
-					<div class="desc1">
+				<div style="">
+					<div class="desc1"  style="float:left;">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>DESCRIPTION: <?=$row['description']?></p>
 								<button class="myButton" onClick="location.href='../product/?catId=<?=$row['Id']?>'">VIEW PRODUCT</button>

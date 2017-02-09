@@ -16,7 +16,7 @@ else
 <div class="wrap">	
 	<div class="main">
 	<div class="single">
-			<div class="left_content">
+			<div style="width:90%;">
 				<div class="span1_of_1">
 					<div class="product-view">
 						<div class="product-essential">
@@ -29,10 +29,10 @@ else
 					</div>
 				</div>
 				<div style="margin-right: 1%;">
-					<div class="desc1">
+					<div class="desc1" style="float:left;">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Description: <?=$row['description']?></p></br>
-						<div style="width: 400px;">
+						<div style="width: 30%;">
 								<button class="updatebtn" style=" width: 160px;" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button>
 								</br></br>
 								<button class="deletebtn" style=" width: 160px;" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
@@ -48,3 +48,4 @@ else
 	</div>
 </div>
 </div>	
+</div>

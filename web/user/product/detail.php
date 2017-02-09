@@ -3,26 +3,26 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 $id = (isset($_GET['id']) && $_GET['id'] != '') ? $_GET['id'] : '';
 $query = mysql_query("select * from product where Id = $id");
 $row=mysql_fetch_array($query);
-if(file_exists("../../../../media/".$row['image']))
+if(file_exists("../../../media/".$row['image']))
     $fileName = $row['image'];
 else
     $fileName = "default.png";
 ?>	
 
-<div style="width: 90%; margin-left: auto; margin-right: auto;">
+<div style="width: 95%; margin-left: auto; margin-right: auto;">
 
 	<?php if (!$message){} else {?>
 	<div class="successmessage"> <?=$message;?></div>
 	<?php } ?>
 		<div class="single">
-			<div class="left_content">
+			<div class="left_content" style="width:72%;">
 					<div class="span1_of_1">
 						<div class="product-view">
 							<div class="product-essential">
 								<div class="product-img-box">
 									<div class="product-image"> 
 
-										<img src="../../../media/<?=$fileName;?>" data-lightbox="image-1" data-title="My caption" ></br>
+										<img src="../../../media/<?=$fileName;?>"></br>
 
 								   </div>
 								</div>
@@ -30,8 +30,8 @@ else
 						</div>
 					</div>
 						
-					<div style="margin-right: 15%;">
-						<div class="desc1">
+					<div>
+						<div class="desc1" style="display: inline-block; float:left;">
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price: <?=$row['price']?><p>

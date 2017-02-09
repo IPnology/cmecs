@@ -14,7 +14,7 @@ else
 	
 <div style="width: 90%; margin-left: auto; margin-right: auto;">
 	<div class="single">
-			<div class="left_content">
+			<div>
 				<div class="span1_of_1">
 					<div class="product-view">
 						<div class="product-essential">
@@ -26,8 +26,8 @@ else
 						</div>
 					</div>
 				</div>
-					<div style="margin-right: 15%;">
-					<div class="desc1">
+					<div>
+					<div class="desc1" style="float:left;">
 						<h3>Name: <?=$row['name']?></br></h3>
 						<p>Category: <?=getCategoryName($row['categoryId'])?></p>
 						<p>Description: <?=$row['description']?></p>
