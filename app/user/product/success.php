@@ -8,11 +8,13 @@ $cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 
 <div class="wrapper">
 
-<div class="successmessageorder">Thank You! Your Order Has Been successfully completed.</div>
+<div style="padding:6px; background-color:#DCDCDC; text-align:center; margin-bottom:1%; margin-top:1%; margin-right:auto; margin-left:auto; color: #808080; font-weight:bold;">
+Thank You! Your Order Has Been successfully completed.
+</div>
 
 <div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">
 Order Number: #<?=$row['orderNumber'];?></br></br></div>
-&nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
+&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
 
 <table class="tablelist" style="border-top:2px solid grey;">
 	<tr>
@@ -63,7 +65,7 @@ Billing Address</br>
 </div>
 
 </div>
-<div style="float:right; margin-top:-115px; margin-right:150px;">
+<div style="float:right; margin-top:-195px; margin-right:150px;">
 Shipping Address</br>
 		<div class="myaccountfont">
 			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
