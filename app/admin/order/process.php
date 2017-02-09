@@ -10,6 +10,10 @@ switch ($action) {
 	approve();
 	break;
 	
+	case 'reject-reason' :
+	rejectReason();
+	break;
+	
 	case 'reject' :
 	reject();
 	break;
@@ -28,6 +32,16 @@ function approve()
 	mysql_query("update checkout set status='Approved' where Id = '".$id."'");
 												
 	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Approved.');
+}
+
+function rejectReason()
+{
+	$id = $_GET['id'];	
+	$rejectReason = $_POST['rejectReason'];
+	
+	mysql_query("update checkout set rejectReason='".$rejectReason."', status='Rejected' where Id = '".$id."'");
+												
+	header('Location: ../order/?view=detail&id='.$id.'&message=Successfully Added Reason.');
 }
 
 function reject()
