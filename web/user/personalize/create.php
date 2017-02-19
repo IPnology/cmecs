@@ -6,9 +6,9 @@
 				<div class="span1_of_1_des" style="">
 					<div class="desc1">
 					<form action="process.php?action=create" method="POST">
-						<label>CHOOSE TYPE:</label></br></br>
-						<select name="type" class="select" required>
-							<option value="">--Select type of wood--</option>
+						<label>CHOOSE MATERIAL:</label></br></br>
+						<select name="material" class="select" required>
+							<option value="">--Select material--</option>
 							<option>Narra</option>
 							<option>Mahogany</option>
 							<option>Oak</option>
@@ -24,6 +24,9 @@
 							<option>Gray</option>
 							<option>Red</option>
 						</select>
+						</br></br>
+						<label>PRICE:</label></br></br>
+						<input type="hidden" name="type" value="PE">
 						</br></br><input type="submit" class="myButton" value="Save">
 					</form>
 					 </div>
