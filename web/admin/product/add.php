@@ -48,6 +48,7 @@ $query = mysql_query("select * from category");
 	<label>UPLOAD PHOTO *</label>
 	</br>
 	<input type="file" name="upload_file"/><br></br>
+	<input type="hidden" name="type" value="PR">
 
 	<input type="submit" class="myButton" value="Add"></br></br>
 	

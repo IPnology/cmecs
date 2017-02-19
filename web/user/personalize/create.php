@@ -25,8 +25,7 @@
 							<option>Red</option>
 						</select>
 						</br></br>
-						<label>PRICE:</label></br></br>
-						<input type="hidden" name="type" value="PE">
+						<label>PRICE: 10,000</label><input type="hidden" name="price" value="10000"></br></br>
 						</br></br><input type="submit" class="myButton" value="Save">
 					</form>
 					 </div>

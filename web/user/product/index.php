@@ -86,10 +86,15 @@ require_once $template;
 
 #this is to get the values
 
-function getProductName($productId)
+function getProductName($productId, $type)
 {
-	$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));
-	return $get['name'];
+	if($type == 'PE'){
+		return "personalize";
+	}
+	else{
+		$get = mysql_fetch_array(mysql_query("select name from product where Id=$productId"));
+		return $get['name'];
+	}
 }
 
 ?>

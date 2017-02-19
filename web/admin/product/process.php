@@ -28,6 +28,7 @@ function add()
 	$description = $_POST['description'];
 	$price = $_POST['price'];
 	$quantity = $_POST['quantity'];
+	$type=$_POST['type'];
 	
 	// Where the file is going to be placed 
 	$target_path = "../../../media/";
@@ -44,7 +45,8 @@ function add()
 											description='$description',
 											price='$price',
 											quantity='$quantity',
-											image='$newfilename'");
+											image='$newfilename',
+											type='$type'");
 							
 	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../../../media/" . $newfilename)) {
 							

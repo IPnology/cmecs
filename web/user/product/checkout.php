@@ -44,7 +44,7 @@ $insuf = (isset($_GET['insuf']) && $_GET['insuf'] != '') ? $_GET['insuf'] : '';
 				<input type="hidden" name="productId[]" value="<?=$row['productId'];?>">
 				<input type="hidden" name="price[]" value="<?=$row['price'];?>">
 				<tr>
-					<td><?=getProductName($row['productId'])?></td>
+					<td><?=getProductName($row['productId'], $row['type'])?></td>
 					<td>X</td>
 					<td><input type="text" name="quantity[]" value="<?=$row['quantity']?>" required></td>
 					<td>=</td>

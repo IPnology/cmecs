@@ -25,7 +25,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 					$totalPrice += $row['price'];
 			?>	
 				<tr>
-					<td><?=getProductName($row['productId'])?></td>
+					<td><?=getProductName($row['productId'], $row['type'])?></td>
 					<td>X</td>
 					<td><?=$row['quantity']?></td>
 					<td>=</td>

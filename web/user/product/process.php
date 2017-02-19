@@ -105,12 +105,14 @@ function confirmAddress()
 					
 					$productId = $row['productId'];
 					$quantity = $row['quantity'];
-					$price = $row['price'];					
+					$price = $row['price'];
+					$type = $row['type'];
 					
 					mysql_query("insert into cart set productId='".$productId."',
 														quantity='".$quantity."',
 														price='".$price."',
-														orderNumber='".$orderNumber."'");
+														orderNumber='".$orderNumber."',
+														type='".$type."'");
 					
 					
 				
