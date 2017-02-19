@@ -26,7 +26,7 @@
 			</div>	
 		</div>
 		<div class="search_box" style="width: 100%;">
-    		<form class="formsearch" action="../../../admin/product" method="GET">
+    		<form class="formsearch" action="../product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">

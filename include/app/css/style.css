@@ -935,6 +935,7 @@ p.para{
 	display:inline-block;
 	margin-right:3.333%;
 }
+
 .fnwhole{
 	width:100%;
 	display:inline-block;
@@ -962,9 +963,16 @@ p.para{
     transition: border-color ease-in-out .15s;
 }
 .select{
-	height: 50px; 
-	width: 200px; 
-	font-size:1.05em;
+	    width: 100%;
+    padding: 8px 14px;
+	height: 50px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+	border-radius:0 !important;	
+	transition: border-color ease-in-out .15s;
+	font-size: .95em;
 }
 
 

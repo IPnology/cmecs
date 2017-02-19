@@ -15,7 +15,12 @@ $query = mysql_query("select * from product $getCatId");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-
+<?php
+if (!isset($username)){}
+else{
+require_once 'tempCart.php';
+}
+?>
 
 <div class="main_bg">
 <div class="wrap">	
@@ -53,11 +58,6 @@ else
 </div>
 </div>
 
-<?php
-if (!isset($username)){}
-else{
-require_once 'tempCart.php';
-}
-?>
+
 
 <div class="clear"></div>

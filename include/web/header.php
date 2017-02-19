@@ -29,7 +29,7 @@
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form action="../../../web/admin/product" method="GET">
+    		<form action="../product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">

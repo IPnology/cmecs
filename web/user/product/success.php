@@ -51,8 +51,10 @@ else{
 
 </table></br>
 
-
-<div style="margin-left:150px;">
+<center>
+<table width="100%">
+	<tr width="100%">
+	<td valign="top">
 Billing Address</br>
 		<div class="myaccountfont">
 			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
@@ -60,10 +62,8 @@ Billing Address</br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
-
-</div>
-<div style="float:right; margin-top:-115px; margin-right:150px;">
+			
+	<td valign="top">		
 Shipping Address</br>
 		<div class="myaccountfont">
 			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
@@ -71,10 +71,14 @@ Shipping Address</br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
-</div>
+
+</table>
+
 </br>
 </br>
 </br>
+<center>
 <button class="updatebtn" onClick="location.href='../home'">Go Back to Home Page</button>
+</center>
+<br><br><br>
 </div>

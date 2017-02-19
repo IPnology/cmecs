@@ -1,12 +1,15 @@
 <?php
-if (!isset($_SESSION['user_session']))
+$username = $_SESSION['user_session'];
+$query = mysql_query("select * from user where username = '$username'");
+$querylen = mysql_num_rows($query);
+
+if ($querylen != 0)
 	{
-		$headerName="Please login";
+		$headerName = "Welcome ".$username."!";
 	}
 else
 	{
-		$username = $_SESSION['user_session'];
-		$headerName = "Welcome ".$username."!";
+		$headerName="Please login";
 	}
 ?>
 
@@ -23,7 +26,7 @@ else
 		
 		<div class="welcome">
 			<?php
-			if (!isset($username)){
+			if ($querylen == 0){
 			?>
 			<div>
 				<a href="../../../app/user/account">Login</a> |
@@ -46,7 +49,7 @@ else
 		
 	</div>
 	<div class="search_box" style="width: 100%;">
-    		<form class="formsearch" action="../../../user/product" method="GET">
+    		<form class="formsearch" action="../product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
@@ -65,6 +68,7 @@ else
 				<option value="../../../app/user/product">Product</option>
 				<option value="../../../app/user/wishlist">Wishlist</option>
 				<option value="../../../app/user/order">Order</option>
+				<option value="../../../app/user/order/?view=searchOrderNumber">Search OrderNumber</option>
 			</select>
 	</div>
 	

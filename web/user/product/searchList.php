@@ -1,24 +1,61 @@
 <?php
 $search = (isset($_GET['search']) && $_GET['search'] != '') ? $_GET['search'] : '';
-$orderNum = strtolower($search);
-$query = mysql_query("select * from checkout where orderNumber=$orderNum");
-$row = mysql_fetch_array($query);
-$orderNumber = $row['orderNumber'];
-$deliveryQuery = mysql_query("select * from delivery where orderNumber='$orderNumber'");
-$deliveryRow = mysql_fetch_array($deliveryQuery);
+
+$query = mysql_query("select * from product where name like '%$search%'");
+
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-<div class="wrapper" style="width:40%;">
-	<?=$message;?></br></br>
-	<div class="myaccountfont">
-	<div style="font-size: 1.3em; color:#09340E;" class="accountlabels">Order Number #<?=$row['orderNumber'];?></br></div> 
-	</br></br><div class="accountlabels">Username:</div> <?=$row['username'];?></br></br>
-	<div class="accountlabels">Address:</div> <?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
-	<div class="accountlabels">Date:</div> <?=$row['date'];?></br></br>
-	<div class="accountlabels">Total Price:</div> <?=$row['totalPrice'];?></br></br>
-	<div class="accountlabels">Status:</div> <?=$row['status'];?></br></br>
-	<div class="accountlabels">Delivery Status:</div> <?=$deliveryRow['status'];?>
-	
+
+
+<div class="main_bg">
+<div class="wrap">	
+<div class="main">
+<div style="width: 74.3333%; float:left; margin-top: -2.3%;">
+
+<br><br><br>
+		<center><font color="green">Search for "<?=$search;?>"</font></center>
+<?php
+
+if (mysql_num_rows($query) > 0){
+	while($row=mysql_fetch_array($query)){
+?>
+<?php
+
+if(file_exists("../../../media/".$row['image']))
+    $fileName = $row['image'];
+else
+    $fileName = "default.png";
+?>
+	<div class="grids_of_3">
+		<div class="grid1_of_3">
+			<img src="../../../media/<?=$fileName;?>" alt=""/>
+				<div class="descname"><?=$row['name']?></div>
+				<div class="price">
+					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW PRODUCT</button>
+				</div>
+			</div>
 	</div>
-	</br>
+<?php
+	}
+}
+else{
+	?>
+	<div class="grids_of_3"><font color="red">Product not found</font></div>
+	</div>
+	<?php
+}
+?>
+
 </div>
+</div>
+</div>
+</div>
+
+<?php
+if (!isset($username)){}
+else{
+require_once 'tempCart.php';
+}
+?>
+
+<div class="clear"></div>

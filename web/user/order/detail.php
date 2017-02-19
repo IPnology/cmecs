@@ -3,27 +3,94 @@ $id = $_GET['id'];
 $query = mysql_query("select * from checkout where Id=$id");
 $row = mysql_fetch_array($query);
 $orderNumber = $row['orderNumber'];
-$deliveryQuery = mysql_query("select * from delivery where orderNumber='$orderNumber'");
-$deliveryRow = mysql_fetch_array($deliveryQuery);
+$cartQuery = mysql_query("select * from cart where orderNumber='$orderNumber'");
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
-<div class="wrapper" style="width:40%;">
-	<?=$message;?></br></br>
-	<div class="myaccountfont">
-	<div style="font-size: 1.3em; color:#09340E;" class="accountlabels">Order Number #<?=$row['orderNumber'];?></br></div> 
-	</br></br><div class="accountlabels">Username:</div> <?=$row['username'];?></br></br>
-	<div class="accountlabels">Address:</div> <?=$row['street'];?>, <?=$row['brgy'];?>, <?=$row['city'];?>, <?=$row['province'];?>, <?=$row['postal'];?></br></br>
-	<div class="accountlabels">Date:</div> <?=$row['date'];?></br></br>
-	<div class="accountlabels">Total Price:</div> <?=$row['totalPrice'];?></br></br>
-	<div class="accountlabels">Status:</div> <?=$row['status'];?></br></br>
-	<div class="accountlabels">Delivery Status:</div> <?=$deliveryRow['status'];?></br></br>
-	
-	<?php if (!$row['rejectReason']){} else {?>
-	<div class="accountlabels">Reason of Rejection:</div> <?=$row['rejectReason'];?>
-	<?php } ?>
-	
-	</div>
+
+<div class="wrapper">
+
+<div style="color:green; margin-left:10px; font-weight:bold; font-size:20px;">
+Order Number: #<?=$row['orderNumber'];?></br></br></div>
+&nbsp;&nbsp;&nbsp;Date and Time: <?=$row['date'];?></br></br>
+
+<!-- Put space check layout in document page 50 -->
+<table class="tablelist" style="border-top:2px solid grey;">
+	<tr>
+		 <td style="float:left;">Product</td>
+
+		<td style="float:right;">Price:</td> 
+	</tr>
 	</br>
+</table>
+
+<?php
+if(mysql_num_rows($cartQuery)>0){
+	while($cartRow=mysql_fetch_array($cartQuery)){
+?>
+
+
+	</br>
+<table class="tablelist">
+	<tr>
+
+		<td style="float:left;"><?=getProductName($cartRow['productId']);?></br></td>
+		<td style="float:right;">PHP <?=$cartRow['price'];?></td> 
+	</tr>
+</table>
+<?php
+	}
+}
+else{
+	echo "Cart is Empty.";
+}
+?>
+</br>
+
+<!--Shipping Information</br></br>
+
+Address: , , , </br></br>
+ -->
+
+		<td style="float:left; font-weight:bold;">TOTAL:</td>
+		<td style="float:right;font-weight:bold; "><?=$row['totalPrice'];?></td>
+</br></br></br>
+<table class="tablelist" style="border-bottom:2px solid grey;">
+<tr>
+<td><div style="font-weight:bold;">Name: <?=$row['fname']?>, <?=$row['lname']?></div></br>
+<td><div style="font-weight:bold;">Status: <?=$row['status'];?></div>
+<?php
+if ($row['status'] == "Rejected"){
+?>
+<tr>
+<td colspan="2"><div style="font-weight:bold color;color:red;"><?=$row['rejectReason'];?></div>
+</tr>
+<?php }?>
+</table></br>
+
+<center>
+<table width="100%">
+	<tr width="100%">
+	<td valign="top">
+Billing Address</br>
+		<div class="myaccountfont">
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
+			<?=$row['street']?>, <?=$row['brgy']?></br>
+			<?=$row['city']?></br>
+			<?=$row['province']?></br>
+			<?=$row['postal']?></br>
+			
+	<td valign="top">		
+Shipping Address</br>
+		<div class="myaccountfont">
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
+			<?=$row['street']?>, <?=$row['brgy']?></br>
+			<?=$row['city']?></br>
+			<?=$row['province']?></br>
+			<?=$row['postal']?></br>
+
+</table>
+
+<br><br>
 	<?php
 		if ($row['status'] == 'Pending'){
 	?>
@@ -31,7 +98,16 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<?php
 		}
 		else{
-			echo "This order cannot be cancelled.";
+	?>
+		<button class="myButton" disabled>Order Can not be cancelered</button>
+	<?php
 		}
 	?>
+
+</div></br></br>
+</div>
+	
+	</div>
+	</br>
+
 </div>

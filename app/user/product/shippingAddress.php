@@ -13,6 +13,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<div class="successmessage"> <?=$message;?></div>
 	<?php } ?>
 	<form action="process.php?action=confirm-address" method="POST">
+	
+		FIRST NAME:</br>
+		<input type="text" name="fname" value="<?=$row['fname']?>" placeholder="First Name">
+		LAST NAME:</br>
+		<input type="text" name="lname" value="<?=$row['lname']?>" placeholder="Last Name">
 		<div class="registerlabels" >STREET:</div>
 		<input type="text" name="street" value="<?=$row['street']?>" placeholder="Street">
 		</br></br>
@@ -34,7 +39,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		<input type="hidden" name="tp" value="<?=$_GET['tp']?>">
 			
 			<div class="centerregbtn">
-				<input type="submit" class="registerbtn" value="Register">
+				<input type="submit" class="registerbtn" value="CONFIRM">
 			</div>
 	</form>
 	<br>

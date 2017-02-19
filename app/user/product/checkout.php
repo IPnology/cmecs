@@ -7,17 +7,14 @@ $count=mysql_num_rows($query);
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<div class="wrapper" style="font-size: 1em; margin-left: 5%;">
 	<div class="successmessage"><?=$message;?></div>
-<div class="checkoutwrap">
 	</br>
 	<?php if (!$message){} else {?>
 	<div class="successmessage"> <?=$message;?></div>
 	<?php } ?>
-	<div>
-		<div>
-		<div class="checkoutheader">YOUR ORDER</div>
 			<table class="tablemycart">
+				<tr>
+					<td colspan="5" class="checkoutheader"> YOUR ORDER
 				<tr style="font-size:.8em">
 					<th>PRODUCT NAME</th>
 					<th></th>
@@ -74,13 +71,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 			</tr>
 			</form>
 			</table>		
-		</div>
-	</div>
 	</br>
 	<div style="width:: 90%; margin-left: 25%;"> 
 	<button class="myButton" onClick="location.href='index.php'">Continue Shopping</button><br><br>
 	<button class="deletebtn" onClick="location.href='?view=shipping-address&tp=<?=$totalPrice;?>'">Proceed to Checkout >></button>
 	</br></br>
 	</div>
-
+</div>
 </div>

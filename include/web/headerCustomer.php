@@ -42,7 +42,7 @@ else
 			<a href="../../../user/home"><img src="../../../include/web/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_search">
-    		<form class="formsearch" action="../../user/product" method="GET">
+    		<form class="formsearch" action="../product" method="GET">
     			<input type="hidden" name="view" value="searchList">
 				<input type="text" name="search" value="">
     			<input type="submit" value="">
@@ -62,7 +62,8 @@ else
 				<li><a href="../../user/product">product</a></li> |
 				<li><a href="../../user/wishlist">wishlist</a></li> |
 				<li><a href="../../user/order">order</a></li> |
-				<li><a href="../../user/personalize">personalize</a></li>		
+				<li><a href="../../user/personalize">personalize</a></li> |		
+				<li><a href="../../user/order/?view=searchOrderNumber">Search Order Number</a></li>		
 			</ul>
 		</div>
 		<div class="top-nav">

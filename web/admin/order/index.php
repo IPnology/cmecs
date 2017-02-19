@@ -47,4 +47,5 @@ function getProductPrice($productId)
 	return $get['price'];
 }
 
+
 ?>

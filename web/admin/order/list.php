@@ -3,7 +3,7 @@ $status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : 
 $query = mysql_query("select * from checkout where status='$status'");
 ?>
 <div class="listwrapper">
-<div class="myaccountheader" style=" font-size: 1.6em;"></br>ORDER DETAILS</br></h1></div>
+<div class="myaccountheader" style=" font-size: 1.6em;"></br>ORDER DETAILS (<?=$status?>)</br></h1></div>
 </br>
 
 <table class="tablelist">
@@ -18,10 +18,9 @@ $query = mysql_query("select * from checkout where status='$status'");
 <table class="tablelist">
 
 	<tr>
-		<th>USERNAME</th>
 		<th>ORDER NUMBER</th>
+		<th>NAME</th>
 		<th>DATE</th>
-		<th>STATUS</th>
 		<th>TOTAL PRICE</th>
 		<th></th>
 	</tr>
@@ -30,10 +29,9 @@ $query = mysql_query("select * from checkout where status='$status'");
 		while($row=mysql_fetch_array($query)){
 	?>
 	<tr>
-		<td><?=$row['username']?></td>
 		<td><?=$row['orderNumber']?></td>
+		<td><?=$row['fname']?> <?=$row['lname']?></td>
 		<td><?=$row['date']?></td>
-		<td><?=$row['status']?></td>
 		<td><?=$row['totalPrice']?></td>
 		<td><button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">VIEW ORDER</button></td>
 	</tr>

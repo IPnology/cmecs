@@ -1,5 +1,5 @@
 <?php
-$query = mysql_query("select * from temp_cart where username = '$username'");
+$tQuery = mysql_query("select * from temp_cart where username = '$username'");
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
@@ -19,17 +19,17 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 
 			<?php
 			$totalPrice = 0;
-			if(mysql_num_rows($query)>0){ 
-				while($row=mysql_fetch_array($query)){
+			if(mysql_num_rows($tQuery)>0){ 
+				while($tRow=mysql_fetch_array($tQuery)){
 					
-					$totalPrice += $row['price'];
+					$totalPrice += $tRow['price'];
 			?>	
 				<tr>
-					<td><?=getProductName($row['productId'])?></td>
+					<td><?=getProductName($tRow['productId'])?></td>
 					<td>X</td>
-					<td><?=$row['quantity']?></td>
+					<td><?=$tRow['quantity']?></td>
 					<td>=</td>
-					<td><?=$row['price']?>.00</td>
+					<td><?=$tRow['price']?>.00</td>
 				</tr>
 			
 

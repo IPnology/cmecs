@@ -59,13 +59,21 @@ if ($deliveryRow['status'] != "Shipping"){
 ?>
 <button class="updatebtn" onClick="location.href='process.php?action=shipping&orderNumber=<?=$orderNumber?>'">Shipping</button>
 <?php 
+}else{
+?>
+<button class="myButton" disabled>Shipping</button>
+<?php 
 }
 ?>
+
 <?php
 if ($deliveryRow['status'] != "Received"){
 ?>
 <button class="updatebtn" onClick="location.href='process.php?action=received&orderNumber=<?=$orderNumber?>'">Received</button>
 <?php 
+}else{
+?>
+<button class="myButton" disabled>Received</button><?php 
 }
 ?>
 <?php
@@ -73,12 +81,20 @@ if ($deliveryRow['status'] != "Bad Address"){
 ?>
 <button class="updatebtn" onClick="location.href='process.php?action=bad-address&orderNumber=<?=$orderNumber?>'">Bad Address</button>
 <?php 
+}else{
+?>
+<button class="myButton" disabled>Bad Address</button>
+<?php 
 }
 ?>
 <?php
 if ($deliveryRow['status'] != "Canceled"){
 ?>
 <button class="updatebtn" onClick="location.href='process.php?action=canceled&orderNumber=<?=$orderNumber?>'">Canceled</button>
+<?php 
+}else{
+?>
+<button class="myButton" disabled>Canceled</button>
 <?php 
 }
 ?>
@@ -94,7 +110,9 @@ if ($deliveryRow['status'] != "Canceled"){
 </table></br>
 
 
-<div style="margin-left:150px;">
+<table width="100%">
+	<tr>
+	<td valign="top">
 Billing Address</br>
 		<div class="myaccountfont">
 			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
@@ -102,11 +120,8 @@ Billing Address</br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
 
-
-</div>
-<div style="float:right; margin-top:-115px; margin-right:150px;">
+	<td valign="top">
 Shipping Address</br>
 		<div class="myaccountfont">
 			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
@@ -114,7 +129,7 @@ Shipping Address</br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
+</table>
 
 
 

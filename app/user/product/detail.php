@@ -8,11 +8,18 @@ if(file_exists("../../../media/".$row['image']))
 else
     $fileName = "default.png";
 ?>	
-
+		   <?php
+				if (!isset($username)){}
+				else{
+					require_once 'tempCart.php';
+				}
+				?>
+	
 <div style="width: 90%; margin-left: auto; margin-right: auto;">
 	<?php if (!$message){} else {?>
 	<div class="successmessage"> <?=$message;?></div>
 	<?php } ?>
+	
 	
 		<div class="single">
 		
@@ -25,8 +32,7 @@ else
 								<div class="ctgdetail">
 									Name: <?=$row['name']?></br></br>
 									Description: <?=$row['description']?></br></br>
-									Price: <?=$row['price']?></br></br>
-									<button class="myButton" onClick="location.href='../product/?catId=<?=$row['Id']?>'">VIEW PRODUCT</button></br></br>	
+									Price: <?=$row['price']?></br></br>	
 										
 									<?php
 										# This is for users that are not logged in!!! DO NOT DELETE!
@@ -98,16 +104,6 @@ else
 					</div>
 					<div class="clear"></div>
 			</div>
-			
-			<div style="margin-left: auto; margin-right: auto; width: 90.333%; margin-left: 8%;">
-			   <?php
-				if (!isset($username)){}
-				else{
-					require_once 'tempCart.php';
-				}
-				?>
-			</div>
-		 <br>
 		 <div class="clear"></div>
 		</div>
 </div>

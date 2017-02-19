@@ -1,45 +1,62 @@
 <?php
 $search = (isset($_GET['search']) && $_GET['search'] != '') ? $_GET['search'] : '';
-$search = strtolower($search);
 
 $query = mysql_query("select * from product where name like '%$search%'");
+
+$message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 ?>
 
-<div class="listwrapper">
-	<button class="myButton" onClick="location.href='?view=add'">Add Product</button></br></br>
+<div class="main_bg">
+<div class="wrap">	
+<div class="main">	
+<div style="width: 100%; margin-left:auto; margin-right:auto;">
+<div style="margin-right: 5%;">
+	<?php if (!$message){} else {?>
+	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
 	
-	<?php
-			while($row=mysql_fetch_array($query)){
-	?>		
-	
-	<?php
+<button class="myButton" style="width: 100%; margin-left: 3%;" onClick="location.href='?view=add'">Add Product</button>
 
-	if(file_exists("../../../media/".$row['image']))
-		$fileName = $row['image'];
-	else
-		$fileName = "default.png";
-	?>
-	
+<br><br><br>
+		<center><font color="green">Search for "<?=$search;?>"</font></center>
+<?php
+
+if (mysql_num_rows($query) > 0){
+	while($row=mysql_fetch_array($query)){
+?>
+<!--diri-->
+<!-- start grids_of_3 -->
+<?php
+
+if(file_exists("../../../media/".$row['image']))
+    $fileName = $row['image'];
+else
+    $fileName = "default.png";
+?>
+
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
 			<img src="../../../media/<?=$fileName;?>" alt=""/>
-				<div class="descname">
-					<div class="accountlabels">CATEGORY ID:</div> <?=$row['categoryId']?></br>
-					<div class="accountlabels"><a href="?view=detail&id=<?=$row['Id']?>"><?=$row['name']?></a></div></br>
-					<div class="accountlabels">PRICE:</div> <?=$row['price']?>.00</br>
-					<div class="accountlabels">DESCRIPTION:</div> <?=$row['description']?>
-				</div>
-				<div class="price"></br>
-					<button class="updatebtn" style="width: 150px;" onClick="location.href='?view=update&id=<?=$row['Id']?>'">Update</button></br></br>
-					<button class="deletebtn" style="width: 150px;" onClick="location.href='process.php?action=delete&id=<?=$row['Id']?>'">Delete</button>
+				<div class="descname"><?=$row['name']?></div>
+				<div class="price">
+					<button class="myButton" onClick="location.href='?view=detail&id=<?=$row['Id']?>'">View</button>
 				</div>
 			</div>
-			
 	</div>
-	
-	<?php
+	<!--asta d-->
+<?php
 	}
+}
+else{
 	?>
-	
-	<div class="clear"></div>
+	<div class="grids_of_3"><font color="red">Product not found</font></div>
+	</div>
+	<?php
+}
+?>
 </div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>	

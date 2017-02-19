@@ -43,7 +43,11 @@ $query = mysql_query("select * from checkout where username = '$username'");
 		<td><div style="color:blue;"><?=$row['status']?></div></td>
 		<?php 
 		}
-		else{}
+		else{
+		?>
+		<td><div><?=$row['status']?></div></td>
+		<?php 
+		}
 		?>
 		<td><?=getDeliveryStatus($row['orderNumber'])?></td>
 		<td><?=$row['totalPrice']?></td>

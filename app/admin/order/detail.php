@@ -54,22 +54,15 @@ Address: , , , </br></br>
 </br>
 
 <div style="width:300px;">
+
 <?php
-if ($row['status'] != "Approved"){
+if ($row['status'] == "Pending"){
 ?>
 <button class="updatebtn" onClick="location.href='process.php?action=approve&id=<?=$row['Id']?>'">Approve</button>
-<?php 
-}
-?>
-<?php
-if ($row['status'] != "Rejected"){
-?>
 <button class="deletebtn" onClick="location.href='index.php?view=reject-reason&id=<?=$row['Id']?>'">Reject</button>
 <?php 
 }
-?>
-<?php
-if ($row['status'] == "Approved"){
+else if ($row['status'] == "Approved"){
 ?>
 <button class="myButton" onCLick="location.href='?view=set-delivery&id=<?=$row['Id']?>'">Set Delivery</button>
 <?php 
@@ -84,28 +77,28 @@ if ($row['status'] == "Approved"){
 <td><div style="font-weight:bold;">Reason: <?=$row['rejectReason'];?></div>
 </table></br>
 
-
-<div style="margin-left:150px;">
+<center>
+<table width="100%">
+	<tr width="100%">
+	<td valign="top">
 Billing Address</br>
 		<div class="myaccountfont">
-			</br>John Lorenz Tajonera</br>
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
 			<?=$row['street']?>, <?=$row['brgy']?></br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
-
-
-</div>
-<div style="float:right; margin-top:-115px; margin-right:150px;">
+			
+	<td valign="top">		
 Shipping Address</br>
 		<div class="myaccountfont">
-			</br>John Lorenz Tajonera</br>
+			</br><?=$row['fname']?>, <?=$row['lname']?></br></br>
 			<?=$row['street']?>, <?=$row['brgy']?></br>
 			<?=$row['city']?></br>
 			<?=$row['province']?></br>
 			<?=$row['postal']?></br>
-</div>
+
+</table>
 
 
 
