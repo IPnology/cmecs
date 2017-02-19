@@ -1,6 +1,6 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.19-MariaDB)
-# Date: 2017-02-09 00:10:21
-# Generator: MySQL-Front 5.4  (Build 4.102) - http://www.mysqlfront.de/
+﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
+# Date: 2017-02-19 16:33:12
+# Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
 
@@ -87,7 +87,7 @@ CREATE TABLE `checkout` (
   `paymentMethod` varchar(255) DEFAULT NULL,
   `contactNumber` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "checkout"
@@ -147,7 +147,7 @@ CREATE TABLE `product` (
   `quantity` int(11) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "product"
