@@ -7,9 +7,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 ?>
 <br>
 <center>
-<form action="" method="GET">
-<input type="date" name="schedule">
-<button type="submit" class="button updatebtn">OK</button>
+<form action="" method="GET">Enter date:
+<input type="date" name="schedule"></br></br>
+<button type="submit" class="button myButton">Search Schedule</button>
 </form>
 </center>
 
@@ -34,7 +34,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		}
 	?>
 	</table>
-	<div class="clear"></div>
+	</br>
 </div>
 
 <?php }?>

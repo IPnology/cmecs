@@ -56,8 +56,22 @@
 				<li><a href="../../../web/admin/schedule">schedule</a></li>
 				<?php } 
 				else if ($admin['level']=='staff'){ ?>
-				fdsfdsfd
-				<?php} elsel{}?>
+				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
+				<li><a href="../../../web/admin/order">Order</a></li> |
+				<li><a href="../../../web/admin/category">category</a></li> |
+				<li><a href="../../../web/admin/product">product</a></li> |
+				<li><a href="../../../web/admin/truck">truck</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
+				<?php } 
+				
+				else if ($admin['level']=='delivery'){ ?>
+				<li class="active"><a href="../../../web/admin/home">Home</a></li> |
+				<li><a href="../../../web/admin/schedule">schedule</a></li>
+				<?php } 
+				
+				else{
+					
+				}?>
 				
 				
 			</ul>
