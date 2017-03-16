@@ -13,7 +13,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
     <div class="labels">Password:</div>
     <input type="password" placeholder="Enter Password" name="password" required>
     </br></br>
-	<button class="loginbtn" type="submit">Login</button>	
+	<div align="center"><button class="loginbtn" type="submit">Login</button></div>
 	</div>
 </form>
 </div>
