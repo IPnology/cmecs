@@ -35,6 +35,7 @@ else
 							<h3>Name: <?=$row['name']?></br></h3>
 							<p>Description: <?=$row['description']?></p>
 							<p>Price: <?=$row['price']?><p>
+							<p>Quantity: <?=$row['quantity']?><p>
 							</br>
 							<?php
 							# This is for users that are not logged in!!! DO NOT DELETE!
