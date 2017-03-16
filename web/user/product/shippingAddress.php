@@ -27,6 +27,9 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 		POSTAL CODE:</br>
 		<input type="text" name="postal" value="<?=$row['postal']?>" placeholder="postal">
 		</br></br>
+		CONTACT NUMBER:</br>
+		<input type="text" name="contactNum" value="<?=$row['contactNumber']?>" placeholder="postal">
+		</br></br>
 		<input type="hidden" name="tp" value="<?=$_GET['tp']?>">
 		</br>
 		<input class="registerbtn" type="submit" value="CONFIRM">

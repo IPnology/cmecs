@@ -3,5 +3,5 @@
 </br>
 </br>
 
-<button class="updatebtn" onClick="location.href="#">Go Back to Home Page</button>
+<button class="updatebtn" onClick="location.href='../home'">Go Back to Home Page</button>
 </div>

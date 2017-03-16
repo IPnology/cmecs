@@ -5,12 +5,18 @@ $query = mysql_query("select * from temp_cart where username='$username'");
 $count=mysql_num_rows($query);
 
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
+$insuf = (isset($_GET['insuf']) && $_GET['insuf'] != '') ? $_GET['insuf'] : '';
 ?>
 
 <div class="checkoutwrap">
 	</br>
 	<?php if (!$message){} else {?>
 	<div class="successmessage"> <?=$message;?></div>
+	<?php } ?>
+	
+	
+	<?php if (!$insuf){} else {?>
+	<div class="successmessage"> <?=$insuf;?></div>
 	<?php } ?>
 	
 	<div>
@@ -35,6 +41,7 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 							
 			?>	
 				<input type="hidden" name="id[]" value="<?=$row['Id'];?>">
+				<input type="hidden" name="productId[]" value="<?=$row['productId'];?>">
 				<input type="hidden" name="price[]" value="<?=$row['price'];?>">
 				<tr>
 					<td><?=getProductName($row['productId'])?></td>

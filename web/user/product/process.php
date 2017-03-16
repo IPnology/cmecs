@@ -14,6 +14,10 @@ switch ($action) {
 		confirmAddress();
 		break;
 	
+	case 'payment-method' :
+		paymentMethod();
+		break;
+	
 	case 'update-quantity' :
 		updateQuantity();
 		break;
@@ -44,12 +48,26 @@ function updateQuantity()
 		$id = $_POST['id'];
 		$quantity = $_POST['quantity'];
 		$price = $_POST['price'];
-		$totalPrice = $quantity[$i] * $price[$i];
-		mysql_query("UPDATE temp_cart SET quantity='$quantity[$i]',
-											price='$totalPrice'
-											WHERE id='$id[$i]'");
+		$productId = $_POST['productId'];
+		
+		$quantity = $_POST['quantity'];
+		
+		$get = mysql_fetch_array(mysql_query("select quantity from product where Id=$productId[$i]"));
+		
+		if ($get['quantity'] > $quantity[$i]){
+	
+				$totalPrice = $quantity[$i] * $price[$i];
+				mysql_query("UPDATE temp_cart SET quantity='$quantity[$i]',
+													price='$totalPrice'
+													WHERE id='$id[$i]'");
+				
+				$success = 'message=You have successfully Updated Quantity';
+				}		
+			else{
+				$insuf = 'insuf=Some Quantities are insuficient';
+			}
+			header('Location: ../product/?view=checkout&'.$success.'&'.$insuf);
 		}
-	header('Location: ../product/?view=checkout&message=You have successfully Updated Quantity');
 }
 
 function confirmAddress()
@@ -62,6 +80,7 @@ function confirmAddress()
 	$city = $_POST['city'];
 	$province = $_POST['province'];
 	$postal = $_POST['postal'];
+	$contactNum = $_POST['contactNum'];
 	$tp = $_POST['tp'];
 	$orderNumber = round(microtime(true));
 	
@@ -76,6 +95,7 @@ function confirmAddress()
 											postal='".$postal."',
 											orderNumber='".$orderNumber."',
 											totalPrice='".$tp."',
+											contactNumber='".$contactNum."',
 											date=NOW()");
 
 	#copy data from temp_cart to cart
@@ -91,13 +111,21 @@ function confirmAddress()
 														quantity='".$quantity."',
 														price='".$price."',
 														orderNumber='".$orderNumber."'");
+					
+					
+				
+				$get = mysql_fetch_array(mysql_query("select quantity from product where Id=$productId"));
+				
+				$newQuantity = $get['quantity'] - $quantity;
+													
+				mysql_query("UPDATE product SET quantity='$newQuantity' where Id=$productId");
 				}
 	}
 	
 	#delete data from temp_cart
 	mysql_query("delete from temp_cart where username='".$username."'");
 	
-	header('Location: ../product/?view=success');
+	header("Location: ../product/?view=payment-method&username='".$username."'");
 }
 
 

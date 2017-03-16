@@ -16,7 +16,11 @@ $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'
 	<div class="accountlabels">Date:</div> <?=$row['date'];?></br></br>
 	<div class="accountlabels">Total Price:</div> <?=$row['totalPrice'];?></br></br>
 	<div class="accountlabels">Status:</div> <?=$row['status'];?></br></br>
-	<div class="accountlabels">Delivery Status:</div> <?=$deliveryRow['status'];?>
+	<div class="accountlabels">Delivery Status:</div> <?=$deliveryRow['status'];?></br></br>
+	
+	<?php if (!$row['rejectReason']){} else {?>
+	<div class="accountlabels">Reason of Rejection:</div> <?=$row['rejectReason'];?>
+	<?php } ?>
 	
 	</div>
 	</br>
