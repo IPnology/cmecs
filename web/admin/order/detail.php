@@ -84,7 +84,7 @@ if ($row['status'] == "Approved"){
 <table class="tablelist" style="border-bottom:2px solid grey;">
 <td><div style="font-weight:bold;">Username: <?=$row['username'];?></div></br>
 <td><div style="font-weight:bold;">Status: <?=$row['status'];?></div>
-
+<td><div style="font-weight:bold;">Reason: <?=$row['rejectReason'];?></div>
 </table></br>
 
 
