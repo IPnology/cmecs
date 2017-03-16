@@ -3,7 +3,7 @@
 	
 	if (!$_SESSION['admin_session'])
 	{
-		header("Location: ../../account");	
+		header("Location: ../account");	
 	}
 	else
 	{
