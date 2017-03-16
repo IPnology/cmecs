@@ -128,7 +128,15 @@ function confirmAddress()
 	header("Location: ../product/?view=payment-method&username='".$username."'");
 }
 
-
+function paymentMethod(){
+	
+	$username = $_SESSION['user_session'];
+	
+		mysql_query("UPDATE checkout SET paymentMethod='$paymentMethod' where username=$username");
+		
+	header("Location: ../product/?view=success&username='".$username."'");
+	
+}
 
 
 ?>
